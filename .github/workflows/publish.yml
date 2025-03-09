@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3.6.0
       with:
-        submodules: 'recursive'  # Keep this for initial checkout
+        submodules: 'recursive'
 
     - name: Install Python dependencies
       run: pip3 install requests pyyaml
@@ -33,15 +33,13 @@ jobs:
         # Set the remote URL with PAT for authentication
         git remote set-url origin https://x-access-token:${{ secrets.WEH_BOT_PAT }}@github.com/LateStation14/Late-station-14.git
         
-        # Fetch only the main repo, no submodules
-        git fetch origin master --no-recurse-submodules
-        
-        # Pull changes from master, no submodules
-        git pull origin master --rebase --no-recurse-submodules
-        
-        # Add and commit the updated changelog
+        # Add and commit the updated changelog first
         git add Resources/Changelog/LateStation.yml
         git commit -m "Auto-update changelog [skip ci]" || echo "No changes to commit"
+        
+        # Fetch and pull with rebase to sync with remote master
+        git fetch origin master --no-recurse-submodules
+        git pull origin master --rebase --no-recurse-submodules
         
         # Push to master
         git push origin master
