@@ -196,27 +196,20 @@ public partial class ChatSystem
     /// <returns></returns>
     private bool AllowedToUseEmote(EntityUid source, EmotePrototype emote)
     {
-        // If emote is in AllowedEmotes, it will bypass whitelist and blacklist
-        if (TryComp<SpeechComponent>(source, out var speech) &&
-            speech.AllowedEmotes.Contains(emote.ID))
-        {
-            return true;
-        }
-
-        // Check the whitelist and blacklist
-        if (_whitelistSystem.IsWhitelistFail(emote.Whitelist, source) ||
-            _whitelistSystem.IsBlacklistPass(emote.Blacklist, source))
-        {
+        // New Frontiers - Harpy Mimicry - Allows harpies to mimic other species,
+        //      bypasses whitelist checks
+        // This code is licensed under AGPLv3. See AGPLv3.txt
+        if (!TryComp<SpeechComponent>(source, out var speech) ||
+            !speech.MimicEmotes && (_whitelistSystem.IsWhitelistFail(emote.Whitelist, source) || _whitelistSystem.IsBlacklistPass(emote.Blacklist, source)))
             return false;
         }
-
-        // Check if the emote is available for all
-        if (!emote.Available)
-        {
+        if (!emote.Available &&
+            !speech.AllowedEmotes.Contains(emote.ID))
             return false;
         }
 
         return true;
+        // End of modified code
     }
 
 
