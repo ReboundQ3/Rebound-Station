@@ -32,15 +32,15 @@ jobs:
 
     - name: Commit Changelog Changes
       run: |
-        git config --global user.name "Weh Bot"
-        git config --global user.email "weh-bot@noreply.github.com"
+        git config --global user.name "$BOT_USERNAME"
+        git config --global user.email "$BOT_EMAIL"
         
         # Set the remote URL with PAT for authentication
         git remote set-url origin https://x-access-token:${{ secrets.WEH_BOT_PAT }}@github.com/LateStation14/Late-station-14.git
         
         # Add and commit the updated changelog
         git add Resources/Changelog/LateStation.yml
-        git commit -m "Auto-update changelog [skip ci]" || echo "No changes to commit"
+        git commit -m "Auto-update changelog" || echo "No changes to commit"
         
         # Fetch and pull with rebase to sync with remote master
         git fetch origin master --no-recurse-submodules
