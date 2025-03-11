@@ -1,7 +1,7 @@
 - type: gameMap
   id: Torpedo
-  mapName: 'NSC Torpedo'
-  mapPath: /Maps/_LateStation/torpedo.yml
+  mapName: 'Torpedo'
+  mapPath: /Maps/torpedo.yml
   minPlayers: 3
   maxPlayers: 20
   stations:
@@ -9,7 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} NSC Torpedo {1}'
+          mapNameTemplate: '{0} Torpedo {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

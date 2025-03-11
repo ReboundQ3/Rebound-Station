@@ -42,3 +42,10 @@ Entries:
   changes:
   - type: Add
     message: Added a new coat, acquired from a hacked medidrobe
+- id: 8
+  author: Rellu225
+  time: '2025-03-09T17:09:48Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/6
+  changes:
+  - type: Fix
+    message: Fixed some minor mistakes with the map.
