@@ -157,7 +157,7 @@
         - ReagentId: Egg
           Quantity: 10
    - type: Speech
-     speechVerb: Human
+     speechVerb: Default
 
  - type: entity
    parent: BasePlushie
