@@ -60,3 +60,10 @@ Entries:
     message: Fixed original camera network
   - type: Tweak
     message: Tweaked Science departament to fit more machinery
+- id: 10
+  author: Rellu225
+  time: '2025-03-14T14:45:34Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/9
+  changes:
+  - type: Add
+    message: Added a ton of plushies.
