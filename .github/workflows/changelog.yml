@@ -5,6 +5,9 @@ on:
   pull_request_target:
     types: [closed]
 
+on:
+  workflow_dispatch:
+
 env:
   GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
   CHANGELOG_DIR: ${{ vars.CHANGELOG_DIR }}
