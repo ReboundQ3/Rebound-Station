@@ -482,3 +482,35 @@
           Quantity: 10
    - type: Speech
      speechVerb: Reptilian # for pais (In the secret stash)
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieScarlet #Eepy.
+    name: Scarlet Plushie
+    description: A very intimidating looking little plushie. Also very cute!
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/scarlet-plushie.rsi
+      state: scarlet-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
