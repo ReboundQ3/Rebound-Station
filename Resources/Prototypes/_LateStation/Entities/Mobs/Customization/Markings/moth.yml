@@ -4,31 +4,31 @@
   markingCategory: Tail
   speciesRestriction: [Moth]
   sprites:
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: softcoat_primary
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: softcoat_secondary
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: softcoat_tertiary
-    
+
 - type: marking
   id: MothWingsVoltaic
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Moth]
   sprites:
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: voltaic_primary
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: voltaic_secondary
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: voltaic_tertiary
-        
+
 - type: marking
   id: MothScarVoltaic
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Moth]
   sprites:
-  - sprite: _Latestation/Mobs/Customization/Moth/VS_moth_wings.rsi
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: voltaic_scar
