@@ -75,3 +75,19 @@ Entries:
   - type: Tweak
     message: adjusted FTL mass limit to allow micro stations (Reach, Torpedo, Syndicruiser)
       to FTL.
+- id: 12
+  author: LateFinny
+  time: '2025-03-15T16:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/12
+  changes:
+  - type: Add
+    message: New plushie, Scarlet! A moff!
+- id: 13
+  author: ReboundQ3
+  time: '2025-03-15T16:18:25Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/11
+  changes:
+  - type: Add
+    message: Added two new moth wing markings
+  - type: Add
+    message: Added one new moth chest scar
