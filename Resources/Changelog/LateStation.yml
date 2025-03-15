@@ -67,3 +67,11 @@ Entries:
   changes:
   - type: Add
     message: Added a ton of plushies.
+- id: 11
+  author: Lachryphage
+  time: '2025-03-15T15:04:26Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/10
+  changes:
+  - type: Tweak
+    message: adjusted FTL mass limit to allow micro stations (Reach, Torpedo, Syndicruiser)
+      to FTL.
