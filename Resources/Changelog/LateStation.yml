@@ -91,3 +91,12 @@ Entries:
     message: Added two new moth wing markings
   - type: Add
     message: Added one new moth chest scar
+- id: 14
+  author: LateFinny
+  time: '2025-03-21T40:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/13
+  changes:
+  - type: Add
+    message: 7 new plushies.
+  - type: Fix
+    message: Added comments to a few existing plushies made by Rellu.
