@@ -4,17 +4,15 @@ concurrency: commit_action
 on:
   pull_request_target:
     types: [closed]
-  #Manual Trigger added
-  workflow_dispatch:
 
 env:
-  GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.WEH_BOT_PAT }}
   CHANGELOG_DIR: ${{ vars.CHANGELOG_DIR }}
   PR_NUMBER: ${{ github.event.number }}
 
 jobs:
   changelog:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: github.event.pull_request.merged == true
     permissions:
       contents: write
@@ -22,13 +20,13 @@ jobs:
       - name: Checkout Master
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.WEH_BOT_PAT }}
           ref: "${{ vars.CHANGELOG_BRANCH }}"
 
       - name: Setup Git
         run: |
-          git config --global user.name "${{ vars.CHANGELOG_USER }}"
-          git config --global user.email "${{ vars.CHANGELOG_EMAIL }}"
+          git config --global user.name "${{ secrets.WEH_BOT_USERNAME }}"
+          git config --global user.email "${{ secrets.WEH_BOT_EMAIL }}"
         shell: bash
 
       - name: Setup Node
