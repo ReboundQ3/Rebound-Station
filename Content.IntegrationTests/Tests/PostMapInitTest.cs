@@ -49,6 +49,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] DoNotMapWhitelist =
         {
+            "/Game/_LateStation/Akatsumi.yml"//LateStation map - Contains a billion illegal things.
             "/Maps/centcomm.yml",
             "/Maps/_Harmony/centcomm.yml", // Harmony CC version
             "/Maps/_Harmony/barratry.yml", // Harmony map - Contains mime and clown's rubber stamps.
