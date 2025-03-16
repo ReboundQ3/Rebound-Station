@@ -1,7 +1,7 @@
 - type: gameMap
   id: Akatsumi
   mapName: 'Akatsumi'
-  mapPath: /Maps/_Harmony/akatsumi.yml
+  mapPath: /Maps/_LateStation/akatsumi.yml
   minPlayers: 0
   maxPlayers: 15
   stations:
@@ -11,7 +11,7 @@
         - type: StationNameSetup
           mapNameTemplate: '{0} Akatsumi Syndicate Cruiser {1}'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: Maps/_LateStation/shuttles/emergency_akatsumi.yml
+          emergencyShuttlePath: /Maps/_LateStation/shuttles/emergency_akatsumi.yml
         - type: StationJobs
           availableJobs:
             Captain: [ 1, 1 ]

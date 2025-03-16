@@ -9280,8 +9280,6 @@ entities:
       pos: -2.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2937
   - uid: 2939
@@ -9331,8 +9329,6 @@ entities:
       pos: -2.5,-11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2937
 - proto: FloorDrain
