@@ -1,0 +1,37 @@
+- type: gameMap
+  id: Akatsumi
+  mapName: 'Akatsumi'
+  mapPath: /Maps/_LateStation/akatsumi.yml
+  minPlayers: 0
+  maxPlayers: 15
+  stations:
+    Akatsumi:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Akatsumi Syndicate Cruiser {1}'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/_LateStation/shuttles/emergency_akatsumi.yml
+        - type: StationJobs
+          availableJobs:
+            Captain: [ 1, 1 ]
+            Borg: [ 1, 1 ]
+            SecurityOfficer: [ 1, 1 ]
+            SecurityCadet: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            CargoTechnician: [ 1, 1 ]
+            SalvageSpecialist: [ 1, 1 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            Chaplain: [ 1, 1 ]
+            MedicalDoctor: [ 1, 1 ]
+            MedicalIntern: [ 1, 1 ]
+            Chemist: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            StationEngineer: [ 1, 1 ]
+            Scientist: [ 1, 1 ]
+            ResearchAssistant: [ 1, 1 ]
+            Passenger: [ -1, -1 ]
+
