@@ -53,7 +53,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Harmony/centcomm.yml", // Harmony CC version
             "/Maps/_Harmony/barratry.yml", // Harmony map - Contains mime and clown's rubber stamps.
             "/Maps/_Harmony/xeno.yml", // Harmony map - Contains Matter Dematerializer
-            "/Maps/_LateStation/Akatsumi.yml", //LateStation map - Contains a billion illegal things.
+            "/Maps/_LateStation/akatsumi.yml", //LateStation map - Contains a billion illegal things.
             "/Maps/_Harmony/Nonstations/listening-outpost.yml", // Harmony - Contains a billion illegal things
             "/Maps/_Harmony/Shuttles/ERT-chaplain-medium.yml", // Harmony - Contains centcomm folders.
             "/Maps/_Harmony/Shuttles/syndicate-diplomacy.yml", // Harmony - Contains syndicate rubber stamp.
