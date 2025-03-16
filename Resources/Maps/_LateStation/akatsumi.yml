@@ -9400,8 +9400,6 @@ entities:
       pos: -2.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2937
   - uid: 2939
@@ -9451,8 +9449,6 @@ entities:
       pos: -2.5,-11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2937
 - proto: FloorDrain
@@ -12907,8 +12903,6 @@ entities:
       pos: 9.5,-39.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2335
   - uid: 2526
@@ -13113,8 +13107,6 @@ entities:
       pos: 9.5,-40.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2335
 - proto: GasVolumePump
