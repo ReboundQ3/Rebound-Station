@@ -6,7 +6,7 @@
   physicalDesc: reagent-physical-desc-enigmatic
   flavor: magical
   color: "#FFD700"
-  metabolisms:
+  metabolisms: # Any effects are TODO. No actual consumption is decided, so any effects are just the same as vestine.
     Poison:
       effects:
       - !type:Jitter
@@ -42,11 +42,11 @@
             Airloss: -20
             Brute: -20
 
+# A chemical for extreme bloodloss and bleeding. Less slash, more bloodloss.
 - type: reagent
   id: CrimsonRazorium
   name: reagent-name-crimsonrazorium
   group: Experimental
-  slippery: true
   desc: reagent-desc-crimsonrazorium
   physicalDesc: reagent-physical-desc-reflective
   flavor: sharp
@@ -72,7 +72,7 @@
       metabolismRate : 3.00
       effects:
       - !type:ModifyBloodLevel
-        amount: -50 # Might need tweaking later.
+        amount: -60 # Might need tweaking later.
       - !type:ModifyBleedAmount
         amount: 5
       - !type:HealthChange

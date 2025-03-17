@@ -1,0 +1,23 @@
+- type: reaction
+  id: AuricOmnizine
+  reactants:
+    Omnizine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Gold:
+      amount: 4
+  products:
+    AuricOmnizine: 4
+
+- type: reaction
+  id: CrimsonRazorium
+  reactants:
+    Razorium:
+      amount: 4
+    Aetherium:
+      amount: 1
+    TranexamicAcid:
+      amount: 3
+  products:
+    CrimsonRazorium: 8
