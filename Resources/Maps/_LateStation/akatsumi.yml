@@ -1626,7 +1626,7 @@ entities:
     - type: InsideEntityStorage
 - proto: AirAlarm
   entities:
-  - uid: 3254
+  - uid: 6631
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
