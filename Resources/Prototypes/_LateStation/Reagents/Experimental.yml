@@ -1,0 +1,90 @@
+- type: reagent
+  id: Aetherium
+  name: reagent-name-aetherium
+  group: Experimental
+  desc: reagent-desc-aetherium
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  color: "#FFD700"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.8
+        sprintSpeedModifier: 0.8
+      - !type:HealthChange
+        damage:
+          groups:
+            Airloss: 2
+
+# Heals most of everything practically instantly instantly.
+- type: reagent
+  id: AuricOmnizine
+  name: reagent-name-auricomnizine
+  group: Experimental
+  desc: reagent-desc-auricomnizine
+  physicalDesc: reagent-physical-desc-soothing
+  flavor: medicine
+  color: "#CAA347"
+  metabolisms:
+    Medicine:
+      metabolismRate : 8.00 # Very rapid treatment.
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -20
+            Toxin: -20
+            Airloss: -20
+            Brute: -20
+
+- type: reagent
+  id: CrimsonRazorium
+  name: reagent-name-crimsonrazorium
+  group: Experimental
+  slippery: true
+  desc: reagent-desc-crimsonrazorium
+  physicalDesc: reagent-physical-desc-reflective
+  flavor: sharp
+  color: "#B22222"
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:ModifyBloodLevel
+        amount: -5
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Bloodloss: 2
+            Slash: 1
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00
+      effects:
+      - !type:ModifyBloodLevel
+        amount: -50 # Might need tweaking later.
+      - !type:ModifyBleedAmount
+        amount: 5
+      - !type:HealthChange
+        damage:
+          types:
+             Slash: 2
+             Bloodloss: 8
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages: [ "generic-reagent-effect-slicing-insides"]
+        probability: 0.5
+      - !type:Emote
+        emote: Scream
+        probability: 0.1
