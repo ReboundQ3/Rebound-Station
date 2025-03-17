@@ -10100,7 +10100,7 @@ entities:
       parent: 2
 - proto: CryoxadoneBeakerSmall
   entities:
-  - uid: 2323
+  - uid: 3254
     components:
     - type: Transform
       pos: 0.28273118,-15.389295
