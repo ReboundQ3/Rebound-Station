@@ -33,5 +33,6 @@
     ToyFigurineSecurity: 1
     ToyFigurineWarden: 1
     ToyFigurineHeadOfSecurity: 1
-    ToyPlushieHides: 1
-    ToyPlushieThriz: 1
+    ToyPlushieHides: 1 ## Latestation
+    ToyPlushieThriz: 1 ## Latestation
+    ToyPlushieAtlas: 1 ## Latestation

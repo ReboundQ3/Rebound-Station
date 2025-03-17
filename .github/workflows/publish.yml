@@ -5,54 +5,17 @@ concurrency:
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: '0 10 * * *'
+  schedule:
+    - cron: '0 10 */2 * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    env:
-      BOT_USERNAME: ${{ secrets.WEH_BOT_USERNAME }}
-      BOT_EMAIL: ${{ secrets.WEH_BOT_EMAIL }}
-      WEH_BOT_NEW_PAT: ${{ secrets.WEH_BOT_NEW_PAT }}
-    
     steps:
     - uses: actions/checkout@v3.6.0
       with:
         submodules: 'recursive'
-
-    - name: Install Python dependencies
-      run: pip3 install requests pyyaml
-
-    - name: Update Changelog YAML
-      run: python3 Tools/update_changelog.py
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Commit Changelog Changes
-      run: |
-        git config --global user.name "$BOT_USERNAME"
-        git config --global user.email "$BOT_EMAIL"
-        
-        # Set the remote URL with PAT for authentication
-        git remote set-url origin https://x-access-token:${{ secrets.WEH_BOT_PAT }}@github.com/LateStation14/Late-station-14.git
-        
-        # Add and commit the updated changelog
-        git add Resources/Changelog/LateStation.yml
-        git commit -m "Auto-update changelog" || echo "No changes to commit"
-        
-        # Fetch and pull with rebase to sync with remote master
-        git fetch origin master --no-recurse-submodules
-        git pull origin master --rebase --no-recurse-submodules
-        
-        # Push to master
-        git push origin master
-      env:
-        WEH_BOT_PAT: ${{ secrets.WEH_BOT_PAT }}
-
-    - name: Install dependencies
-      run: sudo apt-get install -y python3-paramiko python3-lxml
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3.2.0

@@ -67,3 +67,36 @@ Entries:
   changes:
   - type: Add
     message: Added a ton of plushies.
+- id: 11
+  author: Lachryphage
+  time: '2025-03-15T15:04:26Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/10
+  changes:
+  - type: Tweak
+    message: adjusted FTL mass limit to allow micro stations (Reach, Torpedo, Syndicruiser)
+      to FTL.
+- id: 12
+  author: LateFinny
+  time: '2025-03-15T16:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/12
+  changes:
+  - type: Add
+    message: New plushie, Scarlet! A moff!
+- id: 13
+  author: ReboundQ3
+  time: '2025-03-15T16:18:25Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/11
+  changes:
+  - type: Add
+    message: Added two new moth wing markings
+  - type: Add
+    message: Added one new moth chest scar
+- id: 14
+  author: LateFinny
+  time: '2025-03-15T21:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/13
+  changes:
+  - type: Add
+    message: 7 new plushies.
+  - type: Fix
+    message: Added comments to a few existing plushies made by Rellu.

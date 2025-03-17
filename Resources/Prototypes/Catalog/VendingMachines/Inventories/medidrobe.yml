@@ -29,6 +29,8 @@
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
-    ToyPlushieLucerne: 1
-    ToyPlushieQuiet: 1
-    ToyPlushieSnacks: 1
+    ToyPlushieLucerne: 1 ##LateStation
+    ToyPlushieQuiet: 1 ##LateStation
+    ToyPlushieSnacks: 1 ##LateStation
+    ToyPlushieEris: 1 ##Latestation
+    ToyPlushieIris: 1 ##Latestation
