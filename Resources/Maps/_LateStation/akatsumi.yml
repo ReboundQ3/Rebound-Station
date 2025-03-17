@@ -3879,7 +3879,7 @@ entities:
     - type: Transform
       pos: -3.5,-12.5
       parent: 2
-  - uid: 2046
+  - uid: 4001
     components:
     - type: Transform
       pos: 5.5,-12.5
@@ -11888,7 +11888,7 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#FF1212FF'
-  - uid: 2009
+  - uid: 4003
     components:
     - type: Transform
       pos: 9.5,-42.5
@@ -16008,17 +16008,17 @@ entities:
     - type: InsideEntityStorage
 - proto: LootSpawnerIndustrial
   entities:
-  - uid: 1979
+  - uid: 4007
     components:
     - type: Transform
       pos: 19.5,-6.5
       parent: 2
-  - uid: 1980
+  - uid: 4002
     components:
     - type: Transform
       pos: 21.5,-6.5
       parent: 2
-  - uid: 2045
+  - uid: 4005
     components:
     - type: Transform
       pos: 13.5,-17.5
@@ -16238,7 +16238,7 @@ entities:
     - type: Transform
       pos: -0.5,-43.5
       parent: 2
-  - uid: 2329
+  - uid: 4006
     components:
     - type: Transform
       pos: -1.5,-34.5
@@ -16261,7 +16261,7 @@ entities:
     - type: InsideEntityStorage
 - proto: PlaqueAtmos
   entities:
-  - uid: 3042
+  - uid: 4008
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -18370,13 +18370,13 @@ entities:
       parent: 2
 - proto: RandomPainting
   entities:
-  - uid: 3043
+  - uid: 4009
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 5.5,-9.5
       parent: 2
-  - uid: 3044
+  - uid: 4008
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -18399,14 +18399,14 @@ entities:
     - type: Transform
       pos: -7.5,-21.5
       parent: 2
-  - uid: 3055
+  - uid: 4013
     components:
     - type: Transform
       pos: -14.5,-19.5
       parent: 2
 - proto: RandomSpawner100
   entities:
-  - uid: 3052
+  - uid: 4014
     components:
     - type: Transform
       pos: 15.5,-20.5
@@ -18427,17 +18427,17 @@ entities:
       parent: 2
 - proto: RandomSpawner
   entities:
-  - uid: 3049
+  - uid: 4010
     components:
     - type: Transform
       pos: 8.5,-21.5
       parent: 2
-  - uid: 3053
+  - uid: 4011
     components:
     - type: Transform
       pos: 6.5,-28.5
       parent: 2
-  - uid: 3054
+  - uid: 4012
     components:
     - type: Transform
       pos: -7.5,-21.5
@@ -20690,7 +20690,7 @@ entities:
     - type: Transform
       pos: -20.5,-14.5
       parent: 2
-  - uid: 3047
+  - uid: 4004
     components:
     - type: Transform
       pos: -21.5,-14.5
