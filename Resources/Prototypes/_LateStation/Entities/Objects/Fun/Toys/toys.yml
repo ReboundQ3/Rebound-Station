@@ -701,7 +701,7 @@
     - type: Extractable
       juiceSolution:
        reagents:
-        - ReagentId: Water
+        - ReagentId: SuiDream
           Quantity: 30
     - type: SolutionContainerManager
       solutions:
@@ -710,7 +710,7 @@
           reagents:
           - ReagentId: Fiber
             Quantity: 10
-          - ReagentId: Water
+          - ReagentId: SuiDream
             Quantity: 10
 
  -  type: entity
@@ -747,7 +747,7 @@
     - type: Extractable
       juiceSolution:
        reagents:
-        - ReagentId: Water
+        - ReagentId: Puncturase
           Quantity: 30
     - type: SolutionContainerManager
       solutions:
@@ -756,7 +756,7 @@
           reagents:
           - ReagentId: Fiber
             Quantity: 10
-          - ReagentId: Water
+          - ReagentId: Puncturase
             Quantity: 10
 
  -  type: entity
