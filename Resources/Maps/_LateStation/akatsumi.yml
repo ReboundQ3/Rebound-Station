@@ -16261,7 +16261,7 @@ entities:
     - type: InsideEntityStorage
 - proto: PlaqueAtmos
   entities:
-  - uid: 4008
+  - uid: 4020
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
