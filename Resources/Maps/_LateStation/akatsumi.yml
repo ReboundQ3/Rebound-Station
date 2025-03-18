@@ -1732,7 +1732,6 @@ entities:
     - type: DeviceList
       devices:
       - 2117
-      - 1828
   - uid: 2890
     components:
     - type: Transform
@@ -14514,18 +14513,6 @@ entities:
       - 2877
     - type: AtmosPipeColor
       color: '#0335FCFF'
-- proto: GasVentScrubber
-  entities:
-  - uid: 1828
-    components:
-    - type: Transform
-      pos: 4.5,-25.5
-      parent: 2
-    - type: DeviceNetwork
-      deviceLists:
-      - 2881
-    - type: AtmosPipeColor
-      color: '#FF1212FF'
   - uid: 1863
     components:
     - type: Transform
