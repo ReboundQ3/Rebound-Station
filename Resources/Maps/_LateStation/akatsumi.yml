@@ -1697,7 +1697,6 @@ entities:
     - type: DeviceList
       devices:
       - 1916
-      - 1852
       - 1963
       - 1863
       - 2603
@@ -14249,19 +14248,6 @@ entities:
       color: '#A020F0FF'
     - type: GasValve
       open: False
-- proto: GasVentPump
-  entities:
-  - uid: 1852
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,-10.5
-      parent: 2
-    - type: DeviceNetwork
-      deviceLists:
-      - 2878
-    - type: AtmosPipeColor
-      color: '#0335FCFF'
   - uid: 1890
     components:
     - type: Transform
