@@ -115,3 +115,9 @@ Entries:
         category chemicals.
   id: 15
   time: '2025-03-17T21:35:52.0000000+00:00'
+- author: Lachryphage
+  changes:
+    - type: Fix
+      message: Fixed multiple glaring QoL and gameplay issues present on Akatsumi
+  id: 16
+  time: '2025-03-18T11:09:50.0000000+00:00'
