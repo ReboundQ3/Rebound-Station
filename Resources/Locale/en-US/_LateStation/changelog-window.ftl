@@ -1,1 +1,1 @@
-changelog-tab-title-LateStation = LateStation Changelog
+changelog-tab-title-LateStation = LateStation

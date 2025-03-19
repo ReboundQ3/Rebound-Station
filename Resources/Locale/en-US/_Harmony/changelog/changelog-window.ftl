@@ -1,1 +1,1 @@
-changelog-tab-title-Harmony = Harmony Changelog
+changelog-tab-title-Harmony = Harmony
