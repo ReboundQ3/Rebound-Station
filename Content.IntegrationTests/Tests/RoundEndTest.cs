@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 using Content.Server.GameTicking;
 using Content.Server.RoundEnd;
@@ -59,6 +58,7 @@ namespace Content.IntegrationTests.Tests
 
             await server.WaitAssertion(() =>
             {
+
                 // Press the shuttle call button
                 roundEndSystem.RequestRoundEnd();
                 Assert.Multiple(() =>
@@ -128,8 +128,8 @@ namespace Content.IntegrationTests.Tests
             async Task WaitForEvent()
             {
                 var timeout = Task.Delay(TimeSpan.FromSeconds(10));
-                var currentCount = Volatile.Read(ref sys.RoundCount);
-                while (currentCount == Volatile.Read(ref sys.RoundCount) && !timeout.IsCompleted)
+                var currentCount = Thread.VolatileRead(ref sys.RoundCount);
+                while (currentCount == Thread.VolatileRead(ref sys.RoundCount) && !timeout.IsCompleted)
                 {
                     await pair.RunTicksSync(5);
                 }
