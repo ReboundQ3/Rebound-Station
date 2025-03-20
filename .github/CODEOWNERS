@@ -1,25 +1,25 @@
 # Last match in file takes precedence.
 
 # Everything
-*                                                   @ReboundQ3
+*                                                   @ReboundQ3 @LateFinny
 
 # C# code
-/Content.*/                                         @ReboundQ3
+/Content.*/                                         @ReboundQ3 @LateFinny
 
 # YML files
-/Resources/*.yml                                    @ReboundQ3
-/Resources/**/*.yml                                 @ReboundQ3
+/Resources/*.yml                                    @ReboundQ3 @LateFinny
+/Resources/**/*.yml                                 @ReboundQ3 @LateFinny
 
 # Sprites
-/Resources/Textures/                                @ReboundQ3
+/Resources/Textures/                                @ReboundQ3 @LateFinny
 
 # Lobby art and music
-/Resources/Audio/Lobby/                             @ReboundQ3
-/Resources/Textures/LobbyScreens/                   @ReboundQ3
+/Resources/Audio/Lobby/                             @ReboundQ3 @LateFinny
+/Resources/Textures/LobbyScreens/                   @ReboundQ3 @LateFinny
  
 
 # Maps
-/Resources/Maps/                                    @ReboundQ3
-/Resources/Prototypes/Maps/                         @ReboundQ3
-/Resources/Prototypes/_LateStation/Maps/            @ReboundQ3    
-/Content.IntegrationTests/Tests/PostMapInitTest.cs  @ReboundQ3
+/Resources/Maps/                                    @ReboundQ3 @LateFinny
+/Resources/Prototypes/Maps/                         @ReboundQ3 @LateFinny
+/Resources/Prototypes/_LateStation/Maps/            @ReboundQ3 @LateFinny
+/Content.IntegrationTests/Tests/PostMapInitTest.cs  @ReboundQ3 @LateFinny
