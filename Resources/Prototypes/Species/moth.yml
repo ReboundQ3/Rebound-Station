@@ -66,7 +66,7 @@
       points: 3
       required: false
     Chest:
-      points: 2
+      points: 4
       required: false
     Legs:
       points: 6
