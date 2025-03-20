@@ -121,3 +121,13 @@ Entries:
       message: Fixed multiple glaring QoL and gameplay issues present on Akatsumi
   id: 16
   time: '2025-03-18T11:09:50.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Actual working records computers.
+    - type: Add
+      message: Moth squaking sounds while speaking.
+    - type: Tweak
+      message: Naming system tweaked to simplify it.
+  id: 17
+  time: '2025-03-20T16:41:06.0000000+00:00'
