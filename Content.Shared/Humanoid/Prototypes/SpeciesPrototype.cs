@@ -82,13 +82,13 @@ public sealed partial class SpeciesPrototype : IPrototype
     public HumanoidSkinColor SkinColoration { get; private set; }
 
     [DataField]
-    public string MaleFirstNames { get; private set; } = "NamesFirstMale";
+    public string MaleFirstNames { get; private set; } = "names_first_male";
 
     [DataField]
-    public string FemaleFirstNames { get; private set; } = "NamesFirstFemale";
+    public string FemaleFirstNames { get; private set; } = "names_first_female";
 
     [DataField]
-    public string LastNames { get; private set; } = "NamesLast";
+    public string LastNames { get; private set; } = "names_last";
 
     [DataField]
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;
@@ -120,6 +120,42 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public int MaxAge = 120;
+
+    /// <summary>
+    /// The minimum height for this species
+    /// </summary>
+    [DataField("minHeight")]
+    public float MinHeight = 0.5f;
+
+    /// <summary>
+    /// The maximum height for this species
+    /// </summary>
+    [DataField("maxHeight")]
+    public float MaxHeight = 1.4f;
+
+    /// <summary>
+    /// The default height for this species
+    /// </summary>
+    [DataField("defaultHeight")]
+    public float DefaultHeight = 1f;
+
+    /// <summary>
+    /// The default width for this species
+    /// </summary>
+    [DataField("defaultWidth")]
+    public float DefaultWidth = 1f;
+
+    /// <summary>
+    /// Whether to scale horizontally or not
+    /// </summary>
+    [DataField("scaleWidth")]
+    public bool ScaleWidth = true;
+
+    /// <summary>
+    /// Whether to scale vertically or not
+    /// </summary>
+    [DataField("scaleHeight")]
+    public bool ScaleHeight = true;
 }
 
 public enum SpeciesNaming : byte
@@ -128,4 +164,5 @@ public enum SpeciesNaming : byte
     FirstLast,
     FirstDashFirst,
     TheFirstofLast,
+    LastFirst, // CD addition
 }

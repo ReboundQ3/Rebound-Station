@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using Content.Shared.CCVar;
 using Content.Shared.Decals;
 using Content.Shared.Examine;
@@ -152,6 +153,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
         targetHumanoid.MarkingSet = new(sourceHumanoid.MarkingSet);
+
+        targetHumanoid.Height = sourceHumanoid.Height; // CD Change
 
         targetHumanoid.Gender = sourceHumanoid.Gender;
         if (TryComp<GrammarComponent>(target, out var grammar))
@@ -414,6 +417,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+		humanoid.Height = profile.Height;
 
         Dirty(uid, humanoid);
     }
