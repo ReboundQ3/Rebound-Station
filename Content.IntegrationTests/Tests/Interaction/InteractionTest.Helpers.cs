@@ -62,7 +62,10 @@ public abstract partial class InteractionTest
 
         // Please someone purge async construction code
         Task<bool> task = default!;
-        await Server.WaitPost(() => task = SConstruction.TryStartItemConstruction(prototype, SEntMan.GetEntity(Player)));
+        await Server.WaitPost(() =>
+        {
+            task = SConstruction.TryStartItemConstruction(prototype, SEntMan.GetEntity(Player));
+        });
 
         Task? tickTask = null;
         while (!task.IsCompleted)
@@ -783,12 +786,13 @@ public abstract partial class InteractionTest
             if (proto == null)
                 return;
 
+            // Create a new grid
             gridEnt = MapMan.CreateGridEntity(MapData.MapId);
             grid = gridEnt;
             gridUid = gridEnt;
             gridComp = gridEnt.Comp;
-            var gridXform = SEntMan.GetComponent<TransformComponent>(gridUid);
-            Transform.SetWorldPosition(gridXform, pos.Position);
+            // Use the overload that takes the entity directly.
+            Transform.SetWorldPosition(gridEnt, pos.Position);
             MapSystem.SetTile((gridUid, gridComp), SEntMan.GetCoordinates(coords ?? TargetCoords), tile);
 
             if (!MapMan.TryFindGridAt(pos, out _, out _))
@@ -1180,8 +1184,6 @@ public abstract partial class InteractionTest
     #endregion
 
     #region Inputs
-
-
 
     /// <summary>
     ///     Make the client press and then release a key. This assumes the key is currently released.
