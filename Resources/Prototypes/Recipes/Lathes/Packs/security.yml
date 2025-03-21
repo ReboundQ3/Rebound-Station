@@ -131,6 +131,7 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
+  - WeaponEnergyAutorifle # Latestation addition
 
 - type: latheRecipePack
   id: SecurityDisablers

@@ -143,6 +143,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponEnergyAutorifle # Latestation Addition
 
 - type: technology
   id: WaveParticleHarnessing

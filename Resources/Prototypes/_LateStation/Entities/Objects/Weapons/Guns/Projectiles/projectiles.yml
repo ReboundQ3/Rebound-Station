@@ -1,0 +1,11 @@
+- type: entity
+  name: laser bolt weak
+  id: BulletLaserWeak
+  parent: BulletLaser
+  categories: [ HideSpawnMenu ]
+  components:  
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 6
