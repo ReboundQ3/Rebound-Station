@@ -131,3 +131,13 @@ Entries:
       message: Naming system tweaked to simplify it.
   id: 17
   time: '2025-03-20T16:41:06.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Valley Girl Accent; can be toggled on any character from the traits
+        menu, like any other speech accent.
+    - type: Add
+      message: Valley Girl Accent -component.
+  id: 18
+  time: '2025-03-21T11:28:08.0000000+00:00'
