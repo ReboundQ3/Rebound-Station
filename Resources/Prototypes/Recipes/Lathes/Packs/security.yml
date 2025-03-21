@@ -73,6 +73,7 @@
   - PowerCageMedium
   - PowerCageSmall
   - TelescopicShield
+  - Binoculars # LateStation change: Part of lens research (former laser rifle)
 
 - type: latheRecipePack
   id: SecurityBoards

@@ -38,7 +38,7 @@
 
 - type: technology
   id: WeaponizedLaserManipulation
-  name: research-technology-weaponized-laser-manipulation
+  name: research-technology-weaponized-laser-manipulation # Latestation change: name changed to "Basic Lenses and Laser Manipulation" in the .ftl file, to minimize future conflicts.
   icon:
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
     state: icon
@@ -47,6 +47,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - Binoculars # Latestation addition.
 
 - type: technology
   id: NonlethalAmmunition
