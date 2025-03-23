@@ -8,18 +8,16 @@
   color: "#FFD700"
   metabolisms: # Any effects are TODO. No actual consumption is decided, so any effects are just the same as vestine.
     Poison:
+      metabolismRate : 0.25 # Takes a good while to get off your system...
       effects:
       - !type:Jitter
-        conditions:
-        - !type:ReagentThreshold
-          min: 5
-      - !type:MovespeedModifier
-        walkSpeedModifier: 0.8
-        sprintSpeedModifier: 0.8
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
       - !type:HealthChange
         damage:
-          groups:
-            Airloss: 2
+          types:
+            Cellular: 1 
 
 # Heals most of everything practically instantly instantly.
 - type: reagent
@@ -88,3 +86,56 @@
       - !type:Emote
         emote: Scream
         probability: 0.1
+
+#Cryo arith, nuff said
+- type: reagent
+  id : SapphireArithrazine
+  name: reagent-name-sapphirearithrazine
+  group: Experimental
+  desc: reagent-desc-sapphirearithrazine
+  physicalDesc: reagent-physical-desc-viscous
+  flavor: acid
+  color: "#0067bc"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Radiation: -2
+            Cold: 3
+          groups:
+            Brute: 2
+
+#Cryo diphen, with a downside!
+- type: reagent
+  id : AzureDiphenhydramine
+  name: reagent-name-azurediphenhydramine
+  group: Experimental
+  desc: reagent-desc-azurediphenhydramine
+  physicalDesc: reagent-physical-desc-frosty
+  flavor: medicine
+  color: "#0080FF"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:Temperature
+          min: 175
+        damage:
+          types:
+            Poison: 3
+      - !type:HealthChange
+        conditions:
+        - !type:Temperature
+          max: 170
+        damage:
+          types:
+            Poison: -1
+            Cold: 3

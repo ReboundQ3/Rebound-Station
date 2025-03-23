@@ -6,7 +6,7 @@
     Aetherium:
       amount: 1
     Gold:
-      amount: 4
+      amount: 5
   products:
     AuricOmnizine: 4
 
@@ -14,10 +14,34 @@
   id: CrimsonRazorium
   reactants:
     Razorium:
-      amount: 4
+      amount: 6
     Aetherium:
       amount: 1
     TranexamicAcid:
       amount: 3
   products:
-    CrimsonRazorium: 8
+    CrimsonRazorium: 10
+
+- type: reaction
+  id: SapphireArithrazine
+  reactants:
+    Arithrazine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Cryoxadone:
+      amount: 10
+  products:
+    SapphireArithrazine: 10
+
+- type: reaction
+  id: AzureDiphenhydramine
+  reactants:
+    Diphenhydramine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Cryoxadone:
+      amount: 10
+  products:
+    AzureDiphenhydramine: 5

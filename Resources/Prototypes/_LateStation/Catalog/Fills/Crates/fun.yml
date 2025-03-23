@@ -1,0 +1,27 @@
+- type: entity
+  id: CrateFunLatePlushie
+  parent: CrateGenericSteel
+  name: special plushie collection crate
+  description: A bunch of peculiar little plushies. Has an assortment of marketable plushies!
+  components:
+  - type: StorageFill
+    contents:
+    - id: ToyPlushieAtlas
+    - id: ToyPlushieDrafts
+    - id: ToyPlushieEris
+    - id: ToyPlushieGarret
+    - id: ToyPlushieHides
+    - id: ToyPlushieIris
+    - id: ToyPlushieJuni
+    - id: ToyPlushieKicks
+    - id: ToyPlushieLucerne
+    - id: ToyPlushieQuiet
+    - id: ToyPlushieRadios
+    - id: ToyPlushieRose
+    - id: ToyPlushieSam
+    - id: ToyPlushieSnacks
+    - id: ToyPlushieSleeps
+      prob: 0.1 # Sleeps is a semi secret
+    - id: ToyPlushieScarlet
+      prob: 0.1 # Scarlet has nocturine
+    - id: ToyPlushieThriz
