@@ -9,6 +9,18 @@
     "states": [
         {
             "name": "sleeps-plushie"
+        },
+        {
+            "name": "sleeps-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "sleeps-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "sleeps-inhand-right",
+            "directions": 4
         }
     ]
 }

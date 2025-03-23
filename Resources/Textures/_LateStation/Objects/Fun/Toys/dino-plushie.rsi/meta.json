@@ -8,18 +8,18 @@
     },
     "states": [
         {
-            "name": "kicks-plushie"
+            "name": "dino-plushie"
         },
         {
-            "name": "kicks-equipped-HELMET",
+            "name": "dino-equipped-HELMET",
             "directions": 4
         },
         {
-            "name": "kicks-inhand-left",
+            "name": "dino-inhand-left",
             "directions": 4
         },
         {
-            "name": "kicks-inhand-right",
+            "name": "dino-inhand-right",
             "directions": 4
         }
     ]

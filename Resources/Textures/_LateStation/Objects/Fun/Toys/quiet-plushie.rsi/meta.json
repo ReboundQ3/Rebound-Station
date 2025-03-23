@@ -13,6 +13,14 @@
         {
             "name": "quiet-equipped-HELMET",
             "directions": 4
+        },
+        {
+            "name": "quiet-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "quiet-inhand-right",
+            "directions": 4
         }
     ]
 }

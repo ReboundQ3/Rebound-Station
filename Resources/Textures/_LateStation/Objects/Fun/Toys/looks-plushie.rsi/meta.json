@@ -8,18 +8,18 @@
     },
     "states": [
         {
-            "name": "kicks-plushie"
+            "name": "looks-plushie"
         },
         {
-            "name": "kicks-equipped-HELMET",
+            "name": "looks-equipped-HELMET",
             "directions": 4
         },
         {
-            "name": "kicks-inhand-left",
+            "name": "looks-inhand-left",
             "directions": 4
         },
         {
-            "name": "kicks-inhand-right",
+            "name": "looks-inhand-right",
             "directions": 4
         }
     ]
