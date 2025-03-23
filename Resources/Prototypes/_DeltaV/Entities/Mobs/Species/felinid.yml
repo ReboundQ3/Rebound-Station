@@ -44,11 +44,11 @@
   - type: TypingIndicator
     proto: felinid
   - type: Vocal
-    wilhelm: "/Audio/_LateStation/Voice/Felinid/cat_wilhelm.ogg"
+    wilhelm: "/Audio/_DeltaV/Voice/Felinid/cat_wilhelm.ogg"
     sounds:
-      Male: MaleFelinid
-      Female: FemaleFelinid
-      Unsexed: MaleFelinid
+      Male: SoundsFelinid
+      Female: SoundsFelinid
+      Unsexed: SoundsFelinid
   - type: Reactive
     groups:
       Flammable: [ Touch ]
