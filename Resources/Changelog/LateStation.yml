@@ -171,3 +171,17 @@ Entries:
         techfab.
   id: 21
   time: '2025-03-22T19:21:07.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Sapphire Arithrazine and Azure Diphenhydramine, two new cryo chems made
+        using Aetherium.
+    - type: Add
+      message: >-
+        Special Plushie Crate to cargo order console; contains all (current)
+        LateStation plushies! Not all guaranteed though.
+    - type: Tweak
+      message: Aetherium is now deadlier.
+  id: 22
+  time: '2025-03-23T12:01:15.0000000+00:00'
