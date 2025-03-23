@@ -1,0 +1,26 @@
+{
+    "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Rellu225 for Latestation",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "dino-plushie"
+        },
+        {
+            "name": "dino-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "dino-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "dino-inhand-right",
+            "directions": 4
+        }
+    ]
+}
