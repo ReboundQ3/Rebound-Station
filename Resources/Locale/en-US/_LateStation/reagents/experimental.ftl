@@ -6,3 +6,9 @@ reagent-desc-auricomnizine = A miracle cure. What you get when you combine the c
 
 reagent-name-crimsonrazorium = crimson razorium
 reagent-desc-crimsonrazorium = An extremely deadly liquid, causes extreme internal bleeding. Results in very rapid death when ingested. Avoid at all costs.
+
+reagent-name-sapphirearithrazine = sapphire arithrazine
+reagent-desc-sapphirearithrazine = A curious mix of arithrazine and aetherium; a cryogenic medicine that works on radiation. As a side effect, it both acts slower and causes severe cold burns on the body, on top of the physical stress.
+
+reagent-name-azurediphenhydramine = azure diphenhydramine
+reagent-desc-azurediphenhydramine = An unexpected combination of diphenhydramine and Aetherium, resulting in a cryogenic medicine that can treat even the dead. Causes severe cold burns, and is incredibly toxic if used at higher temperatures.
