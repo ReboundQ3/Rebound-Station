@@ -185,3 +185,13 @@ Entries:
       message: Aetherium is now deadlier.
   id: 22
   time: '2025-03-23T12:01:15.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Add
+      message: Added more plushies!!!
+    - type: Add
+      message: sprites for inhand lizard plushies
+    - type: Tweak
+      message: tweaked the description of some plushies
+  id: 23
+  time: '2025-03-23T16:00:26.0000000+00:00'
