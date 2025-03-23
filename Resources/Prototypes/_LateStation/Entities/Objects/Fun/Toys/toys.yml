@@ -245,7 +245,7 @@
    - type: Extractable
      juiceSolution:
       reagents:
-      - ReagentId: MaterialGunpowder
+      - ReagentId: JuiceOrange
         Quantity: 30
    - type: SolutionContainerManager
      solutions:
@@ -254,7 +254,7 @@
         reagents:
         - ReagentId: Fiber
           Quantity: 10
-        - ReagentId: MaterialGunpowder
+        - ReagentId: JuiceOrange
           Quantity: 10
    - type: Speech
      speechVerb: Default
