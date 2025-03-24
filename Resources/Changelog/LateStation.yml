@@ -195,3 +195,9 @@ Entries:
       message: tweaked the description of some plushies
   id: 23
   time: '2025-03-23T16:00:26.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed a bug with the name of antag roles.
+  id: 24
+  time: '2025-03-24T14:04:43.0000000+00:00'
