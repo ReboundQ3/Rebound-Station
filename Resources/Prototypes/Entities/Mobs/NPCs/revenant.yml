@@ -73,10 +73,10 @@
   - type: RandomMetadata
     nameSegments:
     - The
-    - NamesRevenantType
+    - RevenantType
     - of
-    - NamesRevenantAdjective
-    - NamesRevenantTheme
+    - RevenantAdjective
+    - RevenantTheme
   - type: Speech
     speechVerb: Ghost
   - type: Reactive
