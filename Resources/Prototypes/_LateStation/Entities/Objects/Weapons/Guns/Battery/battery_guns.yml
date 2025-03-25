@@ -28,11 +28,11 @@
   - type: StaticPrice
     price: 600
   - type: Battery
-    maxCharge: 2080
-    startingCharge: 2080
+    maxCharge: 1560
+    startingCharge: 1560
   - type: ProjectileBatteryAmmoProvider
     proto: BulletLaserWeak
-    fireCost: 80
+    fireCost: 60
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus

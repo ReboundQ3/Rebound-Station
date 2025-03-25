@@ -45,3 +45,27 @@
       amount: 10
   products:
     AzureDiphenhydramine: 5
+
+- type: reaction
+  id: AgentC
+  reactants:
+    Necrosol:
+      amount: 5
+    Aetherium:
+      amount: 1
+    CarpoToxin:
+      amount: 5
+  products:
+    AgentC: 5
+
+- type: reaction
+  id: GlowthJuice
+  reactants:
+    Sulfur:
+      amount: 10
+    Aetherium:
+      amount: 1
+    Carbon:
+      amount: 10
+  products:
+    GlowthJuice: 20

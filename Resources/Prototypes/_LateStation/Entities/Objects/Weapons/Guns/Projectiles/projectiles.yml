@@ -8,4 +8,4 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 6
+        Heat: 8

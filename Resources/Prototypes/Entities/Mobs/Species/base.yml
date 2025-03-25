@@ -138,6 +138,7 @@
     - RadiationProtection
     - Drowsiness
     - Adrenaline
+    - PointLight # Latestation addition; Glowth Juice -chemical.
   - type: Body
     prototype: Human
     requiredLegs: 2
