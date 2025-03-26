@@ -26,7 +26,7 @@
       state: icon
     - type: RandomMetadata
       nameSegments:
-        - NamesMilitaryFirstLeader
+        - NamesFirstMilitaryLeader
         - NamesMilitaryLast
     - type: RandomHumanoidSpawner
       settings: DeathSquad
@@ -49,7 +49,7 @@
       roleLoadout: [ RoleSurvivalEVA ]
     - type: RandomMetadata
       nameSegments:
-        - NamesMilitaryFirstLeader
+        - NamesFirstMilitaryLeader
         - NamesMilitaryLast
 
 
@@ -65,7 +65,7 @@
       state: ertleader
     - type: RandomMetadata
       nameSegments:
-      - NamesMilitaryFirstLeader
+      - NamesFirstMilitaryLeader
       - NamesMilitaryLast
     - type: RandomHumanoidSpawner
       settings: ERTLeader
@@ -87,7 +87,7 @@
       roleLoadout: [ RoleSurvivalExtended ]
     - type: RandomMetadata
       nameSegments:
-      - NamesMilitaryFirstLeader
+      - NamesFirstMilitaryLeader
       - NamesMilitaryLast
 
 - type: entity
