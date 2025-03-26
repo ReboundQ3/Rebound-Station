@@ -32,3 +32,12 @@
   sprites:
   - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
     state: voltaic_scar
+
+- type: marking
+  id: MothAntennaeSoftcoat
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Moth]
+  sprites:
+  - sprite: _LateStation/Mobs/Customization/Moth/VS_moth_wings.rsi
+    state: softcoat_antennae
