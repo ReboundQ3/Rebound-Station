@@ -51,6 +51,7 @@ namespace Content.IntegrationTests.Tests
         {
             "/Maps/centcomm.yml",
             "/Maps/_Harmony/centcomm.yml", // Harmony CC version
+            "/Maps/_Harmony/eclipse.yml", // Harmony Map - Contains Matter Dematerializer and svalinn shuttle guns.
             "/Maps/_Harmony/xeno.yml", // Harmony map - Contains Matter Dematerializer
             "/Maps/_LateStation/akatsumi.yml", //LateStation map - Contains a billion illegal things.
             "/Maps/_Harmony/Nonstations/listening-outpost.yml", // Harmony - Contains a billion illegal things
@@ -78,8 +79,9 @@ namespace Content.IntegrationTests.Tests
             "Aspid", // Harmony, playtest for upstream by Golinth
             "Atlas", // Harmony revived by Kravin
             "Mira", // Harmony, developed by tanuko
+            "Eclipse", //Harmony, Developed by Lachryphage
             "Torpedo", // LateStation, developed by Rellu
-            "Akatsumi", // LateStation, developed by Lachri
+            "Akatsumi", // LateStation, developed by Lachryphage
             "Dev",
             "TestTeg",
             "Fland",
