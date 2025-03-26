@@ -201,3 +201,17 @@ Entries:
       message: Fixed a bug with the name of antag roles.
   id: 24
   time: '2025-03-24T14:04:43.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: Two new chemicals; Imperial Hyperzine and Glowth Juice
+    - type: Add
+      message: More plushies to the plushie order crate!
+    - type: Tweak
+      message: Energy Autorifle battery size and firepower slightly tweaked
+    - type: Tweak
+      message: >-
+        Slightly adjusted Azure Diphenhydramine values, making it slightly more
+        potent.
+  id: 25
+  time: '2025-03-26T08:17:33.0000000+00:00'
