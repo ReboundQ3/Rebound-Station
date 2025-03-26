@@ -425,7 +425,7 @@
       roleLoadout: [ RoleSurvivalClown ]
     - type: RandomMetadata
       nameSegments:
-      - NamesClown
+      - names_clown
 
 - type: randomHumanoidSettings
   id: VisitorJanitor
