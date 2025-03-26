@@ -1,0 +1,16 @@
+# species
+- type: emoteSounds
+  id: SoundsFelinid
+  sounds:
+    Hiss:
+      collection: FelinidHisses
+    Meow:
+      collection: FelinidMeows
+    Mew:
+      collection: FelinidMews
+    Growl:
+      collection: FelinidGrowls
+    Purr:
+      collection: FelinidPurrs
+    Scream:
+      collection: FelinidScreams

@@ -1,0 +1,217 @@
+Name: LateStation
+Order: -1
+Entries:
+- id: 2
+  author: ReboundQ3
+  time: '2025-01-21T21:43:36.0000000+00:00'
+  url: https://github.com/ReboundQ3/Late-station-14
+  changes:
+    - type: Fix
+      message: Had to change stuff again... since well i broke it again.
+- id: 3
+  author: ReboundQ3
+  time: '2025-01-24T17:32:36.0000000+00:00'
+  url: https://github.com/new-frontiers-14/frontier-station-14/pull/2771
+  changes:
+    - type: Add
+      message: >-
+        Ported over the markings from the Impstation repo check the pull request
+        above for more details.
+- id: 4
+  author: ReboundQ3
+  time: '2025-02-1T12:43:00.0000000+00:00'
+  changes:
+    - type: Add
+      message: >-
+        Felinids have migrated from Frontier Sector To Late Sector! (Felinid's
+        have been added).
+- id: 5
+  author: ReboundQ3
+  time: '2025-03-05T08:15:53Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/5
+  changes:
+    - type: Fix
+      message: Fixed Torpedo and is now ready for commissioning
+- id: 6
+  author: Rellu225
+  time: '2025-03-03T18:47:36Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/4
+  changes:
+    - type: Add
+      message: Added a new station for low population servers.
+- id: 7
+  author: Anzuneth
+  time: '2025-02-28T09:11:30Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/3
+  changes:
+    - type: Add
+      message: Added a new coat, acquired from a hacked medidrobe
+- id: 8
+  author: Rellu225
+  time: '2025-03-09T17:09:48Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/6
+  changes:
+    - type: Fix
+      message: Fixed some minor mistakes with the map.
+- id: 9
+  author: Rellu225
+  time: '2025-03-11T15:01:33Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/8
+  changes:
+    - type: Add
+      message: Camera network to Torpedo station.
+    - type: Fix
+      message: Fixed original camera network
+    - type: Tweak
+      message: Tweaked Science departament to fit more machinery
+- id: 10
+  author: Rellu225
+  time: '2025-03-14T14:45:34Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/9
+  changes:
+    - type: Add
+      message: Added a ton of plushies.
+- id: 11
+  author: Lachryphage
+  time: '2025-03-15T15:04:26Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/10
+  changes:
+    - type: Tweak
+      message: >-
+        adjusted FTL mass limit to allow micro stations (Reach, Torpedo,
+        Syndicruiser) to FTL.
+- id: 12
+  author: LateFinny
+  time: '2025-03-15T16:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/12
+  changes:
+    - type: Add
+      message: New plushie, Scarlet! A moff!
+- id: 13
+  author: ReboundQ3
+  time: '2025-03-15T16:18:25Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/11
+  changes:
+    - type: Add
+      message: Added two new moth wing markings
+    - type: Add
+      message: Added one new moth chest scar
+- id: 14
+  author: LateFinny
+  time: '2025-03-15T21:29:14Z'
+  url: https://github.com/LateStation14/Late-station-14/pull/13
+  changes:
+    - type: Add
+      message: 7 new plushies.
+    - type: Fix
+      message: Added comments to a few existing plushies made by Rellu.
+- author: LateFinny
+  changes:
+    - type: Add
+      message: 'Three new chemicals: Aetherium, Crimson Razorium, Auric Omnizine.'
+    - type: Add
+      message: >-
+        Small changes to the guidebook to include the new "experimental"
+        category chemicals.
+  id: 15
+  time: '2025-03-17T21:35:52.0000000+00:00'
+- author: Lachryphage
+  changes:
+    - type: Fix
+      message: Fixed multiple glaring QoL and gameplay issues present on Akatsumi
+  id: 16
+  time: '2025-03-18T11:09:50.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Actual working records computers.
+    - type: Add
+      message: Moth squaking sounds while speaking.
+    - type: Tweak
+      message: Naming system tweaked to simplify it.
+  id: 17
+  time: '2025-03-20T16:41:06.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Valley Girl Accent; can be toggled on any character from the traits
+        menu, like any other speech accent.
+    - type: Add
+      message: Valley Girl Accent -component.
+  id: 18
+  time: '2025-03-21T11:28:08.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Tweak
+      message: tweaked Akatsumi job spawns and balance for Harmony PR
+  id: 19
+  time: '2025-03-22T12:14:27.0000000+00:00'
+- author: EirenexTheDragon
+  changes:
+    - type: Tweak
+      message: >-
+        Ileyra Varimeiren (Cargo Technician) has joined the station! (Valleygirl
+        Accent update)
+  id: 20
+  time: '2025-03-22T12:23:14.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: The Energy Autorifle, a new energy based weapon for crew.
+    - type: Tweak
+      message: >-
+        Concentrated lasers now unlocks the ability to make the Energy Autorifle
+        at a security techfab.
+    - type: Tweak
+      message: Laser research changed to lens research
+    - type: Tweak
+      message: >-
+        Lens research unlocks the ability to make binoculars from the security
+        techfab.
+  id: 21
+  time: '2025-03-22T19:21:07.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Sapphire Arithrazine and Azure Diphenhydramine, two new cryo chems made
+        using Aetherium.
+    - type: Add
+      message: >-
+        Special Plushie Crate to cargo order console; contains all (current)
+        LateStation plushies! Not all guaranteed though.
+    - type: Tweak
+      message: Aetherium is now deadlier.
+  id: 22
+  time: '2025-03-23T12:01:15.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Add
+      message: Added more plushies!!!
+    - type: Add
+      message: sprites for inhand lizard plushies
+    - type: Tweak
+      message: tweaked the description of some plushies
+  id: 23
+  time: '2025-03-23T16:00:26.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed a bug with the name of antag roles.
+  id: 24
+  time: '2025-03-24T14:04:43.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: Two new chemicals; Imperial Hyperzine and Glowth Juice
+    - type: Add
+      message: More plushies to the plushie order crate!
+    - type: Tweak
+      message: Energy Autorifle battery size and firepower slightly tweaked
+    - type: Tweak
+      message: >-
+        Slightly adjusted Azure Diphenhydramine values, making it slightly more
+        potent.
+  id: 25
+  time: '2025-03-26T08:17:33.0000000+00:00'

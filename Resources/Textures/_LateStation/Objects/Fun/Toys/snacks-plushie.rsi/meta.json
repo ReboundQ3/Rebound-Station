@@ -1,0 +1,26 @@
+{
+    "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Rellu225 for Latestation",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "snacks-plushie"
+        },
+        {
+            "name": "snacks-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "snacks-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "snacks-inhand-right",
+            "directions": 4
+        }
+    ]
+}

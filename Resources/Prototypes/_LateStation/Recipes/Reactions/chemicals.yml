@@ -1,0 +1,71 @@
+- type: reaction
+  id: AuricOmnizine
+  reactants:
+    Omnizine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Gold:
+      amount: 5
+  products:
+    AuricOmnizine: 4
+
+- type: reaction
+  id: CrimsonRazorium
+  reactants:
+    Razorium:
+      amount: 6
+    Aetherium:
+      amount: 1
+    TranexamicAcid:
+      amount: 3
+  products:
+    CrimsonRazorium: 10
+
+- type: reaction
+  id: SapphireArithrazine
+  reactants:
+    Arithrazine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Cryoxadone:
+      amount: 10
+  products:
+    SapphireArithrazine: 10
+
+- type: reaction
+  id: AzureDiphenhydramine
+  reactants:
+    Diphenhydramine:
+      amount: 4
+    Aetherium:
+      amount: 1
+    Cryoxadone:
+      amount: 10
+  products:
+    AzureDiphenhydramine: 5
+
+- type: reaction
+  id: AgentC
+  reactants:
+    Necrosol:
+      amount: 5
+    Aetherium:
+      amount: 1
+    CarpoToxin:
+      amount: 5
+  products:
+    AgentC: 5
+
+- type: reaction
+  id: GlowthJuice
+  reactants:
+    Sulfur:
+      amount: 10
+    Aetherium:
+      amount: 1
+    Carbon:
+      amount: 10
+  products:
+    GlowthJuice: 20

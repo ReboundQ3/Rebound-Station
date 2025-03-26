@@ -1,0 +1,220 @@
+# Harpy
+- type: emote
+  id: Ring
+  name: Ring
+  category: Vocal
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["rings."]
+  chatTriggers:
+    - ring
+    - rings
+    - ringing
+    - ringed
+
+- type: emote
+  id: Pew
+  name: Pew
+  category: Vocal
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["pews."]
+  chatTriggers:
+    - pew
+    - pews
+    - pewing # Frontier: consistency, I suppose
+    - pewed # Frontier
+
+- type: emote
+  id: Bang
+  name: Bang
+  category: Vocal
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["bangs."]
+  chatTriggers:
+    - bang
+    - bangs
+    - banging
+    - banged
+
+- type: emote
+  id: Rev
+  name: Rev
+  category: Vocal
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["revs."]
+  chatTriggers:
+    - revs
+    - rev
+    - revving
+    - revved
+
+- type: emote
+  id: Caw
+  name: Caw
+  category: Vocal
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["caws."]
+  chatTriggers:
+    - caws
+    - caw
+    - cawing
+    - cawed
+
+# Felinid
+- type: emote
+  id: Hiss
+  category: Vocal
+  name: Hiss
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [hisses.]
+  chatTriggers:
+    - hiss
+    - hisses
+    - hiss.
+    - hisses.
+    - hisses!
+    - hissing
+    - hissed
+    - hissing.
+    - hissed.
+
+- type: emote
+  id: Meow
+  category: Vocal
+  name: Meow
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [meows.]
+  chatTriggers:
+    - meow
+    - meows
+    - meow.
+    - meow!
+    - meowing
+    - meowed
+    - miau
+    - miaus
+    - meows.
+    - meows~
+    - meows!
+    - meowing.
+    - meowed.
+    - miau.
+    - miaus.
+    - miaus!
+    - nya
+    - nyas
+    - nya.
+    - nyas.
+    - nyas!
+    - mraow.
+    - mraow!
+    - mraow~
+    - mraows.
+    - mraows!
+    - mraows~
+
+- type: emote
+  id: Mew
+  category: Vocal
+  name: Mew
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [mews.]
+  chatTriggers:
+    - mew
+    - mews
+    - mewing
+    - mewed
+
+- type: emote
+  id: Growl
+  category: Vocal
+  name: Growl
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [growls.]
+  chatTriggers:
+    - growl
+    - growls
+    - growling
+    - growled
+
+- type: emote
+  id: Purr
+  category: Vocal
+  name: Purr
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [purrs.]
+  chatTriggers:
+    - purr
+    - purrs
+    - purring
+    - purred
+

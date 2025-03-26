@@ -230,8 +230,8 @@
         - DeathAcidifierImplant
       - type: RandomMetadata
         nameSegments:
-        - NamesNinjaTitle
-        - NamesNinja
+        - names_ninja_title
+        - names_ninja
       mindRoles:
       - MindRoleNinja
 
@@ -313,8 +313,8 @@
         - Wizard
       - type: RandomMetadata
         nameSegments:
-        - NamesWizardFirst
-        - NamesWizardLast
+        - names_wizard_first
+        - names_wizard_last
       mindRoles:
       - MindRoleWizard
 
@@ -539,8 +539,8 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - NamesSyndicatePrefix
-        - NamesSyndicateNormal
+        - SyndicateNamesPrefix
+        - SyndicateNamesNormal
       - type: NpcFactionMember
         factions:
         - Syndicate
