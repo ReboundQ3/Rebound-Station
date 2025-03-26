@@ -221,3 +221,9 @@ Entries:
       message: Merged upstream into LateStation
   id: 26
   time: '2025-03-26T09:19:30.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Tweak
+      message: Fixes a few graphical issues on a couple moth markings.
+  id: 27
+  time: '2025-03-26T09:51:22.0000000+00:00'
