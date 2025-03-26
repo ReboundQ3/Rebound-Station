@@ -34,6 +34,10 @@
 	{
 	  "name": "voltaic_scar",
 	  "directions": 4
-	}
+	},
+	{
+      "name": "softcoat_antennae",
+      "directions": 4
+    }
   ]
 }
