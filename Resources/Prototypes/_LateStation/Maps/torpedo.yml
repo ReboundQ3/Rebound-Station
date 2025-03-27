@@ -17,8 +17,6 @@
           emergencyShuttlePath: /Maps/_LateStation/shuttles/emergency_torpedo.yml
         - type: StationCargoShuttle
           path: /Maps/_LateStation/shuttles/cargo_torpedo.yml
-        - type: StationCargoShuttle
-          path: /Maps/Shuttles/cargo.yml
         - type: StationJobs
           availableJobs:
             #service
