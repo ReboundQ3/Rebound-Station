@@ -227,3 +227,9 @@ Entries:
       message: Fixes a few graphical issues on a couple moth markings.
   id: 27
   time: '2025-03-26T09:51:22.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Add
+      message: Added cargo and evactuation shuttles specific to torpedo station.
+  id: 28
+  time: '2025-03-27T19:30:46.0000000+00:00'
