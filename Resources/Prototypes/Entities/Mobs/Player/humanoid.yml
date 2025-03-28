@@ -594,8 +594,8 @@
       settings: Cluwne
     - type: RandomMetadata
       nameSegments:
-      - NamesFirst
-      - NamesLast
+      - names_first
+      - names_last
 
 - type: randomHumanoidSettings
   id: Cluwne
