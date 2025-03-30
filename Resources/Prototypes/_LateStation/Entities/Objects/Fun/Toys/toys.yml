@@ -1238,3 +1238,233 @@
             Quantity: 10
           - ReagentId: Amasec
             Quantity: 10
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieWillow # Sneaky salvie
+    name: Willow Plushie
+    description: Do you have any idea, what this one is? Do you? I don't. How did you even find this?
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/willow-plushie.rsi
+      state: willow-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Phlogiston #Placeholder
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Phlogiston
+            Quantity: 10
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieFlap # It's made of pancakes!
+    name: Flap Plushie
+    description: You swear they are bigger than this. Regardless, your doubloons are plundered! Yarr!
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/flap-plushie.rsi
+      state: flap-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Cognizine
+          Quantity: 10
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Cognizine
+            Quantity: 5
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieAttacus # squints
+    name: Attacus Plushie
+    description: This plushie comes packed with 15 pre-recorded curses and swears. For some reason you know it's disappointed in you.
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/attacus-plushie.rsi
+      state: attacus-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Tricordrazine
+            Quantity: 10
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieSunny # Always sunny in... no.
+    name: Sunny Plushie
+    description: This plushie looks so bright and sunny, like a sunflower combined with the bee! Or maybe not, but it IS cute!
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/sunny-plushie.rsi
+      state: sunny-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Tricordrazine
+            Quantity: 10
+
+ -  type: entity
+    parent: BasePlushie
+    id: ToyPlushieAstrus # I honestly don't know this one
+    name: Astrus Plushie
+    description: You get a bad feeling looking at this plushie. As if something evil would be behind it...
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/astrus-plushie.rsi
+      state: astrus-plushie
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: SyndicateBomb
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: SyndicateBomb
+            Quantity: 10
