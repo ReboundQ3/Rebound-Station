@@ -233,3 +233,9 @@ Entries:
       message: Added cargo and evactuation shuttles specific to torpedo station.
   id: 28
   time: '2025-03-27T19:30:46.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: Five new moth plushies are a go! Yay!
+  id: 29
+  time: '2025-03-30T14:15:22.0000000+00:00'
