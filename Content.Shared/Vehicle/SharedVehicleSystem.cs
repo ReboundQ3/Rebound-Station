@@ -52,7 +52,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         base.Initialize();
         InitializeRider();
 
-        SubscribeLocalEvent<VehicleComponent, ComponentStartup>(OnVehicleStartup);
+//        SubscribeLocalEvent<VehicleComponent, ComponentStartup>(OnVehicleStartup);
         SubscribeLocalEvent<VehicleComponent, StrappedEvent>(OnBuckled);
         SubscribeLocalEvent<VehicleComponent, UnstrappedEvent>(OnUnbuckled);
         SubscribeLocalEvent<VehicleComponent, HonkActionEvent>(OnHonkAction);
@@ -88,19 +88,19 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         }
     }
 
-    private void OnVehicleStartup(EntityUid uid, VehicleComponent component, ComponentStartup args)
-    {
-        UpdateDrawDepth(uid, 2);
+//    private void OnVehicleStartup(EntityUid uid, VehicleComponent component, ComponentStartup args)
+//    {
+//        UpdateDrawDepth(uid, 2);
 
         // This code should be purged anyway but with that being said this doesn't handle components being changed.
-        if (TryComp<StrapComponent>(uid, out var strap))
-        {
-            component.BaseBuckleOffset = strap.BuckleOffset;
-            strap.BuckleOffset = Vector2.Zero;
-        }
+//        if (TryComp<StrapComponent>(uid, out var strap))
+//        {
+//            component.BaseBuckleOffset = strap.BuckleOffset;
+//            strap.BuckleOffset = Vector2.Zero;
+//        }
 
-        _modifier.RefreshMovementSpeedModifiers(uid);
-    }
+//        _modifier.RefreshMovementSpeedModifiers(uid);
+//    }
 
     /// <summary>
     /// Add the rider component to the user
@@ -309,14 +309,14 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         // TODO: Strap should handle this but buckle E/C moment.
         var oldOffset = strap.BuckleOffset;
 
-        strap.BuckleOffset = xform.LocalRotation.Degrees switch
-        {
-            < 45f => new(0, component.SouthOverride),
-            <= 135f => component.BaseBuckleOffset,
-            < 225f  => new(0, component.NorthOverride),
-            <= 315f => new(component.BaseBuckleOffset.X * -1, component.BaseBuckleOffset.Y),
-            _ => new(0, component.SouthOverride)
-        };
+//        strap.BuckleOffset = xform.LocalRotation.Degrees switch
+//{
+//            < 45f => new(0, component.SouthOverride),
+//            <= 135f => component.BaseBuckleOffset,
+//            < 225f  => new(0, component.NorthOverride),
+//            <= 315f => new(component.BaseBuckleOffset.X * -1, component.BaseBuckleOffset.Y),
+//            _ => new(0, component.SouthOverride)
+//        };
 
         if (!oldOffset.Equals(strap.BuckleOffset))
             Dirty(uid, strap);
