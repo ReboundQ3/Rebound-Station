@@ -249,3 +249,9 @@ Entries:
       message: Reimplemented basic vehicle code
   id: 30
   time: '2025-03-31T08:45:31.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed the status for the Security records computer.
+  id: 31
+  time: '2025-03-31T21:00:58.0000000+00:00'
