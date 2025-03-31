@@ -10,7 +10,7 @@
       northOverride: 0
       southOverride: 0
     - type: Sprite
-      sprite: _CD/Objects/Vehicles/wheelchair.rsi
+      sprite: _CD/Objects/Vehicles/Wheelchair.rsi
       layers:
       - state: vehicle
         map: ["enum.VehicleVisualLayers.AutoAnimate", "unfoldedLayer"]
