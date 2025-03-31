@@ -239,3 +239,13 @@ Entries:
       message: Five new moth plushies are a go! Yay!
   id: 29
   time: '2025-03-30T14:15:22.0000000+00:00'
+- author: Anzuneth
+  changes:
+    - type: Add
+      message: Added Wheelchairs
+    - type: Add
+      message: Added the wheelchiar bound disability
+    - type: Add
+      message: Reimplemented basic vehicle code
+  id: 30
+  time: '2025-03-31T08:45:31.0000000+00:00'
