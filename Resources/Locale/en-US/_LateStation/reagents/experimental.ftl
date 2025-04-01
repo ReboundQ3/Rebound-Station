@@ -19,5 +19,5 @@ reagent-desc-agentc = A peculiar chemical, developed by a certain NT doctor in h
 reagent-name-imperialhyperzine = Imperial Hyperzine
 reagent-desc-imperialhyperzine = A very dangerous modification of Hyperzine. Jolts the nervous system on the user, pushing them well beyond their limits, making them appear superhuman. As a result of this, the moment it runs out, the user will be left extremely vulnerable. May cause heart attack when used. Do not use if possible.
 
-reagent-name-glowthjuice = glowth juice
-reagent-desc-glowthjuice = This mysterious chemical makes your body shine with a warm light. Best not used when going to sleep.
+reagent-name-luxserum = lux serum
+reagent-desc-luxserum = A chemical that makes your body shine through unknown means, producing some heat in the process. Using in moderation will help keep your body at a comfortable warmth, but overdosing will overheat it to a dangerous degree. 
