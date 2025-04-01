@@ -36,6 +36,7 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: HarpyClothing # LateStation - Harpy
 
 
 - type: entity
@@ -60,3 +61,4 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: HarpyClothing # LateStation - Harpy
