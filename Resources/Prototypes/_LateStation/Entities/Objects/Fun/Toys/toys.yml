@@ -1215,7 +1215,7 @@
     parent: BaseMothPlushie
     id: ToyPlushieWist # Tossing this one out the airlock so you can fetch it back :)
     name: Wist Plushie
-    description: You get a bad feeling looking at this plushie. As if something evil would be behind it...
+    description: "Remember, Wisteria, it's never lame to be kind." -Verne Solfeather
     components:
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/wist-plushie.rsi
