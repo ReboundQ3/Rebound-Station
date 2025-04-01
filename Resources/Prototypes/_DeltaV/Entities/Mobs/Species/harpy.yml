@@ -152,7 +152,6 @@
     speciesId: harpy
     templateId: digitigrade
   - type: HarpyVisuals
-  - type: HarpyClothing # LateStation
   
 - type: entity
   save: false
