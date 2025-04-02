@@ -111,16 +111,15 @@
           groups:
             Brute: 2
 
-#Hmm
+#Let there be light!
 - type: reagent
-  id: GlowthJuice
-  name: reagent-name-glowthjuice
+  id: LuxSerum
+  name: reagent-name-luxserum
   group: Experimental
-  desc: reagent-desc-glowthjuice
+  desc: reagent-desc-luxserum
   physicalDesc: reagent-physical-desc-viscous
   flavor: acid
   color: "#ffe600"
-  worksOnTheDead: true
   metabolisms:
     Medicine:
       effects:
@@ -130,6 +129,18 @@
         type: Add
         time: 5
         refresh: true
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          max: 293.15
+        - !type:ReagentThreshold
+          max: 40
+        amount: 1000 # thermal energy, not temperature!
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 40
+        amount: 10000
       
 
 #Cryo diphen, with a downside!

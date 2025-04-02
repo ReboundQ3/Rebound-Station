@@ -1,3 +1,31 @@
+ -  type: entity
+    parent: BasePlushie
+    id: BaseMothPlushie  # To reduce clutter
+    abstract: true
+    components:
+    - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnActivate
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: EmitSoundOnCollide
+      sound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+    - type: Food
+      requiresSpecialDigestion: true
+      useSound:
+        path: /Audio/Voice/Moth/moth_chitter.ogg
+
  - type: entity
    parent: BasePlushie
    id: ToyPlushieHides #attention deprived
@@ -872,7 +900,7 @@
 
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieScarlet #Eepy.
     name: Scarlet Plushie
     description: A very intimidating looking little plushie. Also very cute!
@@ -880,28 +908,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/scarlet-plushie.rsi
       state: scarlet-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -918,7 +924,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieRose #I think they might be blind?
     name: Rose Plushie
     description: A little fluffy scientist, for all your science related needs!
@@ -926,28 +932,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/rose-plushie.rsi
       state: rose-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -964,7 +948,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieRadios #I honestly am not sure what to put here. Hope you have a good day!
     name: Radios Plushie
     description: A mysterious moth, in a purple outfit. Made of the prettiest of white fiber!
@@ -972,28 +956,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/radios-plushie.rsi
       state: radios-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -1010,7 +972,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieEris # The moff suffering...
     name: Eris Plushie
     description: A helpful little doctor, in the most majestic of blue coats! Surprisingly not very fluffy.
@@ -1018,28 +980,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/eris-plushie.rsi
       state: eris-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -1056,7 +996,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieJuni # They need to go on a vacation.
     name: Juni Plushie
     description: A moth, clearly prepared to fly around in space... the final Frontier!
@@ -1064,28 +1004,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/juni-plushie.rsi
       state: juni-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -1102,7 +1020,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieAtlas # Awoo?
     name: Atlas Plushie
     description: A very inimidating looking moth. It smells like dog fur for some reason.
@@ -1110,28 +1028,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/atlas-plushie.rsi
       state: atlas-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -1148,7 +1044,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieIris # Eeeek!!
     name: Iris Plushie
     description: A particularly fluffy moth. They will save you in an emergency!
@@ -1156,28 +1052,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/iris-plushie.rsi
       state: iris-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
         reagents:
@@ -1194,7 +1068,7 @@
             Quantity: 10
 
  -  type: entity
-    parent: BasePlushie
+    parent: BaseMothPlushie
     id: ToyPlushieSam # Coffee drinker!
     name: Samuel Plushie
     description: A very professional looking little engineer. They seem to be asleep...
@@ -1202,28 +1076,6 @@
     - type: Sprite
       sprite: _LateStation/Objects/Fun/Toys/sam-plushie.rsi
       state: sam-plushie
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
     - type: Extractable
       juiceSolution:
        reagents:
@@ -1237,4 +1089,148 @@
           - ReagentId: Fiber
             Quantity: 10
           - ReagentId: Amasec
+            Quantity: 10
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieWillow # Sneaky salvie
+    name: Willow Plushie
+    description: Do you have any idea, what this one is? Do you? I don't. How did you even find this?
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/willow-plushie.rsi
+      state: willow-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Phlogiston #Placeholder
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Phlogiston
+            Quantity: 10
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieFlap # It's made of pancakes!
+    name: Flap Plushie
+    description: You swear they are bigger than this. Regardless, your doubloons are plundered! Yarr!
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/flap-plushie.rsi
+      state: flap-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Cognizine
+          Quantity: 10
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Cognizine
+            Quantity: 5
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieAttacus # squints
+    name: Attacus Plushie
+    description: This plushie comes packed with 15 pre-recorded curses and swears. For some reason you know it's disappointed in you.
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/attacus-plushie.rsi
+      state: attacus-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Tricordrazine
+            Quantity: 10
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieSunny # Always sunny in... no.
+    name: Sunny Plushie
+    description: A moth who loves salvaging and science work with a side of explosions. Comes with a soft crusherdagger reperesenting her favourite weapon.
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/sunny-plushie.rsi
+      state: sunny-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: ManlyDorf
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: ManlyDorf
+            Quantity: 10
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieAstrus # I honestly don't know this one
+    name: Astrus Plushie
+    description: You get a bad feeling looking at this plushie. As if something evil would be behind it...
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/astrus-plushie.rsi
+      state: astrus-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: SyndicateBomb
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: SyndicateBomb
+            Quantity: 10
+
+ -  type: entity
+    parent: BaseMothPlushie
+    id: ToyPlushieWist # Tossing this one out the airlock so you can fetch it back :)
+    name: Wist Plushie
+    description: "\"Remember, Wisteria, it's never lame to be kind.\" -Verne Solfeather"
+    components:
+    - type: Sprite
+      sprite: _LateStation/Objects/Fun/Toys/wist-plushie.rsi
+      state: wist-plushie
+    - type: Extractable
+      juiceSolution:
+       reagents:
+        - ReagentId: Psicodine
+          Quantity: 30
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Fiber
+            Quantity: 10
+          - ReagentId: Psicodine
             Quantity: 10

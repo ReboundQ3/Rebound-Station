@@ -128,10 +128,15 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         {
             var status = (SecurityStatus)args.Id;
             // This should reflect SetStatus in CriminalRecordsConsoleWindow.xaml.cs
-            if (status == SecurityStatus.Wanted || status == SecurityStatus.Suspected)
+            if (status == SecurityStatus.Wanted || status == SecurityStatus.Suspected
+            // LateStation added Harmony additional statuses
+                || status == SecurityStatus.Monitor || status == SecurityStatus.Search)
+             {
                 SetStatusWithReason(status);
-            else
-                OnSetSecurityStatus?.Invoke(status, null);
+                return;
+             }
+
+            OnSetSecurityStatus?.Invoke(status, null);
         };
 
         OnClose += () => _entryView.Close();

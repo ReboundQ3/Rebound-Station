@@ -1,0 +1,8 @@
+- type: latheRecipe
+  id: VehicleWheelchairFolded
+  result: VehicleWheelchairFolded
+  completetime: 4
+  materials:
+    Steel: 300
+    Plastic: 500
+

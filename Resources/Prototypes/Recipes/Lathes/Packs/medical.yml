@@ -49,6 +49,7 @@
   - WhiteCane
   - ClothingEyesEyepatchHudMedical # Harmony
   - ClothingEyesHudMedical # Harmony
+  - VehicleWheelchairFolded #LateStation
 
 - type: latheRecipePack
   id: RollerBedsStatic
