@@ -1,0 +1,12 @@
+- type: gamePreset
+  id: LateExtended
+  alias:
+  - lateextended
+  name: late-extended-title
+  showInVote: false #2boring2vote
+  description: late-extended-description
+  rules:
+  - LateBasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation

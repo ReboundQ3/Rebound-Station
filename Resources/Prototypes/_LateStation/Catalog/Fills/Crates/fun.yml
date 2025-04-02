@@ -7,6 +7,8 @@
   - type: StorageFill
     contents:
     - id: ToyPlushieAtlas
+    - id: ToyPlushieAttacus
+    - id: ToyPlushieAstrus
     - id: ToyPlushieBets
     - id: ToyPlushieDino
     - id: ToyPlushieDrafts
@@ -26,8 +28,11 @@
     - id: ToyPlushieRose
     - id: ToyPlushieSam
     - id: ToyPlushieSnacks
+    - id: ToyPlushieFlap
+    - id: ToyPlushieSunny
     - id: ToyPlushieSleeps
       prob: 0.1 # Sleeps is a semi secret
     - id: ToyPlushieScarlet
       prob: 0.1 # Scarlet has nocturine
     - id: ToyPlushieThriz
+    - id: ToyPlushieWist
