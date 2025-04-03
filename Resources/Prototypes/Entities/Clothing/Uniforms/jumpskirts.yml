@@ -323,6 +323,7 @@
     - ClothMade
     - PrisonUniform
     - WhitelistChameleon
+  - type: HarpyClothing # LateStation - Harpy
 
 - type: entity
   parent: [ClothingUniformSkirtBase, BaseCommandContraband]
