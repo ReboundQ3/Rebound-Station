@@ -271,3 +271,13 @@ Entries:
       message: Special Plushie Crate updated.
   id: 32
   time: '2025-04-02T07:29:52.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Vulpkanin migrate to LateStation.
+    - type: Fix
+      message: Felinids can emote again.
+    - type: Tweak
+      message: Harpies can use Vulp sounds
+  id: 33
+  time: '2025-04-03T18:17:09.0000000+00:00'
