@@ -255,3 +255,29 @@ Entries:
       message: Fixed the status for the Security records computer.
   id: 31
   time: '2025-03-31T21:00:58.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: Wist Plushie; Found at PTech hidden stash.
+    - type: Add
+      message: >-
+        Extended (Late) game preset; Currently, extended with no midround antag
+        rolls.
+    - type: Tweak
+      message: Small code cleanup on the toys.yml file.
+    - type: Tweak
+      message: Glowth Juice reworked.
+    - type: Tweak
+      message: Special Plushie Crate updated.
+  id: 32
+  time: '2025-04-02T07:29:52.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Vulpkanin migrate to LateStation.
+    - type: Fix
+      message: Felinids can emote again.
+    - type: Tweak
+      message: Harpies can use Vulp sounds
+  id: 33
+  time: '2025-04-03T18:17:09.0000000+00:00'

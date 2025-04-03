@@ -1,6 +1,6 @@
-# species
+# species : Harpy
 - type: emoteSounds
-  id: SoundsHarpy
+  id: SoundsHarpyMale
   params:
     variation: 0.125
   sounds:
@@ -63,6 +63,90 @@
     Gasp: # Frontier
       collection: HarpyGasp # Frontier
     DefaultDeathgasp: # Frontier
-      collection: DeathGasp # Frontier
+      collection: MaleDeathGasp # Frontier
     Yawn:
       collection: MaleYawn
+    Bark:
+      collection: HarpyBarks # LateStation
+    Snarl:
+      collection: HarpySnarls # LateStation
+    Howl:
+      collection: HarpyHowls # LateStation
+    Whine:
+      collection: HarpyWhines # LateStation
+
+- type: emoteSounds
+  id: SoundsHarpyFemale
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: HarpyScreams
+    Laugh:
+      collection: HarpyLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: HarpyCry
+    Whistle:
+      collection: Whistles
+    Hiss:
+      collection: HarpyHisses
+    Meow:
+      collection: HarpyMeows
+    Mew:
+      collection: HarpyMews
+    Growl:
+      collection: HarpyGrowls
+    Purr:
+      collection: HarpyPurrs
+    Ring:
+      collection: HarpyRings
+    Pew:
+      collection: HarpyPews
+    Bang:
+      collection: HarpyBangs
+      params: # Frontier
+        volume: -5 # Frontier
+    Beep:
+      collection: HarpyBeeps
+    Rev:
+      collection: HarpyRevs
+      params: # Frontier
+        volume: -5 # Frontier
+    Click:
+      collection: HarpyClicks
+    Squish: # Frontier
+      collection: HarpySquishes # Frontier
+    Chitter:
+      collection: HarpyChitter
+    Squeak:
+      collection: HarpySqueak
+    Caw:
+      collection: HarpyCaws
+    Chirp:
+      collection: HarpyChirps
+    Honk:
+      collection: HarpyHonks
+      params: # Frontier
+        volume: -5 # Frontier
+    Weh:
+      collection: Weh
+    Gasp: # Frontier
+      collection: HarpyGasp # Frontier
+    DefaultDeathgasp: # Frontier
+      collection: FemaleDeathGasp # Frontier
+    Yawn:
+      collection: FemaleYawn
+    Bark:
+      collection: HarpyBarks # LateStation
+    Snarl:
+      collection: HarpySnarls # LateStation
+    Howl:
+      collection: HarpyHowls # LateStation
+    Whine:
+      collection: HarpyWhines # LateStation

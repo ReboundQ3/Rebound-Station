@@ -59,7 +59,7 @@
     AgentC: 5
 
 - type: reaction
-  id: GlowthJuice
+  id: LuxSerum
   reactants:
     Sulfur:
       amount: 10
@@ -68,4 +68,4 @@
     Carbon:
       amount: 10
   products:
-    GlowthJuice: 20
+    LuxSerum: 20
