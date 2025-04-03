@@ -281,3 +281,9 @@ Entries:
       message: Harpies can use Vulp sounds
   id: 33
   time: '2025-04-03T18:17:09.0000000+00:00'
+- author: Kyokonia
+  changes:
+    - type: Fix
+      message: fixed harpys not being able to equip jumpskirts
+  id: 34
+  time: '2025-04-03T20:20:24.0000000+00:00'
