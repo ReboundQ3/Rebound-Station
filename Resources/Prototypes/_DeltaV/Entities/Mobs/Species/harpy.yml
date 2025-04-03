@@ -113,7 +113,7 @@
     speechSounds: Harpy
     speechVerb: Harpy
     # New Frontiers - Expand Harpy Mimicry - includes all harpy sound collections
-    #   as accepted emotes, adds 
+    #   as accepted emotes, adds
     # This code is licensed under AGPLv3. See LICENSE
     mimicEmotes: true # Frontier
     allowedEmotes:
@@ -136,23 +136,27 @@
     - Squeak # Frontier
     - Chirp # Frontier
     - Honk # Frontier
+    - Bark # LateStation
+    - Snarl # LateStation
+    - Howl # LateStation
+    - Whine # LateStation
     # End of modified code
   - type: Vocal
     sounds:
-      Male: SoundsHarpy
-      Female: SoundsHarpy
-      Unsexed: SoundsHarpy
+      Male: SoundsHarpyMale
+      Female: SoundsHarpyFemale
+      Unsexed: SoundsHarpyMale
   - type: GenericVisualizer
     visuals:
       enum.HarpyVisualLayers.Singing:
         singingLayer:
           False:  {visible: false}
           True:  {visible: true}
-  - type: Inventory 
+  - type: Inventory
     speciesId: harpy
     templateId: digitigrade
   - type: HarpyVisuals
-  
+
 - type: entity
   save: false
   name: Urist McHands
@@ -163,7 +167,7 @@
   components:
   - type: HumanoidAppearance
     species: Harpy
-  - type: Inventory 
+  - type: Inventory
     speciesId: harpy
   - type: Sprite
     scale: 0.9, 0.9

@@ -1,9 +1,9 @@
-using Content.Server._DV.Speech.Components;
+using Content.Server._DeltaV.Speech.Components;
 using Content.Server.Speech;
 using Content.Server.Speech.EntitySystems;
 using System.Text.RegularExpressions;
 
-namespace Content.Server._DV.Speech.EntitySystems;
+namespace Content.Server._DeltaV.Speech.EntitySystems;
 
 public sealed class ScottishAccentSystem : EntitySystem
 {
