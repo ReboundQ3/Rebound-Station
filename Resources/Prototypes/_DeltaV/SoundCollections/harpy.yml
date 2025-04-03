@@ -92,6 +92,9 @@
   files:
     - /Audio/_DeltaV/Voice/Felinid/cat_growl1.ogg
     - /Audio/Animals/bear.ogg
+    - /Audio/_Harmony/Voice/Vulpkanin/dog_growl1.ogg
+    - /Audio/_Harmony/Voice/Vulpkanin/dog_growl2.ogg
+    - /Audio/_Harmony/Voice/Vulpkanin/dog_growl3.ogg
 
 - type: soundCollection
   id: HarpyPurrs
@@ -252,3 +255,29 @@
   files:
   - /Audio/Voice/Slime/slime_squish.ogg
 # End Frontier
+
+# LateStation Vulpkanin sounds
+- type: soundCollection
+  id: HarpyBarks
+  files:
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_bark1.ogg
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_bark2.ogg
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_bark3.ogg
+
+- type: soundCollection
+  id: HarpySnarls
+  files:
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_snarl1.ogg
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_snarl2.ogg
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_snarl3.ogg
+
+- type: soundCollection
+  id: HarpyHowls
+  files:
+  - /Audio/_Harmony/Voice/Vulpkanin/howl.ogg
+
+- type: soundCollection
+  id: HarpyWhines
+  files:
+  - /Audio/_Harmony/Voice/Vulpkanin/dog_whine.ogg
+
