@@ -181,7 +181,7 @@
     - mewed
 
 - type: emote
-  id: Growl
+  id: DVGrowl
   category: Vocal
   name: Growl
   icon: Interface/Actions/scream.png
