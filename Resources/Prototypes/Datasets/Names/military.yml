@@ -7,11 +7,11 @@
 - type: localizedDataset
   id: NamesFirstMilitary
   values:
-    prefix: names-military-dataset-
+    prefix: names-military-first-dataset-
     count: 3
 
 - type: localizedDataset
   id: NamesLastMilitary
   values:
-    prefix: names-military-dataset-
+    prefix: names-military-last-dataset-
     count: 42
