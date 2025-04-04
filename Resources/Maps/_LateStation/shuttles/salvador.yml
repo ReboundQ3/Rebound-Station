@@ -1427,8 +1427,6 @@ entities:
 - proto: ActionToggleBlock
   entities:
   - uid: 3191
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 3190
@@ -1436,8 +1434,6 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 3190
   - uid: 3224
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 3223
