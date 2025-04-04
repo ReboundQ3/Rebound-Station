@@ -56,6 +56,9 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Harmony/xeno.yml", // Harmony map - Contains Matter Dematerializer
             "/Maps/_LateStation/akatsumi.yml", //LateStation map - Contains a billion illegal things.
             "/Maps/_Harmony/Nonstations/listening-outpost.yml", // Harmony - Contains a billion illegal things
+            "/Maps/_LateStation/shuttles/avenger.yml", // Latestation shuttle - Contains shuttle weaponry.
+            "/Maps/_LateStation/shuttles/jail.yml", // Latestation jail outpost - Contains a ton of contraband.
+            "/Maps/_LateStation/shuttles/salvador.yml", // Latestation shuttle - Contains shuttle armament.
             "/Maps/_Harmony/Shuttles/ERT-chaplain-medium.yml", // Harmony - Contains centcomm folders.
             "/Maps/_Harmony/Shuttles/syndicate-diplomacy.yml", // Harmony - Contains syndicate rubber stamp.
             "/Maps/_Harmony/Shuttles/syndicate-dropship.yml", // Harmony - Contains syndicate rubber stamp.
