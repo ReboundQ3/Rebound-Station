@@ -293,3 +293,9 @@ Entries:
       message: Add Scandinavian accent
   id: 35
   time: '2025-04-03T22:46:03.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Add
+      message: Added four new grids to use for a event.
+  id: 36
+  time: '2025-04-04T15:29:55.0000000+00:00'
