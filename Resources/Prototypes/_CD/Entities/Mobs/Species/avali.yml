@@ -12,6 +12,10 @@
   - type: Icon
     sprite: _CD/Mobs/Species/Avali/parts.rsi
     state: full
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    scale: 1, 0.8
   - type: Body
     prototype: Avali
     requiredLegs: 2
@@ -42,7 +46,7 @@
       Unsexed: MaleAvali
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Moth # PLACEHOLDER for now :3
+    damageModifierSet: Avali
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
