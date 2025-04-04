@@ -1,5 +1,5 @@
 ﻿- type: localizedDataset
   id: ATVDescriptions
   values:
-    prefix: atv-description-dataset-
+    prefix: descriptions-atv-dataset-
     count: 16
