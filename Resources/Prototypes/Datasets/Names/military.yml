@@ -1,7 +1,7 @@
 ﻿- type: localizedDataset
   id: NamesFirstMilitaryLeader
   values:
-    prefix: names-military-leader-dataset-
+    prefix: names-military-leader-first-dataset-
     count: 4
 
 - type: localizedDataset
