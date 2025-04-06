@@ -20,4 +20,10 @@ reagent-name-imperialhyperzine = Imperial Hyperzine
 reagent-desc-imperialhyperzine = A very dangerous modification of Hyperzine. Jolts the nervous system on the user, pushing them well beyond their limits, making them appear superhuman. As a result of this, the moment it runs out, the user will be left extremely vulnerable. May cause heart attack when used. Do not use if possible.
 
 reagent-name-luxserum = lux serum
-reagent-desc-luxserum = A chemical that makes your body shine through unknown means, producing some heat in the process. Using in moderation will help keep your body at a comfortable warmth, but overdosing will overheat it to a dangerous degree. 
+reagent-desc-luxserum = A chemical that makes your body shine through unknown means, producing some heat in the process. Using in moderation will help keep your body at a comfortable warmth, but overdosing will overheat it to a dangerous degree.  Is used to remove Stasis Serum from a body.
+
+reagent-name-lunasolution = Unknown solution
+reagent-desc-lunasolution = Whatever this is, it can't be good...
+
+reagent-name-stasisserum = Stasis Serum
+reagent-desc-stasisserum = A useful new chemical, used to rapidly cool down a body for preservation in an emergency. Will work on the dead, and is treated with a mix of Lux Serum and Leporazine. Do not use on non-humanoids.
