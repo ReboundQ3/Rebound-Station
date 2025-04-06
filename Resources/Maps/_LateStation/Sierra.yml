@@ -1505,8 +1505,6 @@ entities:
 - proto: ActionToggleInternals
   entities:
   - uid: 1689
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 1635
@@ -1516,8 +1514,6 @@ entities:
 - proto: ActionToggleJetpack
   entities:
   - uid: 1678
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 1635
