@@ -13,7 +13,7 @@
       - !type:Jitter
       - !type:Emote
         emote: Scream
-        probability: 0.3
+        probability: 0.1
       - !type:HealthChange
         damage:
           types:
@@ -60,7 +60,7 @@
         ignoreResistances: false
         damage:
           types:
-            Bloodloss: 2
+            Bloodloss: 1
             Slash: 1
       - !type:Emote
         emote: Scream
@@ -141,6 +141,9 @@
         - !type:ReagentThreshold
           min: 40
         amount: 10000
+      - !type:AdjustReagent
+        reagent: StasisSerum
+        amount: -10
       
 
 #Cryo diphen, with a downside!
@@ -294,3 +297,79 @@
           walkSpeedModifier: 0.3
           sprintSpeedModifier: 0.3
       
+# A future roleplay chemical; It is a secrettttt shhhh
+- type: reagent
+  id: LunaSolution
+  name: reagent-name-lunasolution
+  group: Secret
+  desc: reagent-desc-lunasolution
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: acid
+  color: "#b10061"
+  boilingPoint: 165
+  meltingPoint: -87
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false #Do not set this to true, or the acid will be unstoppable in a water gun.
+        damage:
+          types:
+            Caustic: 1.5 # 3 times stronger than Polytrinic Acid
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "lunasolution-reagent-effect-melting-skin" ]
+        probability: 0.75
+      - !type:Emote
+        emote: Scream
+        probability: 0.8
+      - !type:ModifyBleedAmount
+        amount: 3 #YOUR SKIN IS MELTING AAAA and your blood is pouring
+  metabolisms:
+    Poison:
+      metabolismRate: 5.00 # VERY High damage, high metabolism rate. Far more potent than any former acid. Crits you VERY rapidly.
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 20 # Polytrinic acid is about 18 per 5u, so slightly more potent
+      - !type:ModifyBleedAmount
+        amount: 3
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "lunasolution-reagent-effect-melting-away" ]
+        probability: 0.75
+      - !type:Emote
+        emote: Scream
+        probability: 0.7
+
+# Freezes the body, for preservation. Best used with hardsuits!
+- type: reagent
+  id: StasisSerum
+  name: reagent-name-stasisserum
+  group: Experimental
+  desc: reagent-desc-stasisserum
+  physicalDesc: reagent-physical-desc-pungent
+  flavor: medicine
+  color: "#c5c5c5"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: -5 #Offsets the cold damage, not enough for lizards
+      - !type:AdjustTemperature
+        conditions:
+          - !type:Temperature
+            min: 50
+        amount: -50000 #Fast speed
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.3
+        sprintSpeedModifier: 0.3
