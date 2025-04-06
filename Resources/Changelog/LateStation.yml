@@ -305,3 +305,17 @@ Entries:
       message: Add Avali
   id: 37
   time: '2025-04-05T16:54:19.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Stasis Serum, a chemical for preserving dead bodies that you can use in
+        an emergency, even on yourself if you know you are about to die!
+    - type: Add
+      message: Lux and Stasis serum medipens, for quick use. Currently admeme only.
+    - type: Tweak
+      message: >-
+        Lux Serum now removes Stasis Serum from a body, making it an alternative
+        to charcoal.
+  id: 38
+  time: '2025-04-06T09:09:02.0000000+00:00'
