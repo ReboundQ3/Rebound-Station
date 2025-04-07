@@ -55,6 +55,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Harmony/eclipse.yml", // Harmony Map - Contains Matter Dematerializer and svalinn shuttle guns.
             "/Maps/_Harmony/xeno.yml", // Harmony map - Contains Matter Dematerializer
             "/Maps/_LateStation/akatsumi.yml", //LateStation map - Contains a billion illegal things.
+            "/Maps/_LateStation/Sierra.yml", //LateStation map - Contains handheld crew monitor
             "/Maps/_Harmony/Nonstations/listening-outpost.yml", // Harmony - Contains a billion illegal things
             "/Maps/_LateStation/shuttles/avenger.yml", // Latestation shuttle - Contains shuttle weaponry.
             "/Maps/_LateStation/shuttles/jail.yml", // Latestation jail outpost - Contains a ton of contraband.
@@ -86,6 +87,7 @@ namespace Content.IntegrationTests.Tests
             "Eclipse", //Harmony, Developed by Lachryphage
             "Torpedo", // LateStation, developed by Rellu
             "Akatsumi", // LateStation, developed by Lachryphage
+            "Sierra", // LateStation, developed by Amatiramasu
             "Dev",
             "TestTeg",
             "Fland",
