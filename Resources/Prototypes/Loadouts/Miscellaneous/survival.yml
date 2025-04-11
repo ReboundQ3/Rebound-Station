@@ -18,6 +18,9 @@
     - Human
     - Moth
     - Reptilian
+    - Vulpkanin # Harmony
+    - Harpy # Latestation
+    - Avali # Latestation
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
