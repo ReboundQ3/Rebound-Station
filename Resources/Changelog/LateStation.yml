@@ -339,3 +339,9 @@ Entries:
       message: Vulp hands are not mirrored anymore thanks to TolBean
   id: 41
   time: '2025-04-11T11:02:20.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added a respawn button.
+  id: 42
+  time: '2025-04-11T13:54:40.0000000+00:00'
