@@ -333,3 +333,9 @@ Entries:
       message: Added a new shuttle.
   id: 40
   time: '2025-04-11T11:02:31.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Vulp hands are not mirrored anymore thanks to TolBean
+  id: 41
+  time: '2025-04-11T11:02:20.0000000+00:00'
