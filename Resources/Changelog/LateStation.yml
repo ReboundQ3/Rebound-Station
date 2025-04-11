@@ -327,3 +327,9 @@ Entries:
         Transport
   id: 39
   time: '2025-04-07T16:54:03.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Add
+      message: Added a new shuttle.
+  id: 40
+  time: '2025-04-11T11:02:31.0000000+00:00'
