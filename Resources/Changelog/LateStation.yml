@@ -351,3 +351,13 @@ Entries:
       message: Added a new shuttle.
   id: 43
   time: '2025-04-16T13:11:45.0000000+00:00'
+- author: Rellu225
+  changes:
+    - type: Fix
+      message: Fixed a privacy issue for the bartender.
+    - type: Remove
+      message: Removed four airlocks in order to not get people stuck in cargo.
+    - type: Tweak
+      message: Tweaked the airlocks in the back to be able to spawn escape pods.
+  id: 44
+  time: '2025-04-16T13:12:31.0000000+00:00'
