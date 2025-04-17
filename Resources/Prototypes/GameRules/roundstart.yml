@@ -97,6 +97,7 @@
     nameSegments:
     - NamesOperationPrefix
     - NamesOperationSuffix
+    nameFormat: name-format-nuclear-operation
   - type: NukeopsRule
   - type: RuleGrids
   - type: AntagSelection
