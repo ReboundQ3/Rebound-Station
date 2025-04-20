@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfStripedLesbianShort
+  name: short bacon
+  description: What once was a long bacon, now is cut short. Guaranteed to not trip you up when running!
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_short.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_short.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfStripedLesbianBurnt
+  name: extra crispy
+  description: A lesbian scarf, partially burnt. Certain to hold a love story.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_burnt.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_burnt.rsi
