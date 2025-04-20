@@ -262,3 +262,8 @@
     sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian-long.rsi
   - type: Clothing
     sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian-long.rsi
+  - type: Butcherable ## Latestation addition
+    butcheringType: Knife
+    spawned:
+    - id: ClothingNeckScarfStripedLesbianShort
+      amount: 2

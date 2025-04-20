@@ -8,6 +8,11 @@
     sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_short.rsi
   - type: Clothing
     sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_short.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
 
 - type: entity
   parent: ClothingScarfBase
@@ -19,3 +24,8 @@
     sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_burnt.rsi
   - type: Clothing
     sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/lesbian_burnt.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
