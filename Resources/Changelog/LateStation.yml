@@ -369,3 +369,20 @@ Entries:
       message: short bacon coding socks
   id: 45
   time: '2025-04-21T03:21:42.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: Added the Anti-Materiel Rifle (AMR), a new .60 cal sniper rifle.
+    - type: Add
+      message: >-
+        Added the Short Bacon, a short version of the lesbian scarf. Made by
+        cutting a long bacon.
+    - type: Add
+      message: >-
+        Added two signature items: extra crispy,  burnt version of the short
+        bacon; and Annabelle's syringe gun, a brigmedic's syringe gun with a
+        slightly altered look. For personal flavour.
+    - type: Add
+      message: Added .60 AP rounds for admemes.
+  id: 46
+  time: '2025-04-21T09:33:41.0000000+00:00'
