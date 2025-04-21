@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksBacon
+  name: short bacon socks
+  description: Socks made out of the comfiest scarf in the galaxy. A memorial to your relationship.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Under/Socks/ShortBaconSocks.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Under/Socks/ShortBaconSocks.rsi
