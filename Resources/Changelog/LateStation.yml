@@ -361,3 +361,11 @@ Entries:
       message: Tweaked the airlocks in the back to be able to spawn escape pods.
   id: 44
   time: '2025-04-16T13:12:31.0000000+00:00'
+- author: Kyokonia
+  changes:
+    - type: Add
+      message: hairbrush (alternative way to change hairstyle)
+    - type: Add
+      message: short bacon coding socks
+  id: 45
+  time: '2025-04-21T03:21:42.0000000+00:00'
