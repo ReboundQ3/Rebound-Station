@@ -130,7 +130,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - NamesSyndicateElite
+        - SyndicateNamesElite
         nameFormat: name-format-nukie-commander
       - type: NpcFactionMember
         factions:
@@ -147,7 +147,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - NamesSyndicateNormal
+        - SyndicateNamesNormal
         nameFormat: name-format-nukie-agent
       - type: NpcFactionMember
         factions:
@@ -166,7 +166,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - NamesSyndicateNormal
+        - SyndicateNamesNormal
         nameFormat: name-format-nukie-operator
       - type: NpcFactionMember
         factions:
