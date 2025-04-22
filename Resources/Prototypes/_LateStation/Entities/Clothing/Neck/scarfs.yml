@@ -29,3 +29,35 @@
     spawned:
     - id: MaterialCloth1
       amount: 1
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfStripedGayLong
+  name: long toothpaste
+  description: Long toothpaste! Perfect for sharing with your boyfriend!
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/gay_long.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/gay_long.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: ClothingNeckScarfStripedGayShort
+      amount: 2
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfStripedGayShort
+  name: short toothpaste
+  description: What once was a long toothpaste, now is cut short. Guaranteed to not trip you up when running!
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/gay_short.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Neck/Scarfs/PrideScarfs/gay_short.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
