@@ -386,3 +386,11 @@ Entries:
       message: Added .60 AP rounds for admemes.
   id: 46
   time: '2025-04-21T09:33:41.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        Added the long and short toothpaste. Found in the pride-o-mat after
+        cutting the MNGR wire.
+  id: 47
+  time: '2025-04-23T10:50:19.0000000+00:00'
