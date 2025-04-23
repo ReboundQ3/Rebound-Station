@@ -414,3 +414,11 @@ Entries:
       message: Brick.
   id: 49
   time: '2025-04-23T10:54:27.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Narcoleptics now use the "zzz..." suffix on trigger
+    - type: Add
+      message: You can now use emotes while you sleep.
+  id: 50
+  time: '2025-04-23T22:29:58.0000000+00:00'
