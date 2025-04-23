@@ -1,0 +1,27 @@
+- type: entity
+  parent: [BaseItem, BaseMinorContraband]
+  id: ThrowingBrick
+  name: brick
+  description: A weapon of the older times, designed to be tossed at hopeless girlkissers.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Objects/Weapons/Throwable/brick.rsi
+    state: icon
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 10
