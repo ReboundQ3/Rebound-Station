@@ -394,3 +394,17 @@ Entries:
         cutting the MNGR wire.
   id: 47
   time: '2025-04-23T10:50:19.0000000+00:00'
+- author: LateFinny
+  changes:
+    - type: Add
+      message: >-
+        The Clawlets, a pair of symbiotic gloves that will let you slice people.
+        Currently admeme only, pending further testing.
+    - type: Add
+      message: 'Wist''s HOP mantle, the next signature item. '
+    - type: Tweak
+      message: >-
+        Renamed the Anti-Materiel Rifle into AMR 60, removed its scope/zoom
+        functionality, and overall slightly tweaked its stats.
+  id: 48
+  time: '2025-04-23T10:52:44.0000000+00:00'
