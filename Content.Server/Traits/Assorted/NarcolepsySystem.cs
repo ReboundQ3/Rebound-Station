@@ -1,4 +1,5 @@
-using Content.Shared.Damage.Events;
+using Content.Shared.Damage.Events; // LateStation edit
+using Content.Shared.Traits.Assorted; // LateStation edit
 using Content.Shared.Bed.Sleep;
 using Content.Shared.StatusEffect;
 using Robust.Shared.Random;
@@ -20,7 +21,7 @@ public sealed class NarcolepsySystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<NarcolepsyComponent, ComponentStartup>(SetupNarcolepsy);
-        SubscribeLocalEvent<NarcolepsyComponent, BeforeForceSayEvent>(OnChangeForceSay);
+        SubscribeLocalEvent<NarcolepsyComponent, BeforeForceSayEvent>(OnChangeForceSay, after: new []{typeof(PainNumbnessSystem)}); // LateStation edit
     }
 
     private void SetupNarcolepsy(EntityUid uid, NarcolepsyComponent component, ComponentStartup args)
