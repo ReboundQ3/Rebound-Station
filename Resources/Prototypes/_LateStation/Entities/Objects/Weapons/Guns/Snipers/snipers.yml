@@ -1,5 +1,5 @@
 - type: entity
-  name: anti-materiel rifle
+  name: AMR 60
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseSyndicateContraband]
   id: WeaponSniperAntiMateriel
   description: A simple, custom made anti-materiel rifle. Only holds one bullet at time. Fires .60 anti-materiel ammo.
@@ -10,7 +10,7 @@
     sprite: _LateStation/Objects/Weapons/Guns/Snipers/anti-materiel_sniper.rsi
   - type: GunRequiresWield
   - type: Gun
-    fireRate: 0.3
+    fireRate: 1.0
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -23,9 +23,5 @@
     capacity: 1
     proto: CartridgeAntiMateriel
   - type: SpeedModifiedOnWield
-    walkModifier: 0.6
-    sprintModifier: 0.6
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    walkModifier: 0.7
+    sprintModifier: 0.7
