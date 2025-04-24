@@ -1,6 +1,6 @@
-# Player: Maestro2Kimpembe - Character: Skylight Mirth
+# Player: ReboundQ3 - Character: James C Rondo
 - type: entity
-  parent: PlushieMoth
+  parent: BasePlushie
   id: PersonalItemJamesPlushie
   name: Plushie of James
   description: The medical expert that refers to his headset as talkbox
