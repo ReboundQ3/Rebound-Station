@@ -1,4 +1,4 @@
-<!-- If you are new to the LateStation repository, please read the [Contributing Guidelines](https://github.com/ss14-harmony/ss14-harmony/blob/master/CONTRIBUTING.md) -->
+<!-- If you are new to the LateStation repository, please read the [Contributing Guidelines](https://github.com/LateStation14/Late-station-14/blob/master/CONTRIBUTING.md) -->
 
 ## About the PR
 <!-- What did you change? Describe your changes here. -->
@@ -25,7 +25,7 @@ Incorrect: [ ] [X ] [ X] -->
 
 ## Changelog
 <!-- Add a changelog entry below to inform players about new features or gameplay-affecting changes.
-IMPORTANT: The automated changelog bot (Weh Bot) only reads entries AFTER the ':cl:' marker in this section. 
+IMPORTANT: The automated changelog bot (Weh Bot) only reads entries AFTER the ':cl:' marker in this section.
 - Use the exact format: '- type: message' (e.g., '- add: Added a new feature').
 - Valid types are: 'add', 'remove', 'tweak', 'fix'.
 - Do NOT use these keywords (add, remove, tweak, fix) casually elsewhere in the PR body, or the bot might misinterpret them.
