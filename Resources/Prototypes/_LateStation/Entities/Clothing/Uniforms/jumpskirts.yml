@@ -5,6 +5,6 @@
   description: A dress, for that special day.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
