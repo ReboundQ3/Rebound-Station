@@ -601,7 +601,7 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.ToTable("cd_character_record_entries", (string)null);
                 });
-                
+
             modelBuilder.Entity("Content.Server.Database.Blacklist", b =>
                 {
                     b.Property<Guid>("UserId")
