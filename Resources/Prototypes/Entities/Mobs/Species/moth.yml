@@ -100,10 +100,9 @@
       - map: [ "shoes" ]
       - map: [ "ears" ]
       - map: [ "eyes" ]
-      #- map: [ "belt" ] #Harmony Change: Moves Belt back over outerclothing
       - map: [ "id" ]
       - map: [ "outerClothing" ]
-      - map: [ "belt" ] #Harmony Change: Moves Belt back over outerclothing
+      - map: [ "belt" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] #in the utopian future we should probably have a wings enum inserted here so everyhting doesn't break
       - map: [ "back" ]
       - map: [ "neck" ]
