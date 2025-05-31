@@ -442,3 +442,11 @@ Entries:
   changes: []
   id: 54
   time: '2025-05-10T16:25:35.0000000+00:00'
+- author: BaguetteYeast
+  changes:
+    - type: Add
+      message: Added a new shuttle grid NT-Biosphere
+    - type: Add
+      message: Added a variant of the shuttle, NT-Biosphere-OldEarthDiner
+  id: 55
+  time: '2025-05-31T12:42:11.0000000+00:00'
