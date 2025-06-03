@@ -14,8 +14,9 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
     public NetEntity Station;
     public List<CargoOrderData> Orders;
     public List<ProtoId<CargoProductPrototype>> Products;
+    public CrewManifestEntries? CrewManifest;
 
-    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products)
+    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products, CrewManifestEntries? crewManifest = null)
     {
         Name = name;
         Count = count;
@@ -23,5 +24,6 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
         Station = station;
         Orders = orders;
         Products = products;
+        CrewManifest = crewManifest;
     }
 }

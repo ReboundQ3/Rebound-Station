@@ -33,8 +33,6 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
 
     public IPrototype? RepresentedPrototype { get; private set; }
 
-    public IPrototype? RepresentedPrototype { get; private set; }
-
     public GuideReagentEmbed()
     {
         RobustXamlLoader.Load(this);
