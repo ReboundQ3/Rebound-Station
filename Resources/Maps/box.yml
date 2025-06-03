@@ -140660,12 +140660,6 @@ entities:
     - type: Transform
       pos: 12.5,-49.5
       parent: 8364
-  - uid: 28638
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -12.5,44.5
-      parent: 8364
 - proto: RadiationCollector
   entities:
   - uid: 3780
@@ -147030,11 +147024,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-19.5
-      parent: 8364
-  - uid: 24976
-    components:
-    - type: Transform
-      pos: 6.5,46.5
       parent: 8364
   - uid: 24976
     components:
