@@ -1,17 +1,5 @@
 # Harmony ERT Shuttles
 
-# General
-
-- type: entity
-  id: ERTMedSecLarge
-  parent: BaseUnknownShuttleRule
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-ert-generic-shuttle-incoming #!!
-    weight: 0 #  Admin only.
-  - type: LoadMapRule
-    preloadedGrid: ShuttleERTMedSecLarge
-
 # Security
 
 - type: entity
