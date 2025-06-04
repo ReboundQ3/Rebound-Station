@@ -58,7 +58,7 @@ tilemap:
   129: Lattice
   130: Plating
 entities:
-- proto: ""
+- proto: ''
   entities:
   - uid: 1
     components:
@@ -66,10 +66,8 @@ entities:
       name: Map Entity
     - type: Transform
     - type: Map
-      mapPaused: True
-    - type: PhysicsMap
+      mapPaused: true
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
   - uid: 3
@@ -298,7 +296,7 @@ entities:
       bodyStatus: InAir
       angularDamping: 0.05
       linearDamping: 0.05
-      fixedRotation: False
+      fixedRotation: false
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
@@ -307,7 +305,7 @@ entities:
     - type: Shuttle
     - type: GridPathfinding
     - type: Gravity
-      gravityShakeSound: !type:SoundPathSpecifier
+      gravityShakeSound:
         path: /Audio/Effects/alert.ogg
     - type: DecalGrid
       chunkCollection:
@@ -1657,7 +1655,7 @@ entities:
             5126: 54,-39
             5133: 48,-31
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: Dirt
           decals:
@@ -2032,7 +2030,7 @@ entities:
             6895: -20,-71
             6896: -21,-71
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: DirtHeavy
           decals:
@@ -2428,7 +2426,7 @@ entities:
             6845: 14,-42
             6846: 15,-43
         - node:
-            cleanable: True
+            cleanable: true
             color: '#791500FF'
             id: DirtHeavyMonotile
           decals:
@@ -2438,7 +2436,7 @@ entities:
             3976: 35,-35
             3977: 38,-36
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: DirtHeavyMonotile
           decals:
@@ -2505,7 +2503,7 @@ entities:
             6632: 25,-61
             6794: -16,-80
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: DirtLight
           decals:
@@ -2825,7 +2823,7 @@ entities:
             6856: 14,-38
             6857: 16,-40
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: DirtMedium
           decals:
@@ -4158,20 +4156,20 @@ entities:
             3018: 0,-76
             3019: 0,-75
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: burnt1
           decals:
             5147: 49,-34
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: burnt2
           decals:
             5145: 48,-33
             5146: 48,-34
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: burnt3
           decals:
@@ -4179,7 +4177,7 @@ entities:
             5143: 47,-33
             5144: 49,-32
         - node:
-            cleanable: True
+            cleanable: true
             color: '#FFFFFFFF'
             id: burnt4
           decals:
@@ -4188,7 +4186,7 @@ entities:
             5141: 48,-32
             5148: 48,-34
         - node:
-            cleanable: True
+            cleanable: true
             angle: 1.5707963267948966 rad
             color: '#0E7F1BFF'
             id: line
@@ -4202,7 +4200,7 @@ entities:
             1884: -18.828083,-75.436874
             1885: -22.265583,-75.499374
         - node:
-            cleanable: True
+            cleanable: true
             color: '#B02E26FF'
             id: rune1
           decals:
@@ -4266,13 +4264,13 @@ entities:
             6878: -19.967741,-72.42299
             6879: -19.960796,-71.7216
         - node:
-            cleanable: True
+            cleanable: true
             color: '#43990996'
             id: splatter
           decals:
             5209: 33.03916,-65.59912
         - node:
-            cleanable: True
+            cleanable: true
             color: '#79150069'
             id: splatter
           decals:
@@ -4294,7 +4292,7 @@ entities:
             3993: 36.281677,-36.41942
             3994: 35.609802,-36.45067
         - node:
-            cleanable: True
+            cleanable: true
             color: '#79150096'
             id: splatter
           decals:
@@ -4306,7 +4304,7 @@ entities:
             5207: 32.97666,-65.552246
             5208: 33.19541,-65.770996
         - node:
-            cleanable: True
+            cleanable: true
             color: '#80C71F88'
             id: splatter
           decals:
@@ -4315,7 +4313,7 @@ entities:
             5194: 33.10166,-64.38037
             5195: 32.13291,-64.052246
         - node:
-            cleanable: True
+            cleanable: true
             color: '#80C71F92'
             id: splatter
           decals:
@@ -4323,7 +4321,7 @@ entities:
             5181: 32.179787,-63.520992
             5182: 31.976662,-63.099117
         - node:
-            cleanable: True
+            cleanable: true
             color: '#B02E26AE'
             id: splatter
           decals:
@@ -5741,7 +5739,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          immutable: true
           moles:
           - 0
           - 0
@@ -6894,7 +6892,7 @@ entities:
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
-        DoorStatus: True
+        DoorStatus: true
   - uid: 4502
     components:
     - type: Transform
@@ -7535,7 +7533,7 @@ entities:
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
-        DoorStatus: True
+        DoorStatus: true
   - uid: 1672
     components:
     - type: Transform
@@ -43885,13 +43883,13 @@ entities:
       toggleActionEntity: 1469
     - type: ContainerContainer
       containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
+        cell_slot:
+          showEnts: false
+          occludes: true
           ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
+        actions:
+          showEnts: false
+          occludes: true
           ents:
           - 1469
     - type: ActionsContainer
@@ -57374,7 +57372,7 @@ entities:
   - uid: 13488
     components:
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 57.5,-45.5
       parent: 3
     - type: Physics
@@ -57384,7 +57382,7 @@ entities:
   - uid: 13489
     components:
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 58.5,-45.5
       parent: 3
     - type: Physics
@@ -57398,7 +57396,7 @@ entities:
       pos: 47.5,-50.5
       parent: 3
     - type: GasValve
-      open: False
+      open: false
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 8372
@@ -57408,7 +57406,7 @@ entities:
       pos: -9.5,-32.5
       parent: 3
     - type: GasValve
-      open: False
+      open: false
   - uid: 13635
     components:
     - type: Transform
@@ -57416,7 +57414,7 @@ entities:
       pos: 46.5,-35.5
       parent: 3
     - type: GasValve
-      open: False
+      open: false
     - type: AtmosPipeColor
       color: '#9F2B68FF'
 - proto: GasVentPump
@@ -58235,11 +58233,11 @@ entities:
   - uid: 10714
     components:
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 23.5,-73.5
       parent: 3
     - type: Physics
-      canCollide: True
+      canCollide: true
       bodyType: Dynamic
   - uid: 10720
     components:
@@ -67484,14 +67482,20 @@ entities:
       stampedBy:
       - stampedColor: '#323232FF'
         stampedName: stamp-component-stamped-name-greytide
-      content: >2-
+      content: '
 
         [head=2]                 Hey you! Smartypants! [/head]
 
 
-        [italic]I'm gonna be out of a shift for a while, so make sure you maintain this news room in [bolditalic]tip-top shape![/bolditalic] Otherwise, it's gonna degrade our status as a news network! Who knows... maybe the Syndicate will take over the TV channels! You wouldn't want that, would you? (unless you are with the syndcate yourself...)
+        [italic]I''m gonna be out of a shift for a while, so make sure you maintain
+        this news room in [bolditalic]tip-top shape![/bolditalic] Otherwise, it''s
+        gonna degrade our status as a news network! Who knows... maybe the Syndicate
+        will take over the TV channels! You wouldn''t want that, would you? (unless
+        you are with the syndcate yourself...)
 
-        Do your best to keep this news room in it's best quality! Maintain the greenscreen, fix any broken floorboards or grilles, replace the lights, anything to keep this room pristine![/italic]
+        Do your best to keep this news room in it''s best quality! Maintain the greenscreen,
+        fix any broken floorboards or grilles, replace the lights, anything to keep
+        this room pristine![/italic]
 
 
         [head=3]The Daily Slice will prevail over all![/head]
@@ -67504,7 +67508,7 @@ entities:
         Sincerely,
 
 
-        [head=3] -  Joseph R. Ward
+        [head=3] -  Joseph R. Ward'
   - uid: 8683
     components:
     - type: Transform
@@ -67516,30 +67520,21 @@ entities:
       pos: -11.56402,-77.26266
       parent: 3
     - type: Paper
-      content: >-
-        [head=2]+----------------------------------------------+
-
-        |  How to create your own DAW!  |
-
-        +----------------------------------------------+[/head]
-            [italic]Written by: Barthel Brindle, Scientist[/italic]
-
-        Hello, aspiring musician! We here at NT [italic]love[/italic] the work you do for the station; it's simply beautiful to the ears! So, we have provided you your own DAW board to build up your workstation!
-
-          [head=3]Checklist:[/head]
-
-         \[  ] - 1x mixed instrument crate (ask [color=brown]cargo[/color], or find the needed instruments yourself, if you can!)
-         \[  ] - 1x piece of [color=lightblue]glass[/color]
-         \[  ] - 1x piece of [color=green]LV wire[/color]
-         \[  ]  - a toolbox, with a [color=blue]screwdriver[/color] and a [color=gray]wrench[/color] (optional, you may also ask a nearby [color=orange]engineer[/color] for help!)
-
-           [head=3]Steps:[/head]
-
-           1: Setup a machine frame (we have made one for you!)
-           2: Gather these items:
-           3: Put all the items you have into the machine frame
-           4: Grab a screwdriver and screw it tight
-           5: Enjoy your brand new [bold]DAW![/bold]
+      content: "[head=2]+----------------------------------------------+\n|  How to\
+        \ create your own DAW!  |\n+----------------------------------------------+[/head]\n\
+        \    [italic]Written by: Barthel Brindle, Scientist[/italic]\n\nHello, aspiring\
+        \ musician! We here at NT [italic]love[/italic] the work you do for the station;\
+        \ it's simply beautiful to the ears! So, we have provided you your own DAW\
+        \ board to build up your workstation!\n\n  [head=3]Checklist:[/head]\n\n \\\
+        [  ] - 1x mixed instrument crate (ask [color=brown]cargo[/color], or find\
+        \ the needed instruments yourself, if you can!)\n \\[  ] - 1x piece of [color=lightblue]glass[/color]\n\
+        \ \\[  ] - 1x piece of [color=green]LV wire[/color]\n \\[  ]  - a toolbox,\
+        \ with a [color=blue]screwdriver[/color] and a [color=gray]wrench[/color]\
+        \ (optional, you may also ask a nearby [color=orange]engineer[/color] for\
+        \ help!)\n\n   [head=3]Steps:[/head]\n\n   1: Setup a machine frame (we have\
+        \ made one for you!)\n   2: Gather these items:\n   3: Put all the items you\
+        \ have into the machine frame\n   4: Grab a screwdriver and screw it tight\n\
+        \   5: Enjoy your brand new [bold]DAW![/bold]"
   - uid: 11835
     components:
     - type: Transform
@@ -67550,20 +67545,17 @@ entities:
       stampedBy:
       - stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
-      content: >2-
-
-        [head=3][bolditalic]To the dearest Engineering department,[/head][/bolditalic]
-
-
-        [italic]We here at the [bolditalic]Nanotrasen Station Construction Corporation (NSCC)[/bolditalic] have heard your requests for a larger department. We have come to the solution of moving your department to a more spacious part of the station, which fufills all your wishes. We have also installed a TEG to the east of the department, in compensation for replacing the [bolditalic]Dedicated Engineering Radiatioactive-Energy Plant (DERP)[/bolditalic], i.e. the shoddy, broken RTG setup, for safety reasons.
-
-
-        We hope you guys enjoy the new department! 
-
-        P.S: Enjoy the pizza and soda! And make sure to thank Jemma Ammarylis for it, if you ever come by her![/italic]
-
-           Sincerely, 
-        [bolditalic]           Marques Stanton, Head Architect of NSCC.[/bolditalic]
+      content: "\n[head=3][bolditalic]To the dearest Engineering department,[/head][/bolditalic]\n\
+        \n[italic]We here at the [bolditalic]Nanotrasen Station Construction Corporation\
+        \ (NSCC)[/bolditalic] have heard your requests for a larger department. We\
+        \ have come to the solution of moving your department to a more spacious part\
+        \ of the station, which fufills all your wishes. We have also installed a\
+        \ TEG to the east of the department, in compensation for replacing the [bolditalic]Dedicated\
+        \ Engineering Radiatioactive-Energy Plant (DERP)[/bolditalic], i.e. the shoddy,\
+        \ broken RTG setup, for safety reasons.\n\nWe hope you guys enjoy the new\
+        \ department! \nP.S: Enjoy the pizza and soda! And make sure to thank Jemma\
+        \ Ammarylis for it, if you ever come by her![/italic]\n\n   Sincerely, \n\
+        [bolditalic]           Marques Stanton, Head Architect of NSCC.[/bolditalic]"
   - uid: 11937
     components:
     - type: Transform
@@ -67656,9 +67648,10 @@ entities:
       pos: -2.5054455,-7.5257797
       parent: 3
     - type: Paper
-      content: >2-
+      content: '
 
-        [bold]PROMPT [00:01:22, 03.16.25]:[/bold] Captain Cyrus Khavari: "A.I., run station diagnosis, please."
+        [bold]PROMPT [00:01:22, 03.16.25]:[/bold] Captain Cyrus Khavari: "A.I., run
+        station diagnosis, please."
 
 
 
@@ -67673,14 +67666,17 @@ entities:
         [bold]WEAPON DIAGNOSTICS:[/bold] \[ERROR]
 
 
-        [bold]SUMMARY:[/bold] \[ERROR]: Weapons diagnostics couldn't run, due to "aiturretscript.pyt" not being found within directory.
+        [bold]SUMMARY:[/bold] \[ERROR]: Weapons diagnostics couldn''t run, due to
+        "aiturretscript.pyt" not being found within directory.
 
         [bold]REASON:[/bold] There are currently no turrets within the AI core.
 
-        [bold]SOLUTION:[/bold] Have a station engineer replace the black carpets within the AI Core with NT Issued Defensive Turrets.
+        [bold]SOLUTION:[/bold] Have a station engineer replace the black carpets within
+        the AI Core with NT Issued Defensive Turrets.
 
 
-        For more information, please contact your local technician via [bolditalic]ulissestech@ntmail.com[/bolditalic], or call us at our                   number: [bolditalic]+1-321-854-7737[/bolditalic]
+        For more information, please contact your local technician via [bolditalic]ulissestech@ntmail.com[/bolditalic],
+        or call us at our                   number: [bolditalic]+1-321-854-7737[/bolditalic]'
   - uid: 2522
     components:
     - type: Transform
@@ -67996,11 +67992,11 @@ entities:
   - uid: 9747
     components:
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 14.5,-22.5
       parent: 3
     - type: TriggerOnProximity
-      enabled: False
+      enabled: false
     - type: Physics
       bodyType: Dynamic
 - proto: PortableGeneratorJrPacman
@@ -69521,7 +69517,7 @@ entities:
   - uid: 10891
     components:
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 37.5,-31.5
       parent: 3
     - type: Physics
@@ -77889,7 +77885,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: HoP Bedroom
   - uid: 2856
     components:
@@ -77900,7 +77896,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Command Bathroom
   - uid: 3173
     components:
@@ -77911,7 +77907,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: HoP Office
   - uid: 4886
     components:
@@ -77922,7 +77918,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Vault
   - uid: 4887
     components:
@@ -77933,7 +77929,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Captain's Office
   - uid: 4888
     components:
@@ -77944,7 +77940,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Bridge East
   - uid: 7795
     components:
@@ -77955,7 +77951,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: EVA
   - uid: 9459
     components:
@@ -77965,7 +77961,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: CE's Office
   - uid: 9602
     components:
@@ -77975,7 +77971,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: HoS Office
   - uid: 11745
     components:
@@ -77985,7 +77981,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Conference Room
   - uid: 11746
     components:
@@ -77996,7 +77992,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Command Airlock
   - uid: 11749
     components:
@@ -78007,7 +78003,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: AI Entrance
   - uid: 11800
     components:
@@ -78018,7 +78014,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: RD's Office
   - uid: 14040
     components:
@@ -78029,7 +78025,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: QM's Office
   - uid: 14041
     components:
@@ -78040,7 +78036,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: Bridge West
   - uid: 14356
     components:
@@ -78051,7 +78047,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
-      nameSet: True
+      nameSet: true
       id: AI Core
 - proto: SurveillanceCameraEngineering
   entities:
@@ -78063,7 +78059,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Solars Southwest
   - uid: 4573
     components:
@@ -78073,7 +78069,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Engineering Front
   - uid: 8152
     components:
@@ -78083,7 +78079,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Gravity Generator
   - uid: 11808
     components:
@@ -78094,7 +78090,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Power bank
   - uid: 11811
     components:
@@ -78105,7 +78101,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Locker room
   - uid: 11815
     components:
@@ -78116,7 +78112,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Telecommunications
   - uid: 11816
     components:
@@ -78127,7 +78123,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Station Anchor
   - uid: 13694
     components:
@@ -78138,7 +78134,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: TEG
   - uid: 13987
     components:
@@ -78148,7 +78144,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: AME
   - uid: 13988
     components:
@@ -78158,7 +78154,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Break room
   - uid: 13989
     components:
@@ -78169,7 +78165,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Atmos Locker room
   - uid: 13990
     components:
@@ -78180,7 +78176,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Atmospherics
   - uid: 14028
     components:
@@ -78190,7 +78186,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: East Solars
   - uid: 14032
     components:
@@ -78201,7 +78197,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: South Hallway
   - uid: 14043
     components:
@@ -78212,7 +78208,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
-      nameSet: True
+      nameSet: true
       id: Northwest Solars
 - proto: SurveillanceCameraGeneral
   entities:
@@ -78225,7 +78221,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Arrivals
   - uid: 4421
     components:
@@ -78235,7 +78231,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Maintenance Bar
   - uid: 4863
     components:
@@ -78246,7 +78242,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Service
   - uid: 4869
     components:
@@ -78256,7 +78252,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Bridge
   - uid: 4875
     components:
@@ -78266,7 +78262,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Evac
   - uid: 6266
     components:
@@ -78277,7 +78273,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Arrivals
   - uid: 8304
     components:
@@ -78287,7 +78283,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Stage
   - uid: 9448
     components:
@@ -78298,7 +78294,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Library
   - uid: 9450
     components:
@@ -78309,7 +78305,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Arrivals East
   - uid: 9451
     components:
@@ -78320,7 +78316,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Arrivals West + Evac West
   - uid: 9452
     components:
@@ -78331,7 +78327,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Docking Arm
   - uid: 9454
     components:
@@ -78342,7 +78338,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Docking Arm West
   - uid: 9455
     components:
@@ -78353,7 +78349,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Docking Arm East
   - uid: 9456
     components:
@@ -78364,7 +78360,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Evac West
   - uid: 9993
     components:
@@ -78375,7 +78371,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Bridge Hallway
   - uid: 11802
     components:
@@ -78386,7 +78382,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Dorms North
   - uid: 11803
     components:
@@ -78397,7 +78393,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Engineering
   - uid: 11804
     components:
@@ -78408,7 +78404,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Medbay
   - uid: 11805
     components:
@@ -78418,7 +78414,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Toolroom
   - uid: 11807
     components:
@@ -78429,7 +78425,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: General Dorms
   - uid: 11809
     components:
@@ -78440,7 +78436,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Dorms Room 1
   - uid: 11810
     components:
@@ -78450,7 +78446,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Dorms Room 2
   - uid: 13490
     components:
@@ -78461,10 +78457,10 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Cryosleep
     - type: WiresPanel
-      open: True
+      open: true
   - uid: 13658
     components:
     - type: Transform
@@ -78482,7 +78478,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Tool Room
 - proto: SurveillanceCameraMedical
   entities:
@@ -78495,7 +78491,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraMedical
-      nameSet: True
+      nameSet: true
       id: Medbay
   - uid: 4851
     components:
@@ -78505,7 +78501,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraMedical
-      nameSet: True
+      nameSet: true
       id: Chemistry
   - uid: 9991
     components:
@@ -78516,7 +78512,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraMedical
-      nameSet: True
+      nameSet: true
       id: Medical Equipment
   - uid: 14359
     components:
@@ -78527,7 +78523,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraMedical
-      nameSet: True
+      nameSet: true
       id: Medical Entrance
   - uid: 14360
     components:
@@ -78537,7 +78533,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraMedical
-      nameSet: True
+      nameSet: true
       id: Morgue
 - proto: SurveillanceCameraRouterCommand
   entities:
@@ -78606,7 +78602,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: Artifact Room
   - uid: 11761
     components:
@@ -78617,7 +78613,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: R&D
   - uid: 11792
     components:
@@ -78628,7 +78624,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: Science Breakroom
   - uid: 11798
     components:
@@ -78638,7 +78634,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: Anomaly Room
   - uid: 11799
     components:
@@ -78649,7 +78645,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: Robotics
   - uid: 14042
     components:
@@ -78659,7 +78655,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: R&D Server
   - uid: 14361
     components:
@@ -78669,7 +78665,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraScience
-      nameSet: True
+      nameSet: true
       id: Artifact Chamber
 - proto: SurveillanceCameraSecurity
   entities:
@@ -78682,7 +78678,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Brig
   - uid: 4883
     components:
@@ -78693,7 +78689,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Security Locker Room
   - uid: 8690
     components:
@@ -78704,7 +78700,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Perma
   - uid: 9447
     components:
@@ -78715,7 +78711,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Detective's Office
   - uid: 9453
     components:
@@ -78726,7 +78722,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Lawyer's Office
   - uid: 9600
     components:
@@ -78737,7 +78733,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
-      nameSet: True
+      nameSet: true
       id: Armory
 - proto: SurveillanceCameraService
   entities:
@@ -78750,7 +78746,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Botanist's Room
   - uid: 4853
     components:
@@ -78760,7 +78756,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Bar
   - uid: 4857
     components:
@@ -78770,7 +78766,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Hydroponics
   - uid: 4858
     components:
@@ -78781,7 +78777,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Bartender's Room
   - uid: 4874
     components:
@@ -78792,7 +78788,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Janitorial Closet
   - uid: 5531
     components:
@@ -78803,7 +78799,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Freezer
   - uid: 6604
     components:
@@ -78813,7 +78809,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Kitchen
   - uid: 7796
     components:
@@ -78824,7 +78820,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Chapel
   - uid: 7797
     components:
@@ -78835,7 +78831,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Chaplain's Room
   - uid: 9462
     components:
@@ -78846,7 +78842,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraService
-      nameSet: True
+      nameSet: true
       id: Washroom
 - proto: SurveillanceCameraSupply
   entities:
@@ -78859,7 +78855,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Cargo Storage room
   - uid: 14034
     components:
@@ -78870,7 +78866,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Cargo Bay
   - uid: 14035
     components:
@@ -78881,7 +78877,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Mail room
   - uid: 14036
     components:
@@ -78891,7 +78887,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Cargo Entrance
   - uid: 14037
     components:
@@ -78902,7 +78898,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Cargo Front
   - uid: 14038
     components:
@@ -78913,7 +78909,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Salvage Bay
   - uid: 14039
     components:
@@ -78924,7 +78920,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSupply
-      nameSet: True
+      nameSet: true
       id: Salvage Locker room
 - proto: SurveillanceCameraWirelessRouterEntertainment
   entities:
@@ -80701,147 +80697,147 @@ entities:
         12776:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12775:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12773:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12774:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12772:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12777:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12770:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12769:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12768:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12767:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12766:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12771:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12765:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         10933:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         6631:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12558:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12554:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12555:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12548:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         1911:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12553:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12547:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         3347:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         10955:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12758:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         1903:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         1866:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12755:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12756:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12757:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12760:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12764:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12759:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12763:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12761:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12762:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
   - uid: 10781
     components:
     - type: Transform
@@ -80852,11 +80848,11 @@ entities:
         12782:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12783:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
   - uid: 10901
     components:
     - type: Transform
@@ -80867,23 +80863,23 @@ entities:
         8327:
         - Left: Reverse
         - Right: Forward
-        - Middle: Off
+        - Middle: false
         10900:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         10897:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         10899:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         10898:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
   - uid: 13037
     components:
     - type: Transform
@@ -80894,91 +80890,91 @@ entities:
         7329:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         7328:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         7331:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8182:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         7676:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         7385:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12583:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         6832:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8105:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8092:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         11827:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         11826:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8184:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8187:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         14293:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         8422:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12803:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         11171:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         11172:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12799:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12797:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         14300:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
   - uid: 13949
     components:
     - type: Transform
@@ -80989,11 +80985,11 @@ entities:
         12778:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
         12779:
         - Left: Forward
         - Right: Reverse
-        - Middle: Off
+        - Middle: false
 - proto: UniformPrinter
   entities:
   - uid: 4599
@@ -90727,4 +90723,3 @@ entities:
     - type: Transform
       pos: 16.569206,-41.352577
       parent: 3
-...
