@@ -1,0 +1,9 @@
+- type: loadout
+  id: PersonalItemWistMantle
+  storage:
+    back:
+      - ClothingNeckMantleHOPWist
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Wist Carlene
