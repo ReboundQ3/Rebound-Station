@@ -5,7 +5,7 @@
   description: A pair of spectacular spectacles with prescription lenses.
   components:
   - type: Clothing
-    sprite: _LateStation/Clothing/Eyes/irisglasses.rsi
+    sprite: _LateStation/PersonalItems/irisglasses.rsi
 
 - type: loadout
   id: PersonalItemIrisGlasses
