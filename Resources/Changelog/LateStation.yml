@@ -454,3 +454,9 @@ Entries:
   changes: []
   id: 56
   time: '2025-05-31T13:14:25.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Problem fixed with the return to body button.
+  id: 57
+  time: '2025-06-12T21:26:44.0000000+00:00'
