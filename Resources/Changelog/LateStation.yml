@@ -460,3 +460,9 @@ Entries:
       message: Problem fixed with the return to body button.
   id: 57
   time: '2025-06-12T21:26:44.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Add
+      message: Added Wist's HoP Mantle and Iris' Glasses to the Personal Items Loadout
+  id: 58
+  time: '2025-06-17T20:41:07.0000000+00:00'
