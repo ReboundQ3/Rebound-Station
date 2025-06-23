@@ -478,3 +478,9 @@ Entries:
       message: 'Added Brings-in-Catch'' hoodie!  '
   id: 60
   time: '2025-06-23T06:39:16.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Fix
+      message: Felinids now start with a survival box
+  id: 61
+  time: '2025-06-23T06:41:39.0000000+00:00'
