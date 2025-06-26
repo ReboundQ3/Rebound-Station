@@ -2,7 +2,7 @@
   parent: [ClothingOuterStorageFoldableBase, ClothingOuterWinterCoat]
   id: PersonalItemBringsHoodie
   name: Brings' hoodie
-  description: Brings-in-Catch’s beloved hoodie, it has a seal from an anime printed on the back. It looks sun-bleached and well-worn, and smells of campfire, salt, and fruit.  Some white fur is stuck to it, looks like it’s been shared frequently.
+  description: Brings-In-Catch’s beloved hoodie, it has a seal from an anime printed on the back. It looks sun-bleached and well-worn, and smells of campfire, salt, and fruit.  Some white fur is stuck to it, looks like it’s been shared frequently.
   components:
   - type: FoldableClothing
   - type: Sprite
@@ -23,4 +23,4 @@
   effects:
   - !type:PersonalItemLoadoutEffect
     character:
-    - Brings-in-Catch
+    - Brings-In-Catch
