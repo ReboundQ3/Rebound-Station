@@ -504,3 +504,11 @@ Entries:
       message: Added the RPD back to atmospheric techicians' lockers.
   id: 64
   time: '2025-06-30T08:19:35.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: Added four new masks to the AutoDrobe's inventory.
+    - type: Add
+      message: (Re)added sweater jumpsuits and skirts from Wizden.
+  id: 65
+  time: '2025-06-30T08:33:57.0000000+00:00'
