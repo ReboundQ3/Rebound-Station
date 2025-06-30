@@ -496,3 +496,11 @@ Entries:
       message: Added a personal moth cloak item for Austin.
   id: 63
   time: '2025-06-29T18:57:49.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Add
+      message: Added floodlights to the engivend.
+    - type: Fix
+      message: Added the RPD back to atmospheric techicians' lockers.
+  id: 64
+  time: '2025-06-30T08:19:35.0000000+00:00'
