@@ -6,7 +6,7 @@
   description: A generic white turtleneck with no rank markings.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuits/color_turtle.rsi
+    sprite: _LateStation/Clothing/Uniforms/Jumpsuits/color_turtle.rsi
     layers:
     - state: icon
     - state: trousers-icon
