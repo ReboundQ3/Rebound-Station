@@ -512,3 +512,11 @@ Entries:
       message: (Re)added sweater jumpsuits and skirts from Wizden.
   id: 65
   time: '2025-06-30T08:33:57.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Fix
+      message: >-
+        Removes the Syndicate-Brand Hair Repellant from the PAYDAY masks,
+        meaning you won't randomly become bald.
+  id: 66
+  time: '2025-07-01T21:41:02.0000000+00:00'
