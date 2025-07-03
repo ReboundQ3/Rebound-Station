@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingPrideShoesBase
-  id: ClothingShoesSandalsRainbow
+  id: ClothingShoesSandalRainbow
   name: rainbow sandals
   description: Comfortable shoes, featuring a rainbow bracelet.
   components:
@@ -40,7 +40,7 @@
   - type: Sprite
     sprite: _Harmony/Clothing/Shoes/Misc/arosandals.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Shoes/Misc/aroandals.rsi
+    sprite: _Harmony/Clothing/Shoes/Misc/arosandals.rsi
 
 - type: entity
   parent: ClothingPrideShoesBase
@@ -118,3 +118,14 @@
     sprite: _Harmony/Clothing/Shoes/Misc/transgendersandals.rsi
   - type: Clothing
     sprite: _Harmony/Clothing/Shoes/Misc/transgendersandals.rsi
+
+- type: entity
+  parent: ClothingPrideShoesBase
+  id: ClothingShoesSandalsPlain
+  name: plain sandals
+  description: Comfortable shoes, featuring leather straps.
+  components:
+  - type: Sprite
+    sprite: _Harmony/Clothing/Shoes/Misc/plainsandals.rsi
+  - type: Clothing
+    sprite: _Harmony/Clothing/Shoes/Misc/plainsandals.rsi
