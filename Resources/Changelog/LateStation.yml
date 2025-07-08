@@ -542,3 +542,11 @@ Entries:
       message: Introduces a personal item for Mary Whitewitch.
   id: 69
   time: '2025-07-08T21:04:22.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Tweak
+      message: >-
+        The brigmedic syringe gun now holds three syringes, like its
+        counterpart.
+  id: 70
+  time: '2025-07-08T22:04:43.0000000+00:00'
