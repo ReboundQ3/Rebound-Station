@@ -532,3 +532,13 @@ Entries:
       message: celebratory sandals
   id: 68
   time: '2025-07-03T22:29:35.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added the Shock Collar, found by breaking the Warden's locker- I mean,
+        opening it with your ID.
+    - type: Add
+      message: Introduces a personal item for Mary Whitewitch.
+  id: 69
+  time: '2025-07-08T21:04:22.0000000+00:00'
