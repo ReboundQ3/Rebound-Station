@@ -16,9 +16,6 @@
     quickEquip: true
     slots:
     - neck
-  - type: Tag
-    tags:
-    - WhitelistChameleon
 
 - type: loadout
   id: PersonalItemMaryCollar
