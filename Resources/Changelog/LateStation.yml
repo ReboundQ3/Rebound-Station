@@ -550,3 +550,11 @@ Entries:
         counterpart.
   id: 70
   time: '2025-07-08T22:04:43.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added a preem new accent for you chooms. Try to use it 'fore you get
+        flatlined like a gonk.
+  id: 71
+  time: '2025-07-09T08:22:06.0000000+00:00'
