@@ -61,7 +61,7 @@
       required: true
       defaultMarkings: [ ArachnidCheliceraeDownwards ]
     Chest:
-      points: 3
+      points: 2
       required: false
     Legs:
       points: 6

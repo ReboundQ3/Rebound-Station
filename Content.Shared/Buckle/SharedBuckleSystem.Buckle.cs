@@ -523,7 +523,7 @@ public abstract partial class SharedBuckleSystem
             if (!_interaction.InRangeUnobstructed(user.Value, strap.Owner, buckle.Comp.Range, popup: popup))
                 return false;
 
-            if (user.Value != buckle.Owner && !_actionBlocker.CanComplexInteract(user.Value))
+            if (user.Value != buckle.Owner && !ActionBlocker.CanComplexInteract(user.Value))
                 return false;
         }
 
