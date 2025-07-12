@@ -66,7 +66,6 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
-            "dm02-sandbomb", // Harmony, deathmatch PROMOD map by Unisol
             "Dev",
             "TestTeg",
             "Fland",
