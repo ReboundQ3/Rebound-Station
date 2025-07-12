@@ -923,7 +923,7 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", omniaccentName, Loc.GetString("admin-smite-omni-accent-description"))
         };
         args.Verbs.Add(omniaccent);
-        
+
         //Harmony change start-Added Valley Girl Smite
         var valleyGirlName = Loc.GetString("admin-smite-valley-accent-name").ToLowerInvariant();
         Verb valleyaccent = new()
@@ -940,6 +940,6 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(valleyaccent);
         //Harmony change end
-        
+
     }
 }
