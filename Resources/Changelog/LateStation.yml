@@ -558,3 +558,9 @@ Entries:
         flatlined like a gonk.
   id: 71
   time: '2025-07-09T08:22:06.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Fix
+      message: Made the personal item for Mary Whitewitch actually Work™
+  id: 72
+  time: '2025-07-12T15:02:42.0000000+00:00'
