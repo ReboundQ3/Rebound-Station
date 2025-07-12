@@ -133,13 +133,6 @@ public sealed class FoodSequenceSystem : SharedFoodSequenceSystem
             return false;
         }
 
-        // Prevents plushies with items hidden in them from being added to prevent deletion of items
-        // If more of these types of checks need to be added, this should be changed to an event or something.
-        if (TryComp<SecretStashComponent>(element, out var stashComponent) && stashComponent.ItemContainer.Count != 0)
-        {
-            return false;
-        }
-
         //Generate new visual layer
         var flip = start.Comp.AllowHorizontalFlip && _random.Prob(0.5f);
         var layer = new FoodSequenceVisualLayer(elementIndexed,

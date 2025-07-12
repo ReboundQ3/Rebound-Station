@@ -199,24 +199,6 @@ public abstract class SharedIdCardSystem : EntitySystem
                 id.JobDepartments.Add(department.ID);
         }
 
-        id.AllowRestrictedContraband = job.AllowRestrictedContraband; // Harmony
-
-        Dirty(uid, id);
-
-        return true;
-    }
-
-    public bool TryChangeJobDepartment(EntityUid uid, List<ProtoId<DepartmentPrototype>> departments, IdCardComponent? id = null)
-    {
-        if (!Resolve(uid, ref id))
-            return false;
-
-        id.JobDepartments.Clear();
-        foreach (var department in departments)
-        {
-            id.JobDepartments.Add(department);
-        }
-
         Dirty(uid, id);
 
         return true;
