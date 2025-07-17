@@ -564,3 +564,9 @@ Entries:
       message: Made the personal item for Mary Whitewitch actually Work™
   id: 72
   time: '2025-07-12T15:02:42.0000000+00:00'
+- author: Boaz1111
+  changes:
+    - type: Fix
+      message: Fixed undergarments not working.
+  id: 73
+  time: '2025-07-17T19:25:41.0000000+00:00'
