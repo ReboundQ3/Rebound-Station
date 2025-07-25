@@ -324,3 +324,15 @@
   components:
   - type: Implanter
     implant: DeathRattleImplantCentcomm
+
+# move this to a seperate file in _latestation as its new content. its here for now just to get examples.
+#if this comments still here and i make a PR laugh at me.
+
+- type: entity
+  id: AdmemeStorageImplanter
+  name: BluespaceStorage implanter
+  suffix: Admeme
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+    - type: Implanter
+      implant: AdmemeStorageImplant
