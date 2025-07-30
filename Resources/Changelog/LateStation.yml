@@ -578,3 +578,9 @@ Entries:
       message: Alllowed scurrets to properly have access to suit slot items.
   id: 74
   time: '2025-07-27T15:41:26.0000000+00:00'
+- author: Lachryphage
+  changes:
+    - type: Add
+      message: Added a new ultralow pop station, Vanquish (Previously Akatsumi)!
+  id: 75
+  time: '2025-07-30T10:54:02.0000000+00:00'
