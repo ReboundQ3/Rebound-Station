@@ -4,7 +4,7 @@
   group: Experimental
   desc: reagent-desc-polymorphine
   physicalDesc: reagent-physical-desc-pale
-  flavor: indescribable
+  flavor: flavor-complex-nothing
   color: "#a150b5"
   metabolisms:
     Drink:
