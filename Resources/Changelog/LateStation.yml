@@ -592,3 +592,9 @@ Entries:
       message: Fixed vanquish's unanchored security beacon.
   id: 76
   time: '2025-08-01T11:42:19.0000000+00:00'
+- author: superjeepboy
+  changes:
+    - type: Add
+      message: Added Polymorphine, a new chemical.
+  id: 77
+  time: '2025-08-11T17:51:35.0000000+00:00'
