@@ -95,19 +95,3 @@
         conditions:
         - !type:ReagentThreshold
           min: 13
-
-- type: reaction
-  id: Polymorphine
-  reactants:
-    Phalanximine:
-      amount: 1
-    Opporozidone:
-      amount: 1
-    UncookedAnimalProteins:
-      amount: 1
-    Frezon:
-      amount: 0.5
-  products:
-    Polymorphine: 2
-    UnstableMutagen: 1
-    Frezon: 0.5
