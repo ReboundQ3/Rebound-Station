@@ -598,3 +598,11 @@ Entries:
       message: Added Polymorphine, a new chemical.
   id: 77
   time: '2025-08-11T17:51:35.0000000+00:00'
+- author: superjeepboy
+  changes:
+    - type: Add
+      message: Added the ability for botany mutations to roll for Polymorphine.
+    - type: Tweak
+      message: Refactored the reaction for Polymorphine.
+  id: 78
+  time: '2025-08-12T12:16:09.0000000+00:00'
