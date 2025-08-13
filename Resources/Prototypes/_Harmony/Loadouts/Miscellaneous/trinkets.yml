@@ -71,12 +71,6 @@
     back:
     - PlushieVox
 
-- type: loadout
-  id: Cane
-  storage:
-    back:
-    - Cane
-
 # Towels
 - type: loadout
   id: TowelStripedOrange

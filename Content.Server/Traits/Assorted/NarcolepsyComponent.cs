@@ -1,6 +1,4 @@
 ﻿using System.Numerics;
-using Content.Shared.Dataset; // LateStation edit
-using Robust.Shared.Prototypes; // LateStation edit
 
 namespace Content.Server.Traits.Assorted;
 
@@ -23,12 +21,4 @@ public sealed partial class NarcolepsyComponent : Component
     public Vector2 DurationOfIncident { get; private set; }
 
     public float NextIncidentTime;
-
-    /// <summary>
-    ///     LateStation, copied the sleep dataset from the sleeping component.
-    ///     and it is used for the narcolepsy component.
-    ///     This is the same dataset as the one used by the sleeping component.
-    /// </summary>
-    [DataField]
-    public ProtoId<LocalizedDatasetPrototype> ForceSaySleepDataset = "ForceSaySleepDataset";
 }
