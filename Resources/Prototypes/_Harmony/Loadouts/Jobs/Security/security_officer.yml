@@ -11,9 +11,6 @@
 
 - type: loadout
   id: SeniorOfficerBeretHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
   equipment:
     head: ClothingHeadHatBeretSecuritySeniorOfficerHarmony
 
