@@ -55,9 +55,6 @@
   id: QuartermasterMantle
   equipment: 
     neck: ClothingNeckMantleQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterQM
 
 - type: startingGear
   id: QuartermasterMantle

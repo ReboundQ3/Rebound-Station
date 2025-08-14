@@ -55,9 +55,6 @@
   id: CaptainMantle
   equipment:
     neck: ClothingNeckMantleCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCap
 
 - type: startingGear
   id: CaptainMantle
