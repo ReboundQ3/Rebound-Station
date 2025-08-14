@@ -421,10 +421,17 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
     duration: 60
   - type: VentCrittersRule
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
     entries:
     - id: MobAdultSlimesBlueAngry
       prob: 0.02
@@ -442,10 +449,17 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
     duration: 60
   - type: VentCrittersRule
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
     entries:
     - id: MobPurpleSnake
       prob: 0.02
@@ -463,10 +477,17 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
     duration: 60
   - type: VentCrittersRule
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
     entries:
     - id: MobGiantSpiderAngry
       prob: 0.05
