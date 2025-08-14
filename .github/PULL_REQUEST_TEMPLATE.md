@@ -30,6 +30,7 @@ If this PR is purely code, small fixes, or backend-only, you can omit this.
 <!-- Confirm the following by placing an X inside each [ ] -->
 - [ ] I have tested all added content and code changes.
 - [ ] I have added media to this PR, or it does not require an in-game showcase.
+- [ ] I have added the changes i've made to the respective _LateStation folder or commented it with LateStation
 - [ ] I understand that by submitting this PR, my code contributions are licensed under the MIT and AGPL-3.0-or-later license used by LateStation.
 
 <!-- PRs that do not follow these requirements may be delayed or closed. -->
