@@ -22,5 +22,5 @@
 # Jumpsuit
 - type: loadout
   id: JumpsuitSecBlue
-  equipment: 
+  equipment:
     jumpsuit: ClothingUniformJumpsuitSecBlue
