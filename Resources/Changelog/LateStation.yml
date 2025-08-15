@@ -626,3 +626,12 @@ Entries:
       message: Reverted various things back to their original state.
   id: 81
   time: '2025-08-15T12:16:41.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added the "enforcer" armor and mask to the SecDrobe's MNGR wire
+        inventory. Special thanks to EVIN [EVIN] and KaittoNeko for making the
+        sprites and helping me recreate them respectively.
+  id: 82
+  time: '2025-08-15T12:29:44.0000000+00:00'
