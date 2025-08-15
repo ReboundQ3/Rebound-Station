@@ -614,3 +614,36 @@ Entries:
       message: The ventcritters have been reworked.
   id: 79
   time: '2025-08-14T15:35:20.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Turtlenecks are back in the winterdrobe.
+  id: 80
+  time: '2025-08-15T10:39:13.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Reverted various things back to their original state.
+  id: 81
+  time: '2025-08-15T12:16:41.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added the "enforcer" armor and mask to the SecDrobe's MNGR wire
+        inventory. Special thanks to EVIN [EVIN] and KaittoNeko for making the
+        sprites and helping me recreate them respectively.
+  id: 82
+  time: '2025-08-15T12:29:44.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added a crumbling brick to the trinket loadout list. Throw them at
+        hapless girlkissers.
+    - type: Tweak
+      message: Removed ALL playtime requirements from loadout items.
+    - type: Tweak
+      message: You can now bring up to five trinkets. Rejoice, smokers!
+  id: 83
+  time: '2025-08-15T12:42:38.0000000+00:00'
