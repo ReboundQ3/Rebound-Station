@@ -15,6 +15,7 @@ public sealed class FullCharacterRecords(
     int age,
     string jobTitle,
     string jobIcon,
+    string species,
     Gender gender,
     Sex sex,
     string? fingerprint,
@@ -55,6 +56,12 @@ public sealed class FullCharacterRecords(
     /// </summary>
     [ViewVariables]
     public string JobIcon = jobIcon;
+
+    /// <summary>
+    ///     Species tied to this record.
+    /// </summary>
+    [ViewVariables]
+    public string Species = species;
 
     /// <summary>
     ///     Gender identity tied to this record.
