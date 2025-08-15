@@ -1,5 +1,4 @@
 - type: entity
-  abstract: true
   parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseSecurityContraband]
   id: ClothingOuterArmorMetroCop
   name: enforcer armor
