@@ -128,18 +128,11 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         StatusOptionButton.OnItemSelected += args =>
         {
             var status = (SecurityStatus)args.Id;
-            if (status == SecurityStatus.Wanted || status == SecurityStatus.Suspected
-                || status == SecurityStatus.Monitor || status == SecurityStatus.Search)
-            {
+            // This should reflect SetStatus in CriminalRecordsConsoleWindow.xaml.cs
+            if (status == SecurityStatus.Wanted || status == SecurityStatus.Suspected)
                 SetStatusWithReason(status);
-            }
             else
-            {
                 OnSetSecurityStatus?.Invoke(status, null);
-                // Immediately update the UI to reflect the status change
-                StatusOptionButton.Select((int)status);
-                RecordContainerWantedReason.Visible = false;
-            }
         };
 
         OnClose += () => _entryView.Close();
@@ -148,6 +141,7 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         RecordEntryViewType.AddItem(Loc.GetString("department-Security"));
         RecordEntryViewType.AddItem(Loc.GetString("department-Medical"));
         RecordEntryViewType.AddItem(Loc.GetString("humanoid-profile-editor-cd-records-employment"));
+        RecordEntryViewType.AddItem(Loc.GetString("humanoid-profile-editor-cd-records-admin"));
         RecordEntryViewType.OnItemSelected += args =>
         {
             if (args.Id == RecordEntryViewType.SelectedId)
@@ -324,7 +318,6 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         RecordContainerAge.Text = record.Age.ToString();
         RecordContainerJob.Text = record.JobTitle; /* At some point in the future we might want to display the icon */
         RecordContainerGender.Text = record.Gender.ToString();
-        RecordContainerSpecies.Text = record.Species;
         RecordContainerHeight.Text = cr.Height + " " + UnitConversion.GetImperialDisplayLength(cr.Height);
         RecordContainerWeight.Text = cr.Weight + " " + UnitConversion.GetImperialDisplayMass(cr.Weight);
         RecordContainerContactName.SetValue(cr.EmergencyContactName);
@@ -363,6 +356,10 @@ public sealed partial class CharacterRecordViewer : FancyWindow
                     break;
                 case RecordConsoleType.Security:
                     SetEntries(cr.SecurityEntries, true);
+                    _filtersChanged = false;
+                    break;
+                case RecordConsoleType.Admin:
+                    SetEntries(cr.AdminEntries, true);
                     _filtersChanged = false;
                     break;
                 }
@@ -443,17 +440,6 @@ public sealed partial class CharacterRecordViewer : FancyWindow
                 return;
 
             OnSetSecurityStatus?.Invoke(status, reason);
-            // Immediately update the UI to reflect the status change
-            StatusOptionButton.Select((int)status);
-            if (!string.IsNullOrEmpty(reason))
-            {
-                RecordContainerWantedReason.Text = reason;
-                RecordContainerWantedReason.Visible = true;
-            }
-            else
-            {
-                RecordContainerWantedReason.Visible = false;
-            }
         };
 
         _wantedReasonDialog.OnClose += () => { _wantedReasonDialog = null; };

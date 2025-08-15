@@ -74,7 +74,6 @@ public sealed class CharacterRecordsSystem : EntitySystem
             stationRecordsKey: stationRecordsKey?.Id,
             name: profile.Name,
             age: profile.Age,
-            species: profile.Species,
             jobTitle: jobTitle,
             jobIcon: jobPrototype.Icon,
             gender: profile.Gender,

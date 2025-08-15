@@ -606,3 +606,11 @@ Entries:
       message: Refactored the reaction for Polymorphine.
   id: 78
   time: '2025-08-12T12:16:09.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed most things the rebase broke.
+    - type: Add
+      message: The ventcritters have been reworked.
+  id: 79
+  time: '2025-08-14T15:35:20.0000000+00:00'
