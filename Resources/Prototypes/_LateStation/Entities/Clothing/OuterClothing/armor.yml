@@ -5,9 +5,9 @@
   description: A discontinued uniform built to make Security seem more upstanding, but unfortunately, the built-in drug injector didn't go over well with the ethics department. This one doesn't have an injector.'
   components:
   - type: Sprite
-    sprite: _LateStation\Clothing\OuterClothing\Armor\metrocop.rsi
+    sprite: _LateStation/Clothing/OuterClothing/Armor/metrocop.rsi
   - type: Clothing
-    sprite: _LateStation\Clothing\OuterClothing\Armor\metrocop.rsi
+    sprite: _LateStation/Clothing/OuterClothing/Armor/metrocop.rsi
   - type: Armor
     modifiers:
       coefficients:
