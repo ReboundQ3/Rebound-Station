@@ -45,9 +45,6 @@
   id: HoPMantle
   equipment:
     neck: ClothingNeckMantleHOP
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterHoP
 
 - type: startingGear
   id: HoPMantle
@@ -57,9 +54,6 @@
 # Back
 - type: loadout
   id: HoPBackpackIan
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ProfessionalHoP
   equipment:
     back: ClothingBackpackIan
 

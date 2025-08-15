@@ -18,9 +18,6 @@
   id: ResearchDirectorMantle
   equipment:
     neck: ClothingNeckMantleRD
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterRD
 
 - type: startingGear
   id: ResearchDirectorMantle
