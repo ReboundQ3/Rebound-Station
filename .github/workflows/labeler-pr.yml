@@ -12,7 +12,16 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout base repo for config
+        uses: actions/checkout@v4
+        with:
+          # Ensure we have the base repository's files locally (for config path)
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 1
+          persist-credentials: false
       - uses: actions/labeler@v5
         with:
           configuration-path: .github/labeler.yml
           sync-labels: true
+          # Use bot PAT to create labels if missing (orgs may restrict GITHUB_TOKEN)
+          repo-token: ${{ secrets.WEH_BOT_PAT }}
