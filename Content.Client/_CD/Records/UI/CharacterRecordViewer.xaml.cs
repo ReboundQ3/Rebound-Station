@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 ReboundQ3
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.Security;

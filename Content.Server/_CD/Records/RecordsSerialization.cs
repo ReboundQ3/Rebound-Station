@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 ReboundQ3
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Server.Database;
 using Content.Shared._CD.Records;
 using System.Diagnostics.CodeAnalysis;
