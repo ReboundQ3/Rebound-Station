@@ -53,16 +53,8 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Trill:
-      collection: Trill
-    Warble:
-      collection: Warble
-    Wurble:
-      collection: Wurble
     Chirp:
       collection: ResomiChirp
-    Bagawk: # Mono
-      collection: Bagawk # Mono
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -104,16 +96,8 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Trill:
-      collection: Trill
-    Warble:
-      collection: Warble
-    Wurble:
-      collection: Wurble
     Chirp:
       collection: ResomiChirp
-    Bagawk: # Mono
-      collection: Bagawk # Mono
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
