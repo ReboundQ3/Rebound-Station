@@ -607,18 +607,31 @@ def main():
     # Process files
     files_changed = False
 
+    # Normalize file lists in case they were passed as a single whitespace-separated string
+    def _normalize_files(items):
+        out = []
+        for item in (items or []):
+            if not item:
+                continue
+            # Split on any whitespace to expand combined lists
+            out.extend(item.split())
+        return out
+
+    added_files = _normalize_files(args.files_added)
+    modified_files = _normalize_files(args.files_modified)
+
     # Print the PR base and head SHAs
     print(f"\nPR Base SHA: {args.pr_base_sha}")
     print(f"PR Head SHA: {args.pr_head_sha}")
 
     print("\n--- Processing Added Files ---")
-    for file in args.files_added:
+    for file in added_files:
         print(f"\nProcessing added file: {file}")
         if process_file(file, license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
 
     print("\n--- Processing Modified Files ---")
-    for file in args.files_modified:
+    for file in modified_files:
         print(f"\nProcessing modified file: {file}")
         if process_file(file, license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
