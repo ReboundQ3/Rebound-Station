@@ -266,6 +266,16 @@ def get_authors_from_git(file_path, cwd=REPO_PATH, pr_base_sha=None, pr_head_sha
 
     return author_years
 
+def get_last_editor(file_path: str, cwd: str = REPO_PATH) -> str | None:
+    """Return the most recent non-bot author "Name <email>" for the file, if any."""
+    cmd = [
+        "git", "log", "-1", "--pretty=format:%an <%ae>", "--", file_path
+    ]
+    out = run_git_command(cmd, cwd=cwd, check=False)
+    if out and out.strip() and not is_bot_name(out) and not _contains_token(out):
+        return out.strip()
+    return None
+
 def process_git_log_output(output, author_timestamps):
     """
     Process git log output and add authors to author_timestamps.
@@ -409,7 +419,7 @@ def parse_existing_header(content, comment_style):
 
     return authors, license_id, header_lines
 
-def create_header(authors, license_id, comment_style):
+def create_header(authors, license_id, comment_style, last_author: str | None = None):
     """
     Creates a REUSE header with the given authors and license.
     Returns: header string
@@ -422,10 +432,21 @@ def create_header(authors, license_id, comment_style):
     if suffix is None:
         # Single-line comment style (e.g., //, #)
         # Add copyright lines
+        ordered = []
         if authors:
             for author, (_, year) in sorted(authors.items(), key=lambda x: (x[1][1], x[0])):
                 if author and not is_token(author) and not author.lower().startswith("unknown"):
-                    lines.append(f"{prefix} SPDX-FileCopyrightText: {year} {author}")
+                    ordered.append((author, year))
+        # Move last_author to the end if present
+        if last_author:
+            # Remove existing occurrence first
+            ordered = [(a, y) for (a, y) in ordered if a != last_author]
+            # Append at end
+            # Use the known year if available in authors
+            if last_author in authors:
+                ordered.append((last_author, authors[last_author][1]))
+        for a, y in ordered:
+            lines.append(f"{prefix} SPDX-FileCopyrightText: {y} {a}")
         else:
             lines.append(f"{prefix} SPDX-FileCopyrightText: Contributors to the {DEFAULT_PROJECT_NAME} project")
 
@@ -440,10 +461,17 @@ def create_header(authors, license_id, comment_style):
         lines.append(f"{prefix}")
 
         # Add copyright lines
+        ordered = []
         if authors:
             for author, (_, year) in sorted(authors.items(), key=lambda x: (x[1][1], x[0])):
                 if author and not is_token(author) and not author.lower().startswith("unknown"):
-                    lines.append(f"SPDX-FileCopyrightText: {year} {author}")
+                    ordered.append((author, year))
+        if last_author:
+            ordered = [(a, y) for (a, y) in ordered if a != last_author]
+            if last_author in authors:
+                ordered.append((last_author, authors[last_author][1]))
+        for a, y in ordered:
+            lines.append(f"SPDX-FileCopyrightText: {y} {a}")
         else:
             lines.append(f"SPDX-FileCopyrightText: Contributors to the {DEFAULT_PROJECT_NAME} project")
 
@@ -541,8 +569,12 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
                 print(f"Removed email from: {author_name}")
 
     # Determine what to do based on existing header
+    last_editor = get_last_editor(file_path, REPO_PATH)
     if existing_license:
         print(f"Updating existing header for {file_path} (License: {existing_license})")
+
+        # Optionally override existing license with the provided default_license_id
+        force_license = os.environ.get("REUSE_FORCE_LICENSE", "").lower() in ("1", "true", "yes")
 
         # Combine existing and git authors
         combined_authors = existing_authors.copy()
@@ -558,8 +590,11 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
                 combined_authors[author] = (git_min, git_max)
                 print(f"  Adding new author: {author}")
 
-        # Create new header with existing license
-        new_header = create_header(combined_authors, existing_license, comment_style)
+        # Choose license id
+        license_to_use = default_license_id if force_license else existing_license
+
+        # Create new header
+        new_header = create_header(combined_authors, license_to_use, comment_style, last_author=last_editor)
 
         # Replace old header with new header
         if header_lines:
@@ -572,7 +607,7 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
         print(f"Adding new header to {file_path} (License: {default_license_id})")
 
         # Create new header with default license
-        new_header = create_header(git_authors, default_license_id, comment_style)
+        new_header = create_header(git_authors, default_license_id, comment_style, last_author=last_editor)
 
         # Add header to file
         if content.strip():
