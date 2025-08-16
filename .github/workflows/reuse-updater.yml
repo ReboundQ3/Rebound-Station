@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -106,16 +102,16 @@ jobs:
             echo "PR_LICENSE=mpl" >> $GITHUB_ENV
             echo "License specified in PR: MPL"
           else
-            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
-            echo "No license specified in PR, using default: AGPL"
+            echo "PR_LICENSE=mit" >> $GITHUB_ENV
+            echo "No license specified in PR, using default: MIT"
           fi
         shell: bash
 
       - name: Run REUSE Header Update Script
         run: |
           python Tools/update_pr_reuse_headers.py \
-            --files-added "$ADDED_FILES_LIST" \
-            --files-modified "$MODIFIED_FILES_LIST" \
+            --files-added $ADDED_FILES_LIST \
+            --files-modified $MODIFIED_FILES_LIST \
             --pr-license "$PR_LICENSE" \
             --pr-base-sha ${{ github.event.pull_request.base.sha }} \
             --pr-head-sha ${{ github.event.pull_request.head.sha }}
