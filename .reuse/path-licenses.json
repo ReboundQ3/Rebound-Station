@@ -6,6 +6,6 @@
     { "pattern": "**/_AXOLOTL/**", "license": "MIT" },
     { "pattern": "**/_LateStation/**", "license": "AGPL" },
     { "pattern": "**/_Umbra/**", "license": "MIT" },
-    { "pattern": "**/_github/**", "license": "MIT" }
+    { "pattern": "**/.github/**", "license": "MIT" }
   ]
 }

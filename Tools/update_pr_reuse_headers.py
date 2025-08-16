@@ -25,7 +25,7 @@ LICENSE_CONFIG = {
     "mpl": {"id": "MPL-2.0", "path": "LICENSES/MPL-2.0.txt"},
 }
 
-DEFAULT_LICENSE_LABEL = "agpl"
+DEFAULT_LICENSE_LABEL = "mit"
 
 # Dictionary mapping file extensions to comment styles
 # Format: {extension: (prefix, suffix)}
@@ -522,24 +522,23 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
     except Exception as e:
         print(f"Error getting git user: {e}")
 
-    # dirty changes, this entire script needs to be refactored!!!
-    email_removal_pattern = re.compile(r"^(.+) (<\S+@\S+>)$") # we match the name as the first capture group and the email as the 2nd
-    for author in list(git_authors.keys()):
-        match = email_removal_pattern.match(author)
-        if match:
-            author_name = match.group(1).strip()
-            git_authors[author_name] = git_authors.pop(author) # this changes the keys in git_authors and will also remove any duplicate users
-            print(f"Removed email from: {author_name}")
-        # else: don't spam logs for authors without emails
+    # Optional email stripping (default: keep emails in SPDX headers)
+    # Enable by setting REUSE_STRIP_EMAILS=true if you want names only.
+    if os.environ.get("REUSE_STRIP_EMAILS", "").lower() in ("1", "true", "yes"):
+        email_removal_pattern = re.compile(r"^(.+) (<\S+@\S+>)$")
+        for author in list(git_authors.keys()):
+            match = email_removal_pattern.match(author)
+            if match:
+                author_name = match.group(1).strip()
+                git_authors[author_name] = git_authors.pop(author)
+                print(f"Removed email from: {author_name}")
 
-    # doing the same for existing_authors
-    for author in list(existing_authors.keys()):
-        match = email_removal_pattern.match(author)
-        if match:
-            author_name = match.group(1).strip()
-            existing_authors[author_name] = existing_authors.pop(author) # this changes the keys in existing_authors and will also remove any duplicate users
-            print(f"Removed email from: {author_name}")
-    # else: don't spam logs for authors without emails
+        for author in list(existing_authors.keys()):
+            match = email_removal_pattern.match(author)
+            if match:
+                author_name = match.group(1).strip()
+                existing_authors[author_name] = existing_authors.pop(author)
+                print(f"Removed email from: {author_name}")
 
     # Determine what to do based on existing header
     if existing_license:
