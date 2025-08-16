@@ -23,5 +23,5 @@ jobs:
         with:
           configuration-path: .github/labeler.yml
           sync-labels: true
-          # Use bot PAT to create labels if missing (orgs may restrict GITHUB_TOKEN)
-          repo-token: ${{ secrets.WEH_BOT_PAT }}
+          # Use repository-scoped token so label creation respects base repo permissions
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
