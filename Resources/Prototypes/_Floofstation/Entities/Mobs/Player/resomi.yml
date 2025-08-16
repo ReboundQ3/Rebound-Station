@@ -1,0 +1,5 @@
+- type: entity
+  save: false
+  name: Urist McSmallRaptor
+  parent: BaseMobResomi
+  id: MobResomi

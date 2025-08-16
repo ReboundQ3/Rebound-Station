@@ -18,6 +18,7 @@
     - Human
     - Moth
     - Reptilian
+    - Resomi # fluff/goob/mono
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
