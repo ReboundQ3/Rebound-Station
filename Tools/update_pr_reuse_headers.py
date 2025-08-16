@@ -11,6 +11,7 @@ import subprocess
 import os
 import sys
 import re
+import fnmatch
 import argparse
 import json
 from datetime import datetime, timezone
@@ -642,6 +643,73 @@ def main():
     license_id = _resolve_license_id(args.pr_license)
     print(f"Using license for new files: {license_id}")
 
+    # Optional: load per-path license map
+    def _load_license_map(path: str | None):
+        data = None
+        # Try env override first (JSON string)
+        env_json = os.environ.get("REUSE_LICENSE_MAP_JSON")
+        if env_json:
+            try:
+                data = json.loads(env_json)
+            except Exception as ex:
+                print(f"Warning: Failed to parse REUSE_LICENSE_MAP_JSON: {ex}", file=sys.stderr)
+
+        # Then optional file path
+        if data is None and path and os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+            except Exception as ex:
+                print(f"Warning: Failed to load license map from {path}: {ex}", file=sys.stderr)
+
+        # Then conventional locations
+        if data is None:
+            for candidate in (".reuse/path-licenses.json", ".github/reuse-license-map.json"):
+                if os.path.exists(candidate):
+                    try:
+                        with open(candidate, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                        print(f"Loaded license map from {candidate}")
+                        break
+                    except Exception as ex:
+                        print(f"Warning: Failed to load license map from {candidate}: {ex}", file=sys.stderr)
+
+        # Normalize to list of {pattern, license}
+        rules: list[dict] = []
+        if isinstance(data, dict) and "rules" in data and isinstance(data["rules"], list):
+            for r in data["rules"]:
+                if isinstance(r, dict) and "pattern" in r and "license" in r:
+                    rules.append({"pattern": str(r["pattern"]), "license": str(r["license"])})
+        elif isinstance(data, dict):
+            for k, v in data.items():
+                rules.append({"pattern": str(k), "license": str(v)})
+        elif isinstance(data, list):
+            for r in data:
+                if isinstance(r, dict) and "pattern" in r and "license" in r:
+                    rules.append({"pattern": str(r["pattern"]), "license": str(r["license"])})
+        return rules
+
+    def _license_for_path(path: str, default_id: str, rules: list[dict]) -> str:
+        if not rules:
+            return default_id
+        p = path.replace('\\', '/').lstrip('./')
+        matches: list[tuple[int, str]] = []
+        for r in rules:
+            pat = r.get("pattern", "")
+            lic = r.get("license", "")
+            if not pat or not lic:
+                continue
+            if fnmatch.fnmatchcase(p, pat):
+                matches.append((len(pat), lic))
+        if not matches:
+            return default_id
+        # Prefer the longest pattern (most specific)
+        _, lic_label = max(matches, key=lambda t: t[0])
+        return _resolve_license_id(lic_label)
+
+    license_map_path = os.environ.get("REUSE_LICENSE_MAP_PATH")
+    license_rules = _load_license_map(license_map_path)
+
     # Process files
     files_changed = False
 
@@ -665,13 +733,15 @@ def main():
     print("\n--- Processing Added Files ---")
     for file in added_files:
         print(f"\nProcessing added file: {file}")
-        if process_file(file, license_id, args.pr_base_sha, args.pr_head_sha):
+    file_license_id = _license_for_path(file, license_id, license_rules)
+    if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
 
     print("\n--- Processing Modified Files ---")
     for file in modified_files:
         print(f"\nProcessing modified file: {file}")
-        if process_file(file, license_id, args.pr_base_sha, args.pr_head_sha):
+    file_license_id = _license_for_path(file, license_id, license_rules)
+    if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
 
     print("\n--- Summary ---")
