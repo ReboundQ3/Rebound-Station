@@ -89,6 +89,7 @@ public static class RecordsSerialization
         return records.MedicalEntries.Select(medical => ConvertEntry(medical, CDModel.DbRecordEntryType.Medical))
             .Concat(records.SecurityEntries.Select(security => ConvertEntry(security, CDModel.DbRecordEntryType.Security)))
             .Concat(records.EmploymentEntries.Select(employment => ConvertEntry(employment, CDModel.DbRecordEntryType.Employment)))
+            .Concat(records.AdminEntries.Select(employment => ConvertEntry(employment, CDModel.DbRecordEntryType.Admin)))
             .ToList();
     }
 }

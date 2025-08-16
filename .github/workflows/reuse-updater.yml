@@ -114,8 +114,8 @@ jobs:
       - name: Run REUSE Header Update Script
         run: |
           python Tools/update_pr_reuse_headers.py \
-            --files-added "$ADDED_FILES_LIST" \
-            --files-modified "$MODIFIED_FILES_LIST" \
+            --files-added $ADDED_FILES_LIST \
+            --files-modified $MODIFIED_FILES_LIST \
             --pr-license "$PR_LICENSE" \
             --pr-base-sha ${{ github.event.pull_request.base.sha }} \
             --pr-head-sha ${{ github.event.pull_request.head.sha }}
