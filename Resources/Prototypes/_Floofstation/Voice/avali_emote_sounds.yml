@@ -53,8 +53,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Chirp:
-      collection: ResomiChirp
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -96,8 +94,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Chirp:
-      collection: ResomiChirp
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
