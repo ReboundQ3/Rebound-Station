@@ -1,36 +1,5 @@
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-//
-// SPDX-License-Identifier: MIT
-
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
-//
-// SPDX-License-Identifier: MIT
-
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
-//
-// SPDX-License-Identifier: MIT
-
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
-//
-// SPDX-License-Identifier: MIT
-
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
-//
-// SPDX-License-Identifier: MIT
-
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
-//
-// SPDX-License-Identifier: MIT
-
 // SPDX-FileCopyrightText: 2024 Cosmatic drift
-// SPDX-FileCopyrightText: 2025 ReboundQ3
 // SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
-// SPDX-FileCopyrightText: Contributors to the Late-station-14 project
 //
 // SPDX-License-Identifier: MIT
 
