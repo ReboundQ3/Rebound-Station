@@ -733,15 +733,15 @@ def main():
     print("\n--- Processing Added Files ---")
     for file in added_files:
         print(f"\nProcessing added file: {file}")
-    file_license_id = _license_for_path(file, license_id, license_rules)
-    if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
+        file_license_id = _license_for_path(file, license_id, license_rules)
+        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
 
     print("\n--- Processing Modified Files ---")
     for file in modified_files:
         print(f"\nProcessing modified file: {file}")
-    file_license_id = _license_for_path(file, license_id, license_rules)
-    if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
+        file_license_id = _license_for_path(file, license_id, license_rules)
+        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
             files_changed = True
 
     print("\n--- Summary ---")
