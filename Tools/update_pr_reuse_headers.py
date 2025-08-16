@@ -345,8 +345,13 @@ def parse_existing_header(content, comment_style):
     if suffix is None:
         # Single-line comment style (e.g., //, #)
         # Regular expressions for parsing
-        copyright_regex = re.compile(f"^{re.escape(prefix)} SPDX-FileCopyrightText: (\\d{{4}}) (.+)$")
-        license_regex = re.compile(f"^{re.escape(prefix)} SPDX-License-Identifier: (.+)$")
+        # Allow optional space and accidental '//' after prefix (e.g., '# // SPDX-...')
+        copyright_regex = re.compile(
+            f"^{re.escape(prefix)}\\s*(?:\\/\\/\\s*)?SPDX-FileCopyrightText: (\\d{{4}}) (.+)$"
+        )
+        license_regex = re.compile(
+            f"^{re.escape(prefix)}\\s*(?:\\/\\/\\s*)?SPDX-License-Identifier: (.+)$"
+        )
 
         # Find the header section
         in_header = True
@@ -419,7 +424,64 @@ def parse_existing_header(content, comment_style):
 
     return authors, license_id, header_lines
 
-def create_header(authors, license_id, comment_style, last_author: str | None = None):
+
+def remove_existing_header(content: str, comment_style: tuple[str, str | None]) -> tuple[str, bool]:
+    """Remove one or more SPDX header blocks from the start of the file.
+    Returns (stripped_content, removed_any).
+    """
+    prefix, suffix = comment_style
+    lines = content.splitlines()
+    i = 0
+    removed = False
+
+    if suffix is None:
+        # Single-line comments: remove leading lines that start with prefix and include SPDX tokens
+        while i < len(lines):
+            line = lines[i]
+            stripped = line.lstrip()
+            if not stripped.startswith(prefix):
+                break
+            body = stripped[len(prefix):].lstrip()
+            # tolerate accidental '//' after prefix
+            if body.startswith('//'):
+                body = body[2:].lstrip()
+            if body.startswith('SPDX-') or body == '':
+                i += 1
+                removed = True
+                continue
+            # encountered a comment line without SPDX after header area
+            break
+        # Also trim following blank lines
+        while i < len(lines) and lines[i].strip() == '':
+            i += 1
+    else:
+        # Multi-line: remove consecutive comment blocks starting with prefix and containing SPDX lines
+        j = 0
+        while j < len(lines):
+            if lines[j].strip() != prefix:
+                break
+            k = j + 1
+            saw_spdx = False
+            while k < len(lines) and lines[k].strip() != suffix:
+                if 'SPDX-' in lines[k]:
+                    saw_spdx = True
+                k += 1
+            if k < len(lines) and lines[k].strip() == suffix and saw_spdx:
+                # remove this block
+                j = k + 1
+                removed = True
+                # consume following blank lines
+                while j < len(lines) and lines[j].strip() == '':
+                    j += 1
+            else:
+                break
+        i = j
+
+    if removed:
+        return "\n".join(lines[i:]) + ("\n" if content.endswith("\n") else ''), True
+    return content, False
+
+def create_header(authors, license_id, comment_style, last_author: str | None = None, last_year: int | None = None):
     """
     Creates a REUSE header with the given authors and license.
     Returns: header string
@@ -431,7 +493,7 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
 
     if suffix is None:
         # Single-line comment style (e.g., //, #)
-        # Add copyright lines
+        # Build ordered list of authors
         ordered = []
         if authors:
             for author, (_, year) in sorted(authors.items(), key=lambda x: (x[1][1], x[0])):
@@ -439,14 +501,15 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
                     ordered.append((author, year))
         # Move last_author to the end if present
         if last_author:
-            # Remove existing occurrence first
             ordered = [(a, y) for (a, y) in ordered if a != last_author]
-            # Append at end
-            # Use the known year if available in authors
             if last_author in authors:
                 ordered.append((last_author, authors[last_author][1]))
-        for a, y in ordered:
-            lines.append(f"{prefix} SPDX-FileCopyrightText: {y} {a}")
+            else:
+                ordered.append((last_author, last_year or datetime.now(timezone.utc).year))
+        # Write authors or fallback
+        if ordered:
+            for a, y in ordered:
+                lines.append(f"{prefix} SPDX-FileCopyrightText: {y} {a}")
         else:
             lines.append(f"{prefix} SPDX-FileCopyrightText: Contributors to the {DEFAULT_PROJECT_NAME} project")
 
@@ -470,8 +533,11 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
             ordered = [(a, y) for (a, y) in ordered if a != last_author]
             if last_author in authors:
                 ordered.append((last_author, authors[last_author][1]))
-        for a, y in ordered:
-            lines.append(f"SPDX-FileCopyrightText: {y} {a}")
+            else:
+                ordered.append((last_author, last_year or datetime.now(timezone.utc).year))
+        if ordered:
+            for a, y in ordered:
+                lines.append(f"SPDX-FileCopyrightText: {y} {a}")
         else:
             lines.append(f"SPDX-FileCopyrightText: Contributors to the {DEFAULT_PROJECT_NAME} project")
 
@@ -580,7 +646,6 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
         combined_authors = existing_authors.copy()
         for author, (git_min, git_max) in git_authors.items():
             has_token = is_token(author)
-
             if author.lower().startswith("unknown") or has_token:
                 continue
             if author in combined_authors:
@@ -593,34 +658,43 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
         # Choose license id
         license_to_use = default_license_id if force_license else existing_license
 
-        # Create new header
-        new_header = create_header(combined_authors, license_to_use, comment_style, last_author=last_editor)
+        # Remove any existing header blocks to avoid duplication
+        stripped_content, _ = remove_existing_header(content, comment_style)
+        new_header = create_header(
+            combined_authors,
+            license_to_use,
+            comment_style,
+            last_author=last_editor,
+            last_year=(git_authors.get(last_editor, (None, None))[1] if last_editor else None),
+        )
 
-        # Replace old header with new header
-        if header_lines:
-            old_header = "\n".join(header_lines)
-            new_content = content.replace(old_header, new_header, 1)
-        else:
-            # No header found (shouldn't happen if existing_license is set)
-            new_content = new_header + "\n\n" + content
+        # Always rebuild from stripped content for idempotency
+        new_content = new_header + "\n\n" + stripped_content
     else:
         print(f"Adding new header to {file_path} (License: {default_license_id})")
 
         # Create new header with default license
-        new_header = create_header(git_authors, default_license_id, comment_style, last_author=last_editor)
+        stripped_content, _ = remove_existing_header(content, comment_style)
+        new_header = create_header(
+            git_authors,
+            default_license_id,
+            comment_style,
+            last_author=last_editor,
+            last_year=(git_authors.get(last_editor, (None, None))[1] if last_editor else None),
+        )
 
         # Add header to file
         if content.strip():
-            # For XML files, we need to add the header after the XML declaration if present
+            # For XML files, add the header after the XML declaration if present
             prefix, suffix = comment_style
-            if suffix and content.lstrip().startswith("<?xml"):
+            if suffix and stripped_content.lstrip().startswith("<?xml"):
                 # Find the end of the XML declaration
-                xml_decl_end = content.find("?>") + 2
-                xml_declaration = content[:xml_decl_end]
-                rest_of_content = content[xml_decl_end:].lstrip()
+                xml_decl_end = stripped_content.find("?>") + 2
+                xml_declaration = stripped_content[:xml_decl_end]
+                rest_of_content = stripped_content[xml_decl_end:].lstrip()
                 new_content = xml_declaration + "\n" + new_header + "\n\n" + rest_of_content
             else:
-                new_content = new_header + "\n\n" + content
+                new_content = new_header + "\n\n" + stripped_content
         else:
             new_content = new_header + "\n"
 
