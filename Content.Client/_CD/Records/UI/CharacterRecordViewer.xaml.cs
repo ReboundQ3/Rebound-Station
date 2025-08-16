@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 ReboundQ3
+// SPDX-FileCopyrightText: 2025 Weh-Bot
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.Security;
