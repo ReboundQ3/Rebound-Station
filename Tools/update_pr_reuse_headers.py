@@ -125,6 +125,21 @@ def is_token(text: str) -> bool:
     t = text or ""
     return _contains_token(t) or t.lower().startswith("monolith")
 
+def is_bot_name(name: str | None) -> bool:
+    if not name:
+        return False
+    n = name.strip().lower()
+    return (
+        n.endswith("[bot]")
+        or n.endswith("-bot")
+        or " bot" in n
+        or n.startswith("bot ")
+        or n == "bot"
+        or "github-actions" in n
+        or "dependabot" in n
+        or "weh-bot" in n
+    )
+
 # Project name used in fallback copyright text
 DEFAULT_PROJECT_NAME = (
     os.environ.get("REUSE_PROJECT_NAME")
@@ -275,7 +290,13 @@ def process_git_log_output(output, author_timestamps):
 
         # Add main author
         has_token = _contains_token(author_name) or _contains_token(author_email)
-        if author_name and author_email and author_name.strip() != "Unknown" and not has_token:
+        if (
+            author_name
+            and author_email
+            and author_name.strip() != "Unknown"
+            and not has_token
+            and not is_bot_name(author_name)
+        ):
             author_key = f"{author_name.strip()} <{author_email.strip()}>"
             author_timestamps[author_key].append(timestamp)
 
@@ -285,7 +306,13 @@ def process_git_log_output(output, author_timestamps):
             co_author_email = match.group(2).strip()
             has_token = _contains_token(co_author_name) or _contains_token(co_author_email)
 
-            if co_author_name and co_author_email and co_author_name.strip() != "Unknown" and not has_token:
+            if (
+                co_author_name
+                and co_author_email
+                and co_author_name.strip() != "Unknown"
+                and not has_token
+                and not is_bot_name(co_author_name)
+            ):
                 co_author_key = f"{co_author_name} <{co_author_email}>"
                 author_timestamps[co_author_key].append(timestamp)
 
@@ -458,14 +485,23 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
     # Get all authors from git
     git_authors = get_authors_from_git(file_path, REPO_PATH, pr_base_sha, pr_head_sha)
 
-    # Add current user to authors
+    # Add current user to authors (skip on bots/CI)
     try:
         name_cmd = ["git", "config", "user.name"]
         email_cmd = ["git", "config", "user.email"]
         user_name = run_git_command(name_cmd, check=False)
         user_email = run_git_command(email_cmd, check=False)
 
-        if user_name and user_email and user_name.strip() != "Unknown":
+        skip_add_current = os.environ.get("REUSE_SKIP_ADD_CURRENT", "").lower() in ("1", "true", "yes")
+        if (
+            not skip_add_current
+            and user_name
+            and user_email
+            and user_name.strip() != "Unknown"
+            and not is_bot_name(user_name)
+            and not _contains_token(user_name)
+            and not _contains_token(user_email)
+        ):
             # Use current year
             current_year = datetime.now(timezone.utc).year
             current_user = f"{user_name} <{user_email}>"
@@ -479,7 +515,9 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
                 min_year, max_year = git_authors[current_user]
                 git_authors[current_user] = (min(min_year, current_year), max(max_year, current_year))
         else:
-            print("Warning: Could not get current user from git config or name is 'Unknown'")
+            # Silent when skipping for bots or explicitly disabled
+            if not skip_add_current:
+                print("Warning: Skipping add of current user (unknown/bot/invalid)")
     except Exception as e:
         print(f"Error getting git user: {e}")
 
