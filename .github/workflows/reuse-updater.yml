@@ -1,11 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Aiden
-# SPDX-FileCopyrightText: 2025 Aidenkrz
-# SPDX-FileCopyrightText: 2025 ReboundQ3
-# SPDX-FileCopyrightText: 2025 Weh-Bot
-# SPDX-FileCopyrightText: 2025 sleepyyapril
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 name: Update REUSE Headers
 
 # Align behavior with changelog workflow

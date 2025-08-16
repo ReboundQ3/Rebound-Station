@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Cosmatic-drift
-// SPDX-FileCopyrightText: 2025 ReboundQ3
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Database;
 using Content.Shared._CD.Records;
 using System.Diagnostics.CodeAnalysis;
