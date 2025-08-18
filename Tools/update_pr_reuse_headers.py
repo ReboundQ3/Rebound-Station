@@ -18,10 +18,19 @@ from datetime import datetime, timezone
 from collections import defaultdict
 import re as _re
 
+# Optional TOML support for REUSE.toml
+try:
+    import tomllib as _tomllib  # Python 3.11+
+except Exception:  # pragma: no cover - fallback if running locally on <3.11
+    try:
+        import tomli as _tomllib  # type: ignore
+    except Exception:
+        _tomllib = None
+
 # --- Configuration ---
 LICENSE_CONFIG = {
     "mit": {"id": "MIT", "path": "LICENSES/MIT.txt"},
-    "agpl": {"id": "AGPL-3.0-or-later", "path": "LICENSES/AGPLv3.txt"},
+    "agpl": {"id": "AGPL-3.0-or-later", "path": "LICENSES/AGPL-3.0-or-later.txt"},
     "mpl": {"id": "MPL-2.0", "path": "LICENSES/MPL-2.0.txt"},
 }
 
@@ -552,7 +561,7 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
 
     return "\n".join(lines)
 
-def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=None):
+def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=None, pr_author_login: str | None = None):
     """
     Processes a file to add or update REUSE headers.
     Returns: True if file was modified, False otherwise
@@ -642,7 +651,7 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
         # Optionally override existing license with the provided default_license_id
         force_license = os.environ.get("REUSE_FORCE_LICENSE", "").lower() in ("1", "true", "yes")
 
-        # Combine existing and git authors
+    # Combine existing and git authors
         combined_authors = existing_authors.copy()
         for author, (git_min, git_max) in git_authors.items():
             has_token = is_token(author)
@@ -654,6 +663,20 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
             else:
                 combined_authors[author] = (git_min, git_max)
                 print(f"  Adding new author: {author}")
+
+        # Optionally ensure PR author is listed
+        if pr_author_login:
+            pl = pr_author_login.strip().lower()
+            if pl and not is_bot_name(pl):
+                found = False
+                for a in combined_authors.keys():
+                    if pl in a.strip().lower():
+                        found = True
+                        break
+                if not found:
+                    # Add a minimal GitHub-based author label
+                    current_year = datetime.now(timezone.utc).year
+                    combined_authors[f"{pr_author_login} (GitHub)"] = (current_year, current_year)
 
         # Choose license id
         license_to_use = default_license_id if force_license else existing_license
@@ -675,8 +698,23 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
 
         # Create new header with default license
         stripped_content, _ = remove_existing_header(content, comment_style)
+        # Start with git authors
+        new_authors = git_authors.copy()
+        # Optionally ensure PR author is listed
+        if pr_author_login:
+            pl = pr_author_login.strip().lower()
+            if pl and not is_bot_name(pl):
+                found = False
+                for a in new_authors.keys():
+                    if pl in a.strip().lower():
+                        found = True
+                        break
+                if not found:
+                    current_year = datetime.now(timezone.utc).year
+                    new_authors[f"{pr_author_login} (GitHub)"] = (current_year, current_year)
+
         new_header = create_header(
-            git_authors,
+            new_authors,
             default_license_id,
             comment_style,
             last_author=last_editor,
@@ -712,29 +750,44 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
 
 def _resolve_license_id(license_label: str) -> str:
     """Resolve a license label or a combined list into a REUSE license ID string.
-    Accepts labels like 'agpl', 'mit', 'mpl', or combos like 'mit+agpl', 'mit&mpl'.
+    Supports:
+      - shorthand labels: 'agpl', 'mit', 'mpl'
+      - SPDX IDs: 'AGPL-3.0-or-later', 'MIT', 'CC-BY-SA-3.0', etc.
+      - combiners: '+', ',', ';', '&', 'OR', 'AND' (case-insensitive)
+    If the expression contains 'AND' (and not 'OR'), we'll join with AND; otherwise, we
+    default to OR for dual-licensing.
     """
-    label = (license_label or "").strip().lower()
-    if not label:
-        label = DEFAULT_LICENSE_LABEL
+    original = (license_label or "").strip()
+    if not original:
+        original = DEFAULT_LICENSE_LABEL
 
-    parts = [p for p in _re.split(r"[,;&+]+", label) if p]
+    # Determine preferred logical operator
+    use_and = bool(_re.search(r"\bAND\b", original, flags=_re.IGNORECASE) and not _re.search(r"\bOR\b", original, flags=_re.IGNORECASE))
+    joiner = " AND " if use_and else " OR "
+
+    # Split tokens preserving case
+    parts = [p.strip() for p in _re.split(r"\s+(?:OR|AND)\s+|[,;&+]+", original, flags=_re.IGNORECASE) if p and p.strip()]
     if not parts:
         parts = [DEFAULT_LICENSE_LABEL]
 
-    ids = []
-    for p in parts:
-        cfg = LICENSE_CONFIG.get(p)
-        if not cfg:
-            print(f"Warning: Unknown license '{p}' — skipping", file=sys.stderr)
-            continue
-        ids.append(cfg["id"])
+    # Build map of known SPDX IDs from config
+    known_ids_lc = {v["id"].lower(): v["id"] for v in LICENSE_CONFIG.values()}
+
+    ids: list[str] = []
+    for token in parts:
+        key = token.strip().lower()
+        if key in LICENSE_CONFIG:
+            ids.append(LICENSE_CONFIG[key]["id"])  # map label to SPDX ID
+        elif key in known_ids_lc:
+            ids.append(known_ids_lc[key])  # accept exact SPDX ID from config
+        else:
+            # Assume token is already an SPDX-compatible identifier; keep as-is
+            ids.append(token.strip())
 
     if not ids:
         ids = [LICENSE_CONFIG[DEFAULT_LICENSE_LABEL]["id"]]
 
-    # Join with AND for combined licensing
-    return " AND ".join(ids)
+    return joiner.join(ids)
 
 
 def main():
@@ -744,6 +797,7 @@ def main():
     parser.add_argument("--pr-license", default=DEFAULT_LICENSE_LABEL, help="License to use for new files")
     parser.add_argument("--pr-base-sha", help="Base SHA of the PR")
     parser.add_argument("--pr-head-sha", help="Head SHA of the PR")
+    parser.add_argument("--pr-author", help="Login of the PR author (GitHub username)")
 
     args = parser.parse_args()
 
@@ -795,6 +849,34 @@ def main():
             for r in data:
                 if isinstance(r, dict) and "pattern" in r and "license" in r:
                     rules.append({"pattern": str(r["pattern"]), "license": str(r["license"])})
+
+        # Augment with REUSE.toml if available
+        try:
+            if _tomllib is not None and os.path.exists("REUSE.toml"):
+                with open("REUSE.toml", "rb") as f:
+                    toml_data = _tomllib.load(f)
+                files_rules = toml_data.get("files")
+                if isinstance(files_rules, list):
+                    for entry in files_rules:
+                        if not isinstance(entry, dict):
+                            continue
+                        p = str(entry.get("path", "")).strip()
+                        lic = str(entry.get("license", "")).strip()
+                        if not p or not lic:
+                            continue
+                        p = p.replace("\\", "/")
+                        # Convert a directory path to a glob pattern
+                        patterns: list[str] = []
+                        if p.endswith("/"):
+                            patterns.append(f"{p}**")
+                        else:
+                            patterns.append(p)
+                            patterns.append(f"{p}/**")
+                        for pat in patterns:
+                            rules.append({"pattern": pat, "license": lic})
+                print("Loaded license rules from REUSE.toml")
+        except Exception as ex:
+            print(f"Warning: Failed to load REUSE.toml: {ex}", file=sys.stderr)
         return rules
 
     def _license_for_path(path: str, default_id: str, rules: list[dict]) -> str:
@@ -842,14 +924,14 @@ def main():
     for file in added_files:
         print(f"\nProcessing added file: {file}")
         file_license_id = _license_for_path(file, license_id, license_rules)
-        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
+        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha, args.pr_author):
             files_changed = True
 
     print("\n--- Processing Modified Files ---")
     for file in modified_files:
         print(f"\nProcessing modified file: {file}")
         file_license_id = _license_for_path(file, license_id, license_rules)
-        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha):
+        if process_file(file, file_license_id, args.pr_base_sha, args.pr_head_sha, args.pr_author):
             files_changed = True
 
     print("\n--- Summary ---")
