@@ -4,11 +4,6 @@
 
 name: Update REUSE Headers
 
-# Align behavior with changelog workflow and avoid duplicate runs
-concurrency:
-  group: reuse-update-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
-
 on:
   pull_request:
     types:
@@ -16,6 +11,14 @@ on:
       - synchronize
       - reopened
       - ready_for_review
+    paths:
+      - '**/*.cs'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.py'
+      - '.reuse/**'
+      - 'REUSE.toml'
+      - 'LICENSES/**'
 
 env:
   GH_TOKEN: ${{ github.token }}
@@ -25,7 +28,7 @@ env:
 jobs:
   update_headers:
     # Skip runs triggered by our bot to avoid self-trigger loops on synchronize
-    if: github.actor != 'weh-bot' && github.actor != 'github-actions[bot]'
+    if: ${{ github.actor != 'PJBot' && github.actor != 'weh-bot' && github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -81,8 +84,8 @@ jobs:
             ADDED_FILES=""
             MODIFIED_FILES=""
           else
-            ADDED_FILES=$(echo "$PR_FILES" | grep "^added" | grep -E '\.(cs|ya?ml)$' | sed 's/^added //' | xargs) || true
-            MODIFIED_FILES=$(echo "$PR_FILES" | grep "^modified" | grep -E '\.(cs|ya?ml)$' | sed 's/^modified //' | xargs) || true
+            ADDED_FILES=$(echo "$PR_FILES" | grep -E "^added" | grep -E '\\.(cs|ya?ml)$' | sed 's/^added //' | xargs) || true
+            MODIFIED_FILES=$(echo "$PR_FILES" | grep -E "^(modified|renamed|copied|changed)" | grep -E '\\.(cs|ya?ml)$' | sed 's/^[^ ]* //' | xargs) || true
           fi
 
           echo "Added Files: $ADDED_FILES"
@@ -112,7 +115,14 @@ jobs:
           fi
         shell: bash
 
+      - name: Skip if no relevant files changed
+        if: ${{ env.ADDED_FILES_LIST == '' && env.MODIFIED_FILES_LIST == '' }}
+        run: |
+          echo "No relevant .cs/.yml/.yaml/.py changes detected; skipping header update."
+        shell: bash
+
       - name: Run REUSE Header Update Script
+        if: ${{ env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '' }}
         run: |
           python Tools/update_pr_reuse_headers.py \
             --files-added $ADDED_FILES_LIST \
@@ -125,7 +135,7 @@ jobs:
         shell: bash
 
       - name: Commit changes (same-repo PRs only)
-        if: github.event.pull_request.head.repo.full_name == github.repository
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository && (env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '') }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
