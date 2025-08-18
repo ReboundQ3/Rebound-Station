@@ -5,6 +5,11 @@
 # LateStation14
 
 [![REUSE status](https://api.reuse.software/badge/github.com/LateStation14/Late-station-14)](https://api.reuse.software/info/github.com/LateStation14/Late-station-14)
+[![Build & Test Debug](https://github.com/LateStation14/Late-station-14/actions/workflows/build-test-debug.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/build-test-debug.yml)
+[![YAML Linter](https://github.com/LateStation14/Late-station-14/actions/workflows/yaml-linter.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/yaml-linter.yml)
+[![YAML map schema validator](https://github.com/LateStation14/Late-station-14/actions/workflows/validate_mapfiles.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate_mapfiles.yml)
+[![Validate RSIs](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rsis.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rsis.yml)
+[![YAML RGA schema validator](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rgas.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rgas.yml)
 
 **LateStation** is a custom-content fork of the official [Space Station 14](https://github.com/space-wizards/space-station-14) project.
 We aim to create our own gameplay experience, with original mechanics, stations, and assets — while staying aligned with the upstream SS14 codebase.

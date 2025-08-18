@@ -164,8 +164,6 @@
         Male: MaleSlime
         Female: FemaleSlime
         Unsexed: MaleSlime
-      speechVerb: Slime
-      speechSounds: Slime
     - type: TypingIndicator
       proto: slime
 
