@@ -8,6 +8,7 @@
     { "pattern": "**/_Umbra/**", "license": "MIT" },
     { "pattern": "**/_Floofstation/**", "license": "AGPL" },
     { "pattern": "**/_Impstation/**", "license": "AGPL" },
+    { "pattern": "**/_EinsteinEngines/**", "license": "AGPL" },
     { "pattern": "**/.github/**", "license": "MIT" }
   ]
 }

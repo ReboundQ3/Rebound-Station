@@ -15,6 +15,7 @@
     - Vulpkanin
     - Avali
     - Felinid
+    - Resomi
 
 - type: guideEntry
   id: Arachnid
@@ -75,3 +76,8 @@
   id: Felinid
   name: species-name-felinid
   text: "/ServerInfo/Guidebook/Mobs/_DV/Felinid.xml"
+
+- type: guideEntry
+  id: Resomi
+  name: species-name-resomi
+  text: "/ServerInfo/Guidebook/Mobs/_FloofStation/Resomi.xml"
