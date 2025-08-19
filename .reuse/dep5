@@ -144,6 +144,17 @@ Copyright: Contributors of the _EinsteinEngines upstream project
  2020-2025 EinsteinEngines contributors
 License: AGPL-3.0-or-later
 
+# Funkystation code licensed under AGPL-3.0-or-later
+Files: Content.Server/_Funkystation/**
+        Content.Client/_Funkystation/**
+        Content.Shared/_Funkystation/**
+        Resources/_Funkystation/**
+        Resources/Prototypes/_Funkystation/**
+Copyright: Contributors of the _Funkystation upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Funkystation contributors
+License: AGPL-3.0-or-later
+
 # Assets
 Files: Resources/Textures/**
 Copyright: 2020-2025 LateStation14 contributors
